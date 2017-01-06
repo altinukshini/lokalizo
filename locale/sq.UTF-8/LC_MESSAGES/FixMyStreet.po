@@ -2762,7 +2762,7 @@ msgstr ""
 #: templates/web/base/around/intro.html:1
 #: templates/web/zurich/around/intro.html:1
 msgid "Report, view, or discuss local problems"
-msgstr ""
+msgstr "Raporto, shih ose diskuto problemet lokale"
 
 #: perllib/FixMyStreet/DB/Result/Problem.pm:605
 #: templates/web/base/contact/index.html:57
