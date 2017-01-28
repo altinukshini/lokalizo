@@ -2,7 +2,37 @@
 @import "../sass/layout";
 
 
+.shadow-wrap ul#key-tools {
+ border-top: 2px solid #4DB848;
+}
 
+body.mappage .nav-wrapper .nav-wrapper-2 {
+  background: #fff;
+}
+
+.big-green-banner {
+  background: #4DB848 url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MyIgaGVpZ2h0PSIzMyI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTAgMGgxM2wxMyAxNi0xMyAxNkgwbDEzLTE2Ii8+PC9zdmc+') right center no-repeat;
+}
+
+.nav-wrapper .nav-wrapper-2 {
+ border-top: 0px;
+ border-bottom: 2px solid #4DB848;
+ border-width: 0px 0 2px 0;
+}
+
+
+.with-notes #map_sidebar {
+
+ background-image: linear-gradient(90deg, transparent 29em, #eee 29em);
+
+}
+
+
+.content {
+  color: #666;
+}
+
+/*
 #map_box {
   position: absolute;
   z-index: auto;
@@ -89,9 +119,11 @@
   padding-left: 10px;
 }
 
+*/
 
 // SIDEBAR
 
+/*
 $navW: 3.5rem;
 $navColor: #2680F3;
 
@@ -157,7 +189,9 @@ nav {
     }
   }
 }
+*/
 
+/*
 
 
 // This goes inside #map_sidebar, and establishes a flex container allowing
@@ -241,3 +275,6 @@ nav {
 }
 
 }
+
+
+*/

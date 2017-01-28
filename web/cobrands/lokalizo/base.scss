@@ -4,3 +4,180 @@
 
 @import "../sass/base";
 
+.shadow-wrap ul#key-tools li a:hover, .shadow-wrap ul#key-tools li a.hover, .shadow-wrap ul#key-tools li input[type="submit"]:hover, .shadow-wrap ul#key-tools li input.hover[type="submit"] {
+  background-color: #4DB848;
+}
+
+.item-list--wards__item a:hover, .item-list--reports__item a:hover, .item-list--wards__item a:focus, .item-list--reports__item a:focus, .hovered.item-list--wards__item a, .hovered.item-list--reports__item a {
+    background-color: transparent;
+    text-decoration: none;
+    color: #4DB848;
+    border-left: 4px solid #4DB848;
+}
+
+.item-list__item {
+    list-style: none;
+    background-color: transparent;
+    margin: 10px 0 5px 0px;
+    padding: 0.5em 0em;
+    display: block;
+    border-bottom: 1px solid #eee;
+}
+
+.item-list--wards__item, .item-list--reports__item {
+    padding:0.5em 0em;
+}
+
+.report-list-filters .multi-select-button {
+    max-width: 10em;
+    padding: 2px 3em 2px 3em;
+    line-height: 1.8em;
+    vertical-align: top;
+    height: 2em;
+    box-shadow: none;
+    border-color: #999;
+    border-radius: 5px;
+    color: #666;
+}
+
+.report-list-filters .form-control, .report-list-filters .dropzone {
+    max-width: 10em;
+    padding: 2px 3em 2px 1em;
+    line-height: 1.8em;
+    vertical-align: top;
+    height: 2em;
+    box-shadow: none;
+    border-color: #999;
+    border-radius: 5px;
+    color: #666;
+}
+
+
+
+
+.item-list {
+  border-bottom: none;
+}
+
+.btn {
+    color: #999;
+    background: transparent;
+    border-color: #999;
+    height: 3em;
+}
+
+.btn:hover {
+    color: #fff !important;
+    background: #48B848;
+    border-color: #48B848;
+    height: 3em;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    color: #999 !important;
+    background: transparent;
+    border-color: #999;
+    height: 3em;
+}
+
+button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+    color: #fff !important;
+    background: #48B848;
+    border-color: #48B848;
+    height: 3em;
+}
+
+
+
+.form-box {
+    margin: 0 0em 0em;
+    background: #eee;
+    padding: 1em;
+    border-bottom: 2px solid #48B848;
+    border-color: #48B848 !important;
+}
+
+.form-box .btn--facebook, .form-box .btn--facebook:hover {
+    background: #3b5998 !important;
+    color: white !important;
+    border-radius: 5px !important;
+    height: 3em;
+    border-color: #3b5998 !important;
+}
+
+.form-txt-submit-box input[type="submit"] {
+    float: right;
+    width: 28%;
+    margin-right: 0.25em;
+    padding-top: 0.6em;
+    padding-bottom: 0.5em;
+    background: none;
+    color: #48B848 !important;
+    height: 3em;
+    border-color: #48B848;
+}
+
+.form-txt-submit-box input[type="submit"]:hover {
+    background: #48B848;
+    color: #fff !important;
+}
+
+.content {
+  color: #666;
+}
+
+#report-a-problem-sidebar {
+ 
+ background-color: #eee;
+ 
+}
+
+label {
+  color: #48B848;
+}
+
+a {
+  color: #48B848;
+}
+
+.form-control, .dropzone {
+
+  border: 1px solid #999;
+  border-radius: 5px;
+  box-shadow: none;
+  padding: 10px;
+
+}
+
+.form-box .form-control, .form-box .dropzone {
+
+  border-color: #4E6E5D;
+  background-color: #eee;
+  color: #4E6E5D;
+
+}
+
+
+
+
+input[type="text"], input[type="password"], input[type="email"], textarea {
+  height: 3em;
+  padding: 10px;
+}
+
+
+select.form-control, select.dropzone {
+  box-shadow: none;
+  padding: 10px;
+  height: 3em;
+  color: #666;
+}
+
+
+.dz-clickable:hover .dz-message u, .dz-drag-hover .dz-message u {
+  color: #48B848;
+}
+
+.dz-clickable .dz-message u {
+  color: #48B848;
+}
