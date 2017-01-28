@@ -10,6 +10,7 @@ use Encode;
 use List::MoreUtils 'none';
 use URI;
 use Digest::MD5 qw(md5_hex);
+use Regexp::Common;
 
 use Carp;
 use mySociety::MaPit;
@@ -741,7 +742,7 @@ The MaPit types this site handles
 
 =cut
 
-sub area_types          { FixMyStreet->config('MAPIT_TYPES') || [ 'ZZZ' ] }
+sub area_types          { FixMyStreet->config('MAPIT_TYPES') || [ 'LGA' ] }
 sub area_types_children { FixMyStreet->config('MAPIT_TYPES_CHILDREN') || [] }
 
 =head2 contact_name, contact_email
@@ -943,11 +944,39 @@ Returns the colour of pin to be used for a particular report
 (so perhaps different depending upon the age of the report).
 
 =cut
+
 sub pin_colour {
+
     my ( $self, $p, $context ) = @_;
+
+    my @allowedPinCategories = ("waste", "traffic", "infrastructure", "environmental", "disasterriskreduction");
+    my $finalPinCategory = "other";
+
+    my $pinCategory = clean_category( $p->category );
+
+    if ( grep { $_ eq $pinCategory } @allowedPinCategories ) {
+	$finalPinCategory = $pinCategory;
+    }
+
     #return 'green' if time() - $p->confirmed->epoch < 7 * 24 * 60 * 60;
-    return 'yellow' if $context eq 'around' || $context eq 'reports' || $context eq 'report';
-    return $p->is_fixed ? 'green' : 'red';
+    #return 'yellow' if $context eq 'around' || $context eq 'reports' || $context eq 'report';
+
+    return $finalPinCategory.'-progress' if $p->is_closed;
+    return $p->is_fixed ? $finalPinCategory.'-fixed' : $finalPinCategory.'-problem';
+
+}
+
+=head2 clean_category
+
+Clean category from spaces and make it all lowercase
+
+=cut
+
+sub clean_category {
+    my $s = shift;
+    $s =~ s/\s+//g;
+    $s = lc $s;
+    return $s;
 }
 
 =head2 path_to_pin_icons
@@ -1186,5 +1215,7 @@ sub category_extra_hidden {
     my ($self, $meta) = @_;
 	return 0;
 }
+
+
 
 1;

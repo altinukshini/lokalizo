@@ -4,3 +4,50 @@
         <a href="#main-nav" id="nav-link">Main Navigation</a>
     </div>
 </header>
+
+[%
+    SET base = "";
+    SET base = c.cobrand.base_url IF admin;
+%]
+
+<nav>
+  <ul>
+
+    <li id="link-one">
+      <div>R</div>
+      <div>
+	<[% IF c.req.uri.path == '/reports' %]span[% ELSE %]a href="[% base %]/reports[% IF c.user_exists AND c.user.categories.size %]?filter_category=[% c.user.categories.join(",") | uri | html %][% END %]"[% END %]>
+	[% loc("All reports") %]</[% c.req.uri.path == '/reports' ? 'span' : 'a' %]>[%
+        %]
+      </div>
+    </li>
+
+    <li id="link-two">
+      <div>A</div>
+      <div>
+	<[% IF c.req.uri.path == '/alert' %]span[% ELSE %]a href="[% base %]/alert[% pc ? '/list?pc=' : '' %][% pc | uri %]"[% END %]>
+	[% loc("Local alerts") %]</[% c.req.uri.path == '/alert' ? 'span' : 'a' %]>[%
+	%]
+      </div>
+    </li>
+
+    <li id="link-three">
+      <div>F</div>
+      <div>
+	<[% IF c.req.uri.path == '/faq' %]span[% ELSE %]a href="[% base %]/faq"[% END %]>
+	[% loc("Help") %]</[% c.req.uri.path == '/faq' ? 'span' : 'a' %]>[%
+	%]
+      </div>
+    </li>
+
+    <li id="link-four" class="nav-menu__item--privacy">
+      <div>P</div>
+      <div>
+	<[% IF c.req.uri.path == '/privacy' %]span[% ELSE %]a href="[% base %]/privacy"[% END%]>
+	[% loc("Privacy") %]</[% c.req.uri.path == '/privacy' ? 'span' : 'a' %]>
+      </div>
+    </li>
+
+  </ul>
+</nav>
+

@@ -1,2 +1,243 @@
 @import "_colours";
 @import "../sass/layout";
+
+
+
+#map_box {
+  position: absolute;
+  z-index: auto;
+  top: $mappage-header-height;
+  bottom: 0;
+  #{$right}: 0;
+  #{$left}: 3.5rem;  
+  //#{$left}: $mappage-sidebar-width;
+  width: auto; // stretch from right edge of sidebar to left edge of window
+  height: auto; // stretch from bottom of header to bottom of window
+  margin: 0;
+
+  .with-notes & {
+    #{$left}: $mappage-with-notes-sidebar-width;
+  }
+
+  .with-actions & {
+    #{$left}: ($mappage-with-actions-sidebar-width + 3);
+  }
+}
+
+#map_sidebar {
+  position: absolute;
+  z-index: auto;
+  top: ($mappage-header-height + 4);
+  #{$left}: 5em; //0;
+  bottom: 0;
+  width: ($mappage-sidebar-width - ($mappage-sidebar-padding * 2));
+  padding: $mappage-sidebar-padding;
+  overflow: hidden; // auto; // vertical scrollbar when list is taller than window
+  background-color: #fff; // since no longer in the flow inside .content
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+
+  .with-notes & {
+    width: ($mappage-with-notes-sidebar-width - ($mappage-sidebar-padding * 2));
+    // TODO: Should have a bitmap image fallback for old browsers!!
+    background-image: -webkit-linear-gradient(flip(90deg, 270deg), transparent 29em, #E9F2FF 29em);
+    background-image: linear-gradient(flip(90deg, 270deg), transparent 29em, #E9F2FF 29em);
+  }
+
+  .with-actions & {
+    width: $mappage-with-actions-sidebar-width;
+    max-width: 100%; // Secondary column will squish on screens 768-960px
+    padding: 0; // Padding will be handled by children of .two_column_sidebar
+    left: 3.5em;
+    top: $mappage-header-height;
+    border-radius: 0;
+
+    .shadow-wrap {
+      left: 3.5em;
+    }
+
+    &:after {
+      display: none; // 4em bottom spacing will be handled by children of .two_column_sidebar
+    }
+  }
+
+  // Chrome/Safari count padding-bottom as part of the scrollable content in
+  // an overflow:scroll element (technically in contravention of the spec),
+  // whereas Firefox/IE render the padding outside the scrollable area.
+  // We need padding at the bottom of the sidebar, to stop .shadow-wrap from
+  // obscuring content at the bottom of the sidebar. So we use an :after
+  // pseudo-element instead of padding.
+  // https://bugzilla.mozilla.org/show_bug.cgi?id=748518
+  &:after {
+    content: "";
+    display: block;
+    height: 4em;
+  }
+}
+
+
+.shadow-wrap {
+  #{$left}: 5em;
+}
+
+#side-report{
+  overflow: auto;
+  padding-right: 25px;
+  height: 92% !important;
+  width: auto;
+  position: absolute;
+  padding-left: 10px;
+}
+
+
+// SIDEBAR
+
+$navW: 3.5rem;
+$navColor: #2680F3;
+
+nav {
+  position: absolute;
+  top: $mappage-header-height;
+  left: 0;
+  width: $navW;
+  height: auto;
+  bottom: 0;
+  background: $navColor;
+  transition: all 300ms ease;
+  overflow: hidden;
+  z-index: 50;
+  box-shadow: 0px 0px 10px #333;
+
+  // SIDEBAR EXPAND
+  &:hover {
+    width: $navW * 4;
+  }
+
+  * {
+    user-select: none;
+  }
+
+  // SIDEBAR MENU
+  > ul {
+    display: table;
+    width: $navW * 4;
+
+    // SIDEBAR MENU ITEM
+    > li {
+      display: table-row;
+      background: darken($navColor, 10%);
+      cursor: pointer;
+
+      &:hover {
+        background: lighten($navColor, 10%);
+      }
+
+      &:active {
+        background: lighten($navColor, 20%);
+      }
+
+      > div {
+        height: $navW;
+        line-height: $navW;
+        display: table-cell;
+
+        // ICON
+        &:nth-child(1) {
+          width: $navW;
+          text-align: center;
+        }
+
+        // DESCRIPTION
+        &:nth-child(2) {
+          width: $navW * 3;
+          text-align: left;
+          padding-left: $navW / 5;
+        }
+      }
+    }
+  }
+}
+
+
+
+// This goes inside #map_sidebar, and establishes a flex container allowing
+// us to split the sidebar into two side-by-side columns.
+.two_column_sidebar {
+  @include flex-container();
+  @include flex-align(stretch); // children will fill entire height of this element
+  min-height: 100%; // this element will fill entire height of parent (#map_sidebar)
+
+  & > * {
+    // Columns should start at 50% width, and (eg: if scrollbars appear,
+    // reducing the available width), shrink down to less than 50%.
+    @include box-sizing(border-box);
+    @include flex(0 1 auto);
+    width: 50%;
+    padding: $mappage-sidebar-padding;
+
+    // Add extra space at the bottom of the sidebar columns, to stop
+    // .shadow-wrap obscuring text at the bottom of the sidebar.
+    &:after {
+      content: "";
+      display: block;
+      height: 4em;
+    }
+  }
+
+  // Default for children is to share the horizontal space equally amongst
+  // themselves. But to make sure that the edge of #side-report lines up
+  // with the edge of .shadow-wrap, we give #side-report a fixed width,
+  // and leave the other column to shrink to the remaining space.
+  #side-report {
+    width: $mappage-sidebar-width;
+    height: 94% !important;
+    @include flex(0 0 auto);
+  }
+
+  // No flexbox in IE8, so we settle for floating the columns instead.
+  // They will no longer stretch the full height of the sidebar, and the
+  // width of #side-report will no longer match the width of .shadow-wrap
+  // when a scrollbar is present.
+  .iel8 & {
+    @include clearfix();
+
+    & > * {
+      float: left;
+      width: 50%;
+    }
+  // with the edge of .shadow-wrap, we give #side-report a fixed width,
+  // and leave the other column to shrink to the remaining space.
+  #side-report {
+    width: $mappage-sidebar-width;
+    height: 94% !important;
+    @include flex(0 0 auto);
+  }
+
+  // No flexbox in IE8, so we settle for floating the columns instead.
+  // They will no longer stretch the full height of the sidebar, and the
+  // width of #side-report will no longer match the width of .shadow-wrap
+  // when a scrollbar is present.
+  .iel8 & {
+    @include clearfix();
+
+    & > * {
+      float: left;
+      width: 50%;
+    }
+
+    #side-report {
+      width: 50%;
+    }
+  }
+}
+
+#side-inspect {
+  background-color: #E9F2FF;
+  right: 0;
+  position: absolute;
+  overflow: auto;
+  padding: 10px 10px 15px 10px;
+  height: 100%;
+}
+
+}
