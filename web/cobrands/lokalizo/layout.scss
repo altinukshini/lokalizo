@@ -2,8 +2,106 @@
 @import "../sass/layout";
 
 
+body {
+    background-color: #86cbe9;
+    background-image: url("images/mountains.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: bottom;
+}
+
+#front-main {
+ margin: 0 auto;
+ width: 60em;
+ background: transparent;
+ color: #414042;
+}
+
+#front-main h2 {
+ color: #fff;
+}
+
+#front-main #postcodeForm label {
+    margin: 0.5em 0;
+    color: #414042;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+body.frontpage .nav-wrapper-2 {
+  height: 4em;
+}
+
+.container {
+ margin: 3em auto 6em auto;
+ padding: 1em;
+ width: 60em;
+ position: relative;
+ background-color: #fff;
+ border-radius: 15px;
+}
+
+#site-header .container {
+    min-height: 4em;
+    padding: 0;
+    margin: 0 auto;
+}
+.nav-menu.nav-menu--main {
+    margin: 0;
+}
+.nav-menu--main a:hover {
+ background-color: transparent;
+ color: #4DB848;
+}
+.nav-menu--main a, .nav-menu--main span {
+    padding: 1.5em;
+    font-size: 0.9em;
+}
+body.frontpage #site-logo {
+  top: 0em;
+}
+
+
+#front-main #postcodeForm div {
+    border: none;
+    width: 32em;
+    height: 3em;
+    color: #414042;
+    border-radius: 15px;
+}
+#front-main #postcodeForm div input#pc {
+    border-color: #fff;
+    height: 3em;
+    color: #414042;
+    width: 100%;
+    padding: 10px 10px;
+}
+#front-main #postcodeForm div input#sub {
+    background: #4DB848;
+    color: #fff !important;
+    border-radius: 15px;
+    height: 3em;
+    width: auto;
+    padding: 0em 0.5em 0em 0.5em;
+}
+
+#front-main #postcodeForm div input#sub:hover {
+    background: #4DB848;
+    color: #fff !important;
+    border-radius: 15px;
+    height: 3em;
+    width: auto;
+    padding: 0em 0.5em 0em 0.5em;
+}
+
+
 .shadow-wrap ul#key-tools {
  border-top: 2px solid #4DB848;
+}
+
+.nav-wrapper .nav-wrapper-2 {
+  background: #fff;
 }
 
 body.mappage .nav-wrapper .nav-wrapper-2 {
