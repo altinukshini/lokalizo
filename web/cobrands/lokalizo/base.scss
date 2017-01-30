@@ -4,6 +4,10 @@
 
 @import "../sass/base";
 
+#site-logo {
+  width: 200px;
+}
+
 .shadow-wrap ul#key-tools li a:hover, .shadow-wrap ul#key-tools li a.hover, .shadow-wrap ul#key-tools li input[type="submit"]:hover, .shadow-wrap ul#key-tools li input.hover[type="submit"] {
   background-color: #4DB848;
 }
@@ -27,6 +31,9 @@
 .item-list--wards__item, .item-list--reports__item {
     padding:0.5em 0em;
 }
+.item-list.item-list--updates {
+    margin: 1em;
+}
 
 .report-list-filters .multi-select-button {
     max-width: 10em;
@@ -41,11 +48,11 @@
 }
 
 .report-list-filters .form-control, .report-list-filters .dropzone {
-    max-width: 10em;
-    padding: 2px 3em 2px 1em;
+    max-width: 15em;
+    padding: 2px 3em 2px 3em;
     line-height: 1.8em;
     vertical-align: top;
-    height: 2em;
+    height: 2.5em;
     box-shadow: none;
     border-color: #999;
     border-radius: 5px;
@@ -86,8 +93,19 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
     border-color: #48B848;
     height: 3em;
 }
+.btn.js-moderate.moderate-display {
+    height: auto;
+    padding: 4px;
+    font-size: 12px;
+    float: right;
+}
+.segmented-control a, .segmented-control .btn {
+    height: 1em !important;
+}
 
-
+.inspect-section .btn--navigate, .inspect-section .btn--block {
+    height: 1em;
+}
 
 .form-box {
     margin: 0 0em 0em;
@@ -127,9 +145,7 @@ button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type=
 }
 
 #report-a-problem-sidebar {
- 
  background-color: #eee;
- 
 }
 
 label {

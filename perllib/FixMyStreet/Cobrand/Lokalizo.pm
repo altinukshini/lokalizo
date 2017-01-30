@@ -15,6 +15,7 @@ use Regexp::Common;
 use Carp;
 use mySociety::MaPit;
 use mySociety::PostcodeUtil;
+use mySociety::Locale;
 
 =head1 path_to_web_templates
 
@@ -179,15 +180,6 @@ sub restriction {
     return $self->moniker ? { cobrand => $self->moniker } : {};
 }
 
-=head2 base_url_with_lang 
-
-=cut
-
-sub base_url_with_lang {
-    my $self = shift;
-    return $self->base_url;
-}
-
 =head2 admin_base_url
 
 Base URL for the admin interface.
@@ -240,6 +232,32 @@ Can be specified in template.
 =cut
 
 sub enter_postcode_text { }
+
+
+=head2 base_url_with_lang
+
+Return base url with language
+
+=cut
+
+sub base_url_with_lang {
+
+   my $self = shift;
+
+   my $base = $self->base_url;
+
+   my $lang = $mySociety::Locale::lang;
+
+   if ($lang eq 'sq') {
+      $base =~ s{http://}{$&sq.};
+   } else {
+      $base =~ s{http://}{$&en.};
+   }
+
+   return $base;
+
+}
+
 
 =head2 set_lang_and_domain
 

@@ -2,6 +2,12 @@
 @import "../sass/layout";
 
 
+body.frontpage #site-logo {
+    width: 200px;
+    background: url("images/sprite.png") no-repeat;
+    top: 0.7em !important;
+}
+
 body {
     background-color: #86cbe9;
     background-image: url("images/mountains.png");
@@ -118,7 +124,15 @@ body.mappage .nav-wrapper .nav-wrapper-2 {
  border-width: 0px 0 2px 0;
 }
 
-
+#side-report .full-width {
+    margin: 0em;
+}
+#side-inspect {
+    background-color: #eee;
+}
+#js-reports-list {
+    margin: 0.5em;
+}
 .with-notes #map_sidebar {
 
  background-image: linear-gradient(90deg, transparent 29em, #eee 29em);
