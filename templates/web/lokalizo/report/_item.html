@@ -4,8 +4,7 @@
 
 <li class="item-list__item item-list--reports__item [% item_extra_class %]"
     data-report-id="[% problem.id | html %]" data-lastupdate="[% problem.lastupdate %]">
-    <a href="[% c.cobrand.base_url_with_lang( problem ) %][% problem.url %]">
-<!-- <a href="[% c.cobrand.base_url_for_report( problem ) %][% problem.url %]"> -->
+    <a href="[% c.cobrand.base_url_for_report( problem ) %][% problem.url %]">
     [% IF problem.photo %]
         <img class="img" height="60" width="90" src="[% problem.photos.first.url_fp %]" alt="">
 
@@ -18,7 +17,7 @@
         <div class="item-list__description">[% problem.detail | html %]</div>
     [% END %]
         <small>
-	    [% problem.category | html %],
+	        [% c.cobrand.change_category_text(problem.category) | html %],
             [%- IF c.cobrand.moniker != 'fixamingata' %] [%# Default: %]
                 [%- prettify_dt( problem.confirmed, 1 ) %]
             [%- ELSE %] [%# Swedish cobrand fixamingata: %]

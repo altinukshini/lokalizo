@@ -126,13 +126,13 @@ class="admin-offsite-link">[% problem.latitude %], [% problem.longitude %]</a>
 <select class="form-control" name="category" id="category">
   [% IF NOT problem.category OR NOT categories.grep(problem.category).size %]
   <optgroup label="[% loc('Existing category') %]">
-    <option selected value="[% problem.category | html %]">[% (problem.category OR '-') | html %]</option>
+    <option selected value="[% problem.category | html %]">[% (c.cobrand.change_category_text(problem.category) OR '-') | html %]</option>
   </optgroup>
   [% END %]
   [% IF categories.size %]
     <optgroup label="[% loc('Available categories') %]">
       [% FOREACH cat IN categories %]
-        <option[% ' selected' IF problem.category == cat %]>[% cat | html %]</option>
+        <option[% ' selected' IF problem.category == cat %]>[% c.cobrand.change_category_text(cat) | html %]</option>
       [% END %]
     </optgroup>
   [% END %]

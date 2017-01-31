@@ -208,8 +208,8 @@ hashref.
 =cut
 
 sub base_url_for_report {
-    my ( $self, $report ) = @_;
-    return $self->base_url;
+    my $self = shift; 
+    return base_url_with_lang($self);
 }
 
 =head2 base_host
@@ -962,6 +962,34 @@ Returns the colour of pin to be used for a particular report
 (so perhaps different depending upon the age of the report).
 
 =cut
+
+sub change_category_text {
+    my ($self, $category) = @_;
+
+    my $lang = $mySociety::Locale::lang;
+
+    my %allowedCategories_sq = (
+        "Other"     =>  "Tjera",
+        "Traffic"     =>  "Trafik",
+        "Environmental"     =>  "Ambient",
+        "Infrastructure"    =>  "Infrastrukture",
+        "Waste"     =>  "Mbeturina",
+        "Disaster risk reduction"       =>  "Fatkeqesi natyrore"
+    );
+
+    if ($lang eq 'en') {
+        return $category;
+    } elsif ($lang eq 'sq') {
+        if (exists $allowedCategories_sq{$category}) {
+            return $allowedCategories_sq{$category};
+        }
+        return $category;
+    }
+
+    return $category;
+}
+
+
 
 sub pin_colour {
 

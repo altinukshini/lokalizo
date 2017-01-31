@@ -1,6 +1,51 @@
-// jquery.multi-select.js
-// by mySociety
-// https://github.com/mysociety/jquery-multi-select
+function translateCategory(category){
+	var categories = {
+		"Waste" : {
+  			"en" : "Waste",
+  			"sq" : "Mbeturina",
+  			"sr" : "Waste"
+		},
+		"Infrastructure" : {
+            "en" : "Infrastructure",
+            "sq" : "Infrastrukture",
+            "sr" : "Infrastructure"
+    },
+		"Traffic" : {
+            "en" : "Traffic",
+            "sq" : "Trafik",
+            "sr" : "Traffic"
+    },
+		"Environmental" : {
+            "en" : "Environmental",
+            "sq" : "Ambient",
+            "sr" : "Environmental"
+    },
+		"Disaster risk reduction" : {
+            "en" : "Disaster risk reduction",
+            "sq" : "Fatkeqsi natyrore",
+            "sr" : "Disaster risk reduction"
+    },
+		"Other" : {
+            "en" : "Other",
+            "sq" : "Tjera",
+            "sr" : "Other"
+    }
+	};
+	var websiteDomain = window.location.host;
+	var domainparts = websiteDomain.split('.');
+	var subdomain = domainparts[0];
+
+	category = category.trimLeft().trimRight();
+
+	if(subdomain == 'sq' || subdomain == 'en' || subdomain == 'sr'){
+		if(category in categories){ return categories[category][subdomain];}
+
+		return category;
+      	}
+
+	return category;
+}
+
 
 ;(function($) {
 
@@ -233,12 +278,13 @@
 
     constructMenuItem: function($option, option_index) {
       var unique_id = this.$element.attr('name') + '_' + option_index;
+
       var $item = $(this.settings.menuItemHTML)
         .attr({
           'for': unique_id,
           'role': 'menuitem'
         })
-        .text(' ' + $option.text());
+        .text(' ' + translateCategory($option.text()));
 
       var $input = $('<input>')
         .attr({
