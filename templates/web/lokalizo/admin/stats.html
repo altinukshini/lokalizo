@@ -92,7 +92,7 @@
       [% loc('Council:') %] <select class="form-control" id='body' name='body'>
           <option value=''>[% loc('No council') %]</option>
           [% FOR body IN bodies %]
-          <option value="[% body.id %]"[% ' selected' IF body.id == selected_body %]>[% body.name %]</option>
+          <option value="[% body.id %]"[% ' selected' IF body.id == selected_body %]>[% c.cobrand.change_body_text(body.name) | html %]</option>
           [% END %]
       </select>
       </p>

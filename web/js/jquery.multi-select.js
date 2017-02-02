@@ -31,19 +31,18 @@ function translateCategory(category){
             "sr" : "Other"
     }
 	};
-	var websiteDomain = window.location.host;
-	var domainparts = websiteDomain.split('.');
-	var subdomain = domainparts[0];
+  var websiteDomain = window.location.host;
+  var domainparts = websiteDomain.split('.');
+  var subdomain = domainparts[0];
 
-	category = category.trimLeft().trimRight();
+  category = category.trimLeft().trimRight();
 
-	if(subdomain == 'sq' || subdomain == 'en' || subdomain == 'sr'){
-		if(category in categories){ return categories[category][subdomain];}
+  if(subdomain == 'sq' || subdomain == 'en' || subdomain == 'sr'){
+    if(category in categories){ return categories[category][subdomain];}
+    return category;
+  }
 
-		return category;
-      	}
-
-	return category;
+  return category;
 }
 
 

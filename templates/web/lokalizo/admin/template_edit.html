@@ -1,4 +1,4 @@
-[% INCLUDE 'admin/header.html' title=tprintf(loc('Response Template for %s'), body.name) -%]
+[% INCLUDE 'admin/header.html' title=tprintf(loc('Response Template for %s'), c.cobrand.change_body_text(body.name)) -%]
 [% rt = response_template %]
 
 [% UNLESS rt.id %]<h3>[% loc('New template') %]</h3>[% END %]

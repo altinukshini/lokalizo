@@ -37,7 +37,7 @@ and to receive notices of updates.
   [% FOREACH body IN bodies %]
     [%- SET id = body.id %]
       <option[% IF body.deleted %] class="adminhidden"[% END %] value="[% body.id %]">
-          [% body.name | html %]
+          [% c.cobrand.change_body_text(body.name) | html %]
           [%- IF body.parent %], [% body.parent.name | html %][% END -%]
       </option>
   [% END %]

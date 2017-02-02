@@ -13,6 +13,25 @@
   background-color: #4DB848;
 }
 
+#report-cta {
+  color: #48B848;
+  top: 1.7em;
+  left: 0;
+  margin-left: 5px;
+  position: relative;
+  border-color: #999;
+}
+
+#report-cta:hover {
+  color: #fff;
+  background-color: #48B848;
+  border-color: #48B848;
+}
+
+.frontpage #report-cta, .fullwidthpage #report-cta {
+    display: none;
+}
+
 .item-list--wards__item a:hover, .item-list--reports__item a:hover, .item-list--wards__item a:focus, .item-list--reports__item a:focus, .hovered.item-list--wards__item a, .hovered.item-list--reports__item a {
     background-color: transparent;
     text-decoration: none;

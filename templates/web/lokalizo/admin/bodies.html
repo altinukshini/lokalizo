@@ -39,12 +39,12 @@
             [% IF c.cobrand.moniker == 'zurich' %]
               [% FILTER repeat(4*body.api_key) %]&nbsp;[% END %]
               [% IF admin_type == 'super' %]
-                <a href="[% c.uri_for( 'body', id ) %]">[% body.name | html %]</a>
+                <a href="[% c.uri_for( 'body', id ) %]">[% c.cobrand.change_body_text(body.name) | html %]</a>
               [% ELSE %]
                 [% body.name | html %]
               [% END %]
             [% ELSE %] [%# not Zurich: all bodies should be links %]
-              <a href="[% c.uri_for( 'body', id ) %]">[% body.name | html%]</a>
+              <a href="[% c.uri_for( 'body', id ) %]">[% c.cobrand.change_body_text(body.name) | html%]</a>
               [%- IF body.parent %], [% body.parent.name | html %][% END -%]
             [% END %]
           </td>

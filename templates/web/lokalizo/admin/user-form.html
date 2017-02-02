@@ -36,7 +36,7 @@
           [% loc('Body:') %] <select class="form-control" id='body' name='body'>
             <option value=''>[% loc('No body') %]</option>
           [% FOR body IN bodies %]
-            <option value="[% body.id %]"[% ' selected data-originally-selected' IF body.id == user.from_body.id %]>[% body.name %]</option>
+            <option value="[% body.id %]"[% ' selected data-originally-selected' IF body.id == user.from_body.id %]>[% c.cobrand.change_body_text(body.name) %]</option>
           [% END %]
           </select>
         </li>
@@ -111,7 +111,7 @@
               [% loc('Trusted by bodies:') %]<br />
               <select class="form-control" id='body' name='trusted_bodies' multiple>
                 [% FOR body IN bodies %]
-                  <option value="[% body.id %]"[% ' selected' IF user.has_permission_to('trusted', body.id) %]>[% body.name %]</option>
+                  <option value="[% body.id %]"[% ' selected' IF user.has_permission_to('trusted', body.id) %]>[% c.cobrand.change_body_text(body.name) %]</option>
                 [% END %]
               </select>
             [% ELSE %]

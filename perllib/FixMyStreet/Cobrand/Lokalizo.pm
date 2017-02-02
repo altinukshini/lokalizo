@@ -990,6 +990,112 @@ sub change_category_text {
 }
 
 
+sub change_body_text {
+    my ($self, $body) = @_;
+
+    my $lang = $mySociety::Locale::lang;
+
+    my $enc = 'utf-8';
+
+    my %bodies_sq = (
+        "Municipality of Pristina" => "Komuna e Prishtinës",
+        "Municipality of Decan" => "Komuna e Deçanit",
+        "Municipality of Prizren" => "Komuna e Prizrenit",
+        "Municipality of Gjakova" => "Komuna e Gjakovës",
+        "Municipality of Skenderaj" => "Komuna e Skënderajit",
+        "Municipality of Glogovac" => "Komuna e Gllogocit",
+        "Municipality of Stimlje" => "Komuna e Shtimes",
+        "Municipality of Gjilan" => "Komuna e Gjilanit",
+        "Municipality of Shtrpce" => "Komuna e Shtërpcë",
+        "Municipality of Dragash" => "Komuna e Dragashit",
+        "Municipality of Suva Reka" => "Komuna e Suharekës",
+        "Municipality of Istog" => "Komuna e Istogut",
+        "Municipality of Ferizaj" => "Komuna e Ferizajit",
+        "Municipality of Kacanik" => "Komuna e Kaçanikut",
+        "Municipality of Viti" => "Komuna e Vitisë",
+        "Municipality of Klina" => "Komuna e Klinës",
+        "Municipality of Vushtrri" => "Komuna e Vushtrrisë",
+        "Municipality of Fushe Kosove" => "Komuna e Fushë Kosovës",
+        "Municipality of Zubin Potok" => "Komuna e Zubin Potokut",
+        "Municipality of Kamenica" => "Komuna e Kamenicës",
+        "Municipality of Zvecan" => "Komuna e Zveçanit",
+        "Municipality of Mitrovica" => "Komuna e Mitrovicës",
+        "Municipality of Malisheve" => "Komuna e Malishevës",
+        "Municipality of Leposaviq" => "Komuna e Leposaviqit",
+        "Municipality of Hani i Elezit" => "Komuna e Hanit të Elezit",
+        "Municipality of Lipjan" => "Komuna e Lipjanit",
+        "Municipality of Mamush" => "Komuna e Mamushës",
+        "Municipality of Novo Brdo" => "Komuna e Novobërdës",
+        "Municipality of Junik" => "Komuna e Junikut",
+        "Municipality of Obilic" => "Komuna e Obilicit",
+        "Municipality of Klokot" => "Komuna e Kllokotit",
+        "Municipality of Rahovec" => "Komuna e Rahovecit",
+        "Municipality of Gracanice" => "Komuna e Graçanicës",
+        "Municipality of Peja" => "Komuna e Pejës",
+        "Municipality of Ranilug" => "Komuna e Ranillugut",
+        "Municipality of Podujevo" => "Komuna e Podujevës",
+        "Municipality of Partesh" => "Komuna e Parteshit",
+        "Municipality of North Mitrovica" => "Komuna e Mitrovicës Veriore"
+    );
+
+    my %bodies_sr = (
+        "Municipality of Pristina" => "Opština Priština",
+        "Municipality of Decan" => "Opština Dečane",
+        "Municipality of Prizren" => "Opština Prizren",
+        "Municipality of Gjakova" => "Opština Djakovic",
+        "Municipality of Skenderaj" => "Opština Srbica",
+        "Municipality of Glogovac" => "Opština Glogovac",
+        "Municipality of Stimlje" => "Opština Štimlje",
+        "Municipality of Gjilan" => "Opština Gnjilane",
+        "Municipality of Shtrpce" => "Opština Štrpce",
+        "Municipality of Dragash" => "Opština Dragaš",
+        "Municipality of Suva Reka" => "Opština Suva Reka",
+        "Municipality of Istog" => "Opština Istok",
+        "Municipality of Ferizaj" => "Opština Uroševac",
+        "Municipality of Kacanik" => "Opština Kačanik",
+        "Municipality of Viti" => "Opština Vitina",
+        "Municipality of Klina" => "Opština Klina",
+        "Municipality of Vushtrri" => "Opština Vučitrn",
+        "Municipality of Fushe Kosove" => "Opština Kosovo Polje",
+        "Municipality of Zubin Potok" => "Opština Zubin Potok",
+        "Municipality of Kamenica" => "Opština Kamenica",
+        "Municipality of Zvecan" => "Opština Zvečan",
+        "Municipality of Mitrovica" => "Opština Mitrovica",
+        "Municipality of Malisheve" => "Opština Mališevo",
+        "Municipality of Leposaviq" => "Opština Leposavič",
+        "Municipality of Hani i Elezit" => "Opština Elez Han",
+        "Municipality of Lipjan" => "Opština Lipjan",
+        "Municipality of Mamush" => "Opština Mamuša",
+        "Municipality of Novo Brdo" => "Opština Novo Brdo",
+        "Municipality of Junik" => "Opština Junik",
+        "Municipality of Obilic" => "Opština Obilič",
+        "Municipality of Klokot" => "Opština Klokot",
+        "Municipality of Rahovec" => "Opština Orahovac",
+        "Municipality of Gracanice" => "Opština Gračanica",
+        "Municipality of Peja" => "Opština Peč",
+        "Municipality of Ranilug" => "Opština Ranilug",
+        "Municipality of Podujevo" => "Opština Podujevo",
+        "Municipality of Partesh" => "Opština Parteš",
+        "Municipality of North Mitrovica" => "Opština Severna Mitrovica"
+    );
+
+    if ($lang eq 'en') {
+        return $body;
+    } elsif ($lang eq 'sq') {
+        if (exists $bodies_sq{$body}) {
+            return decode($enc, $bodies_sq{$body});
+        }
+        return $body;
+    } elsif ($lang eq 'sr') {
+        if (exists $bodies_sr{$body}) {
+            return decode($enc, $bodies_sr{$body});
+        }
+        return $body;
+    }
+
+    return $body;
+}
+
 
 sub pin_colour {
 

@@ -815,9 +815,18 @@ $.extend(fixmystreet.set_up, {
   },
 
   email_login_form: function() {
+    var websiteDomain = window.location.host;
+    var domainparts = websiteDomain.split('.');
+    var subdomain = domainparts[0];
+
+    var loginButton = '<button class="btn btn--social btn--social-email">Log in with email</button>';
+
+    if (subdomain == 'sq') {
+        loginButton = '<button class="btn btn--social btn--social-email">Kyçu me email</button>';
+    }
     // Log in with email button
     var email_form = $('#js-social-email-hide'),
-        button = $('<button class="btn btn--social btn--social-email">Log in with email</button>'),
+        button = $(loginButton),
         form_box = $('<div class="form-box"></div>');
     button.click(function(e) {
         e.preventDefault();

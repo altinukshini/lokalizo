@@ -2,8 +2,6 @@
 
 [% PROCESS 'common_scripts.html' %]
 
-<!-- <script type="text/javascript" src="[% version('/js/lokalizo-main.js') %]"></script> -->
-
 <!--[if lte IE 9]>
   <script src="[% version('/js/history.polyfill.min.js') %]"></script>
 <![endif]-->
@@ -13,3 +11,5 @@
         [%~ FOR attr IN script.1 %] [% attr.key %]="[% attr.value %]"[% END ~%]
         ></script>
 [% END %]
+
+<script type="text/javascript" src="[% version('/js/lokalizo-main.js') %]"></script>

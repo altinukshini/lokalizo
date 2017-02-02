@@ -1,7 +1,9 @@
 [% extra_js = [
     version('/js/jquery.fixedthead.js')
 ] -%]
-[% INCLUDE 'header.html', title = loc('Summary reports'), bodyclass => 'fullwidthpage' %]
+
+[% #INCLUDE 'header.html', title = loc('Summary reports'), bodyclass => 'fullwidthpage' %]
+[% INCLUDE 'header.html', title = loc('Summary reports'), bodyclass = 'frontpage fullwidthpage' %]
 
 <h1>[% loc('All Reports') %]</h1>
 
@@ -35,7 +37,7 @@
 [%- IF NOT body.get_column("area_count") %] class="gone"
 [%- ELSIF ! (loop.count % 2) %] class="a"
 [%- END %]>
-<td class="title"><a href="[% body.url(c) %]">[% body.name %]</a></td>
+<td class="title"><a href="[% body.url(c) %]" class="">[% c.cobrand.change_body_text(body.name) | html %]</a></td>
 <td class="data">[% IF open.${body.id}.new %]<a href="[% body.url(c, { t => 'new' }) %]">[% open.${body.id}.new %]</a>[% ELSE %]0[% END %]</td>
 <td class="data">[% IF open.${body.id}.older %]<a href="[% body.url(c, { t => 'older' }) %]">[% open.${body.id}.older %]</a>[% ELSE %]0[% END %]</td>
 <td class="data">[% IF open.${body.id}.unknown %]<a href="[% body.url(c, { t => 'unknown' }) %]">[% open.${body.id}.unknown %]</a>[% ELSE %]0[% END %]</td>

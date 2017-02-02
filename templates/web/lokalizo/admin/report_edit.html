@@ -56,7 +56,7 @@ class="admin-offsite-link">[% problem.latitude %], [% problem.longitude %]</a>
   [% IF problem.bodies_str %]
     [% FOREACH body IN problem.bodies.values %]
       [% SET body_printed = 1 %]
-      <a href="[% c.uri_for('body', body.id) %]">[% body.name | html %]</a>
+      <a href="[% c.uri_for('body', body.id) %]">[% c.cobrand.change_body_text(body.name) | html %]</a>
       [%- ',' IF NOT loop.last %]
     [% END %]
     [% IF NOT body_printed %]

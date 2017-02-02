@@ -38,7 +38,7 @@
         <select class="form-control" name="parent" id="parent">
             <option value=""> -- [% loc('Select a body') %] -- </option>
             [% FOR b IN bodies %]
-            <option value="[% b.id %]"[% ' selected' IF body.parent.id == b.id %]>[% b.name %]</option>
+            <option value="[% b.id %]"[% ' selected' IF body.parent.id == b.id %]>[% c.cobrand.change_body_text(b.name) %]</option>
             [% END %]
         </select>
     </p>
@@ -129,7 +129,9 @@
     </div>
     <p>
         <input type="checkbox" id="can_be_devolved" name="can_be_devolved"[% ' checked' IF body.can_be_devolved %]>
-        <label for="can_be_devolved" class="inline">Send method or endpoints can be devolved to contacts (i.e, can be different from the body's)</label>
+        <label for="can_be_devolved" class="inline">
+        [% IF lang_code == 'en-gb' %]Send method or endpoints can be devolved to contacts (i.e, can be different from the body's)[% ELSE %]Metoda e dergimit mund ti pershtatet kontaktit (p.sh mund te jete tjeter nga ajo e komunes)[% END %]
+        </label>
     </p>
 
     <p>

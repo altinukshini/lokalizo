@@ -1,4 +1,4 @@
-[% INCLUDE 'admin/header.html' title=tprintf(loc('Council contacts for %s'), body.name) -%]
+[% INCLUDE 'admin/header.html' title=tprintf(loc('Council contacts for %s'), c.cobrand.change_body_text(body.name)) -%]
 
 [% BLOCK highlightchanged_yesno %]
 [%- output = loc('No') %]
