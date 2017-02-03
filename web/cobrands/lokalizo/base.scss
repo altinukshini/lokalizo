@@ -79,11 +79,14 @@
     color: #666;
 }
 
-
+.item-list--reports__item a {
+  padding: 0 0 0 0.5em;
+}
 
 
 .item-list {
   border-bottom: none;
+  margin: 0em 1em 0em 1em;
 }
 
 .btn {
@@ -172,10 +175,6 @@ label {
   color: #48B848;
 }
 
-a {
-  color: #48B848;
-}
-
 .form-control, .dropzone {
 
   border: 1px solid #999;
@@ -192,9 +191,6 @@ a {
   color: #4E6E5D;
 
 }
-
-
-
 
 input[type="text"], input[type="password"], input[type="email"], textarea {
   height: 3em;
@@ -216,4 +212,23 @@ select.form-control, select.dropzone {
 
 .dz-clickable .dz-message u {
   color: #48B848;
+}
+
+a, .content a {
+  color: #48B848;
+  text-decoration: none;
+}
+
+a:hover, a:active, .content a:active, .content a:hover {
+  color: #4E6E5D;
+  text-decoration: none;
+}
+
+.plain-list a {
+    color: #4DB848;
+}
+
+footer {
+    margin: -4em auto 6em auto;
+    width: 60em;
 }

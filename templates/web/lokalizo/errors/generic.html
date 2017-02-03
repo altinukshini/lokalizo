@@ -1,4 +1,5 @@
-[% INCLUDE 'header.html', bodyclass = 'fullwidthpage', title = loc('Error') %]
+[%# INCLUDE 'header.html', bodyclass = 'fullwidthpage', title = loc('Error') %]
+[% INCLUDE 'header.html', title = loc('Error'), bodyclass = 'frontpage fullwidthpage' %]
 
 [% IF csrf_token ~%]
 <input type="hidden" name="token" value="[% csrf_token %]">

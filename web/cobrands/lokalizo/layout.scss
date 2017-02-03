@@ -5,7 +5,9 @@
 body.frontpage #site-logo {
     width: 200px;
     background: url("images/logo.png") no-repeat;
-    top: 0.7em !important;
+    top: 0.6em !important;
+    margin-left: 1em;
+    position: fixed;
 }
 
 body {
@@ -37,6 +39,28 @@ body {
 
 body.frontpage .nav-wrapper-2 {
   height: 4em;
+  position: fixed;
+}
+
+.twothirdswidthpage .container {
+    background-image: linear-gradient(90deg, transparent 44.5em, #eee 29em);
+}
+
+body.twothirdswidthpage .content .sticky-sidebar aside {
+  margin-left: 2em;
+  margin-top: 2em;
+  top: 11em;
+  border-bottom: 2px solid #4DB848;
+}
+
+#main-nav {
+  float: right;
+}
+
+body.mappage #main-nav {
+  width: 100%;
+  margin-right: 1em;
+  float: left;
 }
 
 .container {
@@ -47,14 +71,16 @@ body.frontpage .nav-wrapper-2 {
  background-color: #fff;
  border-radius: 15px;
 }
-
+.container.header-logo {
+    width: 100%;
+}
 #site-header .container {
     min-height: 4em;
     padding: 0;
     margin: 0 auto;
 }
 .nav-menu.nav-menu--main {
-    margin: 0;
+    margin: 0 1em 0 0;
 }
 .nav-menu--main a:hover {
  background-color: transparent;
@@ -64,9 +90,6 @@ body.frontpage .nav-wrapper-2 {
     padding: 1.5em;
     font-size: 0.9em;
 }
-body.frontpage #site-logo {
-  top: 0em;
-}
 
 #report-cta {
   display: block;
@@ -74,7 +97,7 @@ body.frontpage #site-logo {
 
 .nav-menu.nav-menu--main.left {
     float: left;
-    margin-left: 220px;
+    margin-left: 15em;
 }
 
 .frontpage .nav-menu.nav-menu--main.left, .fullwidthpage .nav-menu.nav-menu--main.left {
@@ -123,7 +146,10 @@ body.frontpage #site-logo {
 }
 
 body.mappage .nav-wrapper .nav-wrapper-2 {
-  background: #fff;
+    background: #fff;
+    background-image: url('images/logo-bg2.png');
+    background-repeat: no-repeat;
+    background-position: bottom right;
 }
 
 .big-green-banner {
@@ -253,7 +279,7 @@ $navColor: #fff;
 
 .frontpage nav, .fullwidthpage nav {
   display: block !important;
-  position: absolute;
+  position: fixed;
   top: $mappage-header-height;
   left: 0;
   width: $navW;
@@ -264,36 +290,68 @@ $navColor: #fff;
   overflow: hidden;
   z-index: 50;
   border-right: 2px solid #4DB848;
+  color:#999;
+
+  a{
+    color: #999;
+  }
 
   // SIDEBAR EXPAND
   &:hover {
-    width: $navW * 4;
+    width: ($navW * 4) + 1;
   }
 
   * {
     user-select: none;
   }
 
+  span {
+    color: #4DB848;
+  }
+
   // SIDEBAR MENU
   > ul {
     display: table;
-    width: $navW * 4;
+    width: ($navW * 4) + 1;
+    color:#999;
+
+    a{
+      color: #999;
+    }
 
     // SIDEBAR MENU ITEM
     > li {
+      color:#999;
+
+      a{
+        color: #999;
+      }
       display: table-row;
       
       cursor: pointer;
 
       &:hover {
-        background: darken($navColor, 10%);
+        background: darken($navColor, 5%);
+        color: #4DB848;
+        a {
+          color: #4DB848;
+        }
       }
 
       &:active {
-        background: darken($navColor, 10%);
+        background: darken($navColor, 5%);
+        color: #4DB848;
+        a {
+          color: #4DB848;
+        }
       }
 
       > div {
+        color:#999;
+
+        a{
+          color: #999;
+        }
         height: $navW;
         line-height: $navW;
         display: table-cell;
@@ -403,3 +461,88 @@ $navColor: #fff;
 
 
 */
+a {
+  color: #48B848;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: #4E6E5D;
+  text-decoration: none;
+}
+
+.header-logo #postcodeForm {
+    z-index: 16;
+    position: fixed;
+    margin-left: 15em;
+    margin-top: 0.4em;
+}
+.header-logo form input[type="text"] {
+    background-color: transparent;
+    width: 20em;
+    float: left;
+    border-bottom: 1px solid #999 !important;
+    border: 1px solid;
+    border-color: #fff;
+    color: #ccc;
+}
+.header-logo #postcodeForm #sub {
+    border: 1px solid #fff;
+    border-bottom: 1px solid #999;
+    margin-left: 5px;
+}
+.header-logo #postcodeForm #sub:hover {
+    background-color: #fff;
+    color: #4DB848 !important;
+}
+
+.showMenuSearch .header-logo #postcodeForm {
+  display:block !important;
+}
+
+.header-logo #postcodeForm #geolocate_link {
+  display: none;
+}
+
+#footer-help {
+    border-left: 1em solid transparent;
+    width: 46%;
+    float: right;
+    background: #fff;
+    padding: 2em 1em 2em 1em;
+    border-radius: 15px;
+    height: 10em;
+    margin-right: -1em;
+}
+
+#footer-mobileapps {
+    border-right: 1em solid transparent;
+    background: #fff;
+    width: 46%;
+    float: left;
+    border-radius: 15px;
+    padding: 2em 1em 2em 1em;
+    height: 10em;
+}
+
+footer .bordered {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body.twothirdswidthpage .content .sticky-sidebar {
+    position: absolute;
+    left: 42em;
+    z-index: -1;
+    top: -2em;
+}
+
+body.twothirdswidthpage .content .sticky-sidebar aside {
+    margin-left: 2em;
+    margin-top: 2em;
+    top: 0;
+    border-bottom: 2px solid #4DB848;
+    position: absolute;
+}

@@ -1,10 +1,10 @@
-                    [% IF pagefooter %]
-                    <footer role="contentinfo">
-                        [% INCLUDE 'front/footer-marketing.html' %]
-                    </footer>
-                    [% END %]
                 </div><!-- .content role=main -->
             </div><!-- .container -->
+            [% IF pagefooter %]
+            <footer role="contentinfo">
+                [% INCLUDE 'front/footer-marketing.html' %]
+            </footer>
+            [% END %]
         </div><!-- .table-cell -->
 
         <div class="nav-wrapper">
@@ -19,6 +19,7 @@
 %]
 
                     <ul class="nav-menu nav-menu--main left">
+                        <li><a href="/">[% IF lang_code == 'en-gb' %]Home[% ELSE %]Ballina[% END %]</a></li>
                         <li>
                         <[% IF c.req.uri.path == '/reports' %]span[% ELSE %]a href="[% base %]/reports[% IF c.user_exists AND c.user.categories.size %]?filter_category=[% c.user.categories.join(",") | uri | html %][% END %]"[% END %]>
                         [% loc("All reports") %]</[% c.req.uri.path == '/reports' ? 'span' : 'a' %]>[%

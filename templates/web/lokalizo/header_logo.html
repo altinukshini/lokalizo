@@ -1,2 +1,7 @@
                     <a href="[% c.cobrand.base_url_with_lang(c.cobrand.base_url) IF admin %]/" id="site-logo">[% site_name %]</a>
-                    
+        <form style="display:none;" action="[% c.uri_for('/around') %]" method="get" name="postcodeForm" id="postcodeForm">
+            <div>
+                <input type="text" name="pc" value="[% pc | html %]" id="pc" size="10" maxlength="200" placeholder="[% tprintf(loc('e.g. ‘%s’ or ‘%s’'), c.cobrand.example_places) %]">
+                <input type="submit" value="[% loc('Go') %]" id="sub">
+            </div>
+        </form>

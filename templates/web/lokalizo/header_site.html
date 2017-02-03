@@ -1,5 +1,5 @@
 <header id="site-header" role="banner">
-    <div class="container">
+    <div class="container header-logo">
         [% INCLUDE 'header_logo.html' %]
         <a href="#main-nav" id="nav-link">Main Navigation</a>
     </div>
@@ -14,6 +14,11 @@
 
 <nav style="display:none;">
   <ul>
+
+    <li>
+      <div>H</div>
+      <div><a href="/">[% IF lang_code == 'en-gb' %]Home[% ELSE %]Ballina[% END %]</a></div>
+    </li>
 
     <li id="link-one">
       <div>R</div>

@@ -2,7 +2,6 @@
     recent_photos = c.cobrand.recent_photos('front', 5);
 %]
 
-[% IF recent_photos.size %]
 <div id="front-recently">
     <h2>
         [%- IF c.cobrand.moniker == 'hart' %]
@@ -14,10 +13,14 @@
 
     <section class="full-width">
         <ul class="item-list item-list--reports item-list--front-page">
+        [% IF recent_photos.size %]
           [% FOREACH problem IN recent_photos %]
             [% INCLUDE 'front/_list-entry.html' %]
           [% END %]
+        [% ELSE %]
+            No recent reports with images.
+        [% END %]
         </ul>
     </section>
 </div>
-[% END %]
+
