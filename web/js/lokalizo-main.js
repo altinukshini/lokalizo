@@ -1,5 +1,15 @@
 $('document').ready(function(){
 
+	$(".ninja-btn, .panel-overlay, .panel li a").click( function() {
+	  $(".ninja-btn, .panel-overlay, .panel").toggleClass("active");
+	  /* Check panel overlay */
+	  if ($(".panel-overlay").hasClass("active")) {
+	    $(".panel-overlay").fadeIn();
+	  } else {
+	    $(".panel-overlay").fadeOut();
+	  }
+	}); 
+
 	var municipalitiesArray = {
 		"Municipality of Prishtina" : {
 			"en" : "Municipality of Pristina",

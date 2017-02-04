@@ -110,7 +110,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     height: 3em;
 }
 
-button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, button:active, input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active, button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus {
     color: #fff !important;
     background: #48B848;
     border-color: #48B848;
@@ -232,3 +232,169 @@ footer {
     margin: -4em auto 6em auto;
     width: 60em;
 }
+
+
+/* Map legend 
+***************************************************************/
+.panel {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  position: absolute;
+  z-index: -999;
+  top: 0;
+  height: 100%;
+  width: 20em;
+  color: #888;
+  padding: 1em;
+  left: 29em;
+  overflow: auto;
+
+  /* ul */
+  /* Ninja Button styles */
+  /* Ninja Button */
+  /* Ninja Button Active */
+}
+.panel a{
+  color: #4DB848;
+  font-family: sans-serif;
+}
+
+
+.ninja-btn {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  display: inline-block;
+  float: left;
+  cursor: pointer;
+  padding: 13px;
+  /*padding: 34.28571429px 30px;*/
+  position: absolute;
+  z-index: 2;
+  top: 1em;
+  width: 30px;
+  height: 20.18181818px;
+  left: 1em;
+}
+.ninja-btn span,
+.ninja-btn span:before,
+.ninja-btn span:after {
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  width: 30px;
+  height: 2px;
+}
+.ninja-btn span {
+  position: relative;
+  display: inline-block;
+  float: left;
+  margin-top: 9.09090909px;
+}
+.ninja-btn span:before,
+.ninja-btn span:after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.ninja-btn span:before {
+  top: -9.09090909px;
+}
+.ninja-btn span:after {
+  top: 9.09090909px;
+}
+.ninja-btn.active span {
+  background-color: transparent;
+}
+.ninja-btn.active span:before,
+.ninja-btn.active span:after {
+  top: 0;
+}
+.ninja-btn.active span:before {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+}
+.ninja-btn.active span:after {
+  -webkit-transition-delay: 0.09s;
+  -moz-transition-delay: 0.09s;
+  -o-transition-delay: 0.09s;
+  -msa-transition-delay: 0.09s;
+  transition-delay: 0.09s;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+}
+/* Panel */
+.panel-overlay {
+  position: fixed;
+  top: 0;
+  z-index: 9998;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.55);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.25)), color-stop(100%, rgba(255, 255, 255, 0.8)));
+  cursor: pointer;
+  top: 4em;
+}
+/* overlay */
+.panel-white {
+  background-color: #ffffff;
+  left: 29em;
+  /* ul */
+}
+
+.ninja-btn {
+  background-color: #ffffff;
+}
+.ninja-btn span,
+.ninja-btn span:before,
+.ninja-btn span:after {
+  background-color: #4DB848;
+}
+/* panel white */
+
+/* panel brand */
+.panel.left {
+    left: 0em;
+    z-index: 0;
+    top: 0em;
+}
+.panel.left .ninja-btn {
+  left: 110%;
+  top: 11px;
+}
+/* Panel Left Active */
+.panel.left.active {
+  z-index: 99999;
+  display: block !important;
+}
+.ninja-btn.active {
+  left: 23em;
+  margin-left: 0px;
+}
+/* Panel Menu Active */

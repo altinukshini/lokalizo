@@ -132,7 +132,7 @@ class="admin-offsite-link">[% problem.latitude %], [% problem.longitude %]</a>
   [% IF categories.size %]
     <optgroup label="[% loc('Available categories') %]">
       [% FOREACH cat IN categories %]
-        <option[% ' selected' IF problem.category == cat %]>[% c.cobrand.change_category_text(cat) | html %]</option>
+        <option[% ' selected' IF problem.category == cat %] value="[% cat %]">[% c.cobrand.change_category_text(cat) | html %]</option>
       [% END %]
     </optgroup>
   [% END %]

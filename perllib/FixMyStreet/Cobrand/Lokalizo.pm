@@ -209,7 +209,7 @@ hashref.
 
 sub base_url_for_report {
     my $self = shift; 
-    return $self->base_url_with_lang($self);
+    return base_url_with_lang($self);
 }
 
 =head2 base_host
@@ -1105,7 +1105,7 @@ sub pin_colour {
     my @allowedPinCategories = ("waste", "traffic", "infrastructure", "environmental", "disasterriskreduction");
     my $finalPinCategory = "other";
 
-    my $pinCategory = $self->clean_category( $p->category );
+    my $pinCategory = clean_category( $p->category );
 
     if ( grep { $_ eq $pinCategory } @allowedPinCategories ) {
 	   $finalPinCategory = $pinCategory;
