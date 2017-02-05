@@ -62,6 +62,9 @@ body.mappage #main-nav {
   margin-right: 1em;
   float: left;
 }
+.nav-menu.nav-menu--main.left .fa {
+    padding-right: 2px;
+}
 
 .container {
  margin: 3em auto 6em auto;
@@ -545,4 +548,67 @@ body.twothirdswidthpage .content .sticky-sidebar aside {
     top: 0;
     border-bottom: 2px solid #4DB848;
     position: absolute;
+}
+
+.map-legend-item {
+    clear: both;
+    padding-top: 0.5em;
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+.map-legend-item .icon-wrapper {
+    float: left;
+    padding: 1.5em 1em 0em 1em;
+    background-color: #efefef;
+    border-radius: 10px;
+    height: 3em;
+    width: 1.6em;
+    text-align: center;
+    margin-right: 1em;
+}
+.icon-wrapper .fa {
+    font-size: 1.5em;
+}
+.map-legend-item .map-category {
+    padding-top: 1.4em;
+    float: left;
+    font-size: 1.1em;
+}
+
+.panel-white h3 {
+    margin-top: 0;
+}
+
+.map-legend-type .fa {
+    padding: 0.1em;
+    width: 2em;
+    text-align: center;
+    margin-top: 0.5em;
+    margin-left: -0.6em;
+}
+
+.map-legend-item .icon-wrapper.traffic {
+    background-color: #1260B6;
+    color: white;
+}
+.map-legend-item .icon-wrapper.environmental {
+    background-color: #50B391;
+    color: white;
+}
+.map-legend-item .icon-wrapper.infrastructure {
+    background-color: #8053CF;
+    color: white;
+}
+.map-legend-item .icon-wrapper.waste {
+    background-color: #DB5B1C;
+    color: white;
+}
+.map-legend-item .icon-wrapper.ddr {
+    background-color: #F42455;
+    color: white;
+}
+.map-legend-item .icon-wrapper.other {
+    background-color: #CFCFCF;
+    color: white;
 }

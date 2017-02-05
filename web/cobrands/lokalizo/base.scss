@@ -4,6 +4,16 @@
 
 @import "../sass/base";
 
+@import "css/font-awesome.css";
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Roboto,Museo300-display,MuseoSans,Helmet,Freesans,sans-serif;
+}
+
+body {
+  font-family: Roboto,MuseoSans,Helmet,Freesans,sans-serif;
+}
+
 #site-logo {
   width: 200px;
   background: url("images/logo.png") -3px -3px no-repeat;
@@ -398,3 +408,47 @@ footer {
   margin-left: 0px;
 }
 /* Panel Menu Active */
+
+nav .fa {
+    font-size: 1.2em;
+}
+
+nav ul li.active .fa {
+    color: #4DB848 !important;
+}
+
+nav ul li:hover a, nav ul li:hover .fa {
+    color: #4DB848;
+}
+
+#footer-mobileapps img {
+    float: left;
+    width: 44%;
+    padding: 1em 1em 1em 1em;
+}
+
+#footer-mobileapps h4, #footer-help h4 {
+    margin: 0;
+    font-weight: bold;
+    color: #666;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    padding: 0;
+    text-align: center;
+}
+#footer-mobileapps, #footer-help {
+  color: #888;
+}
+
+.item-list--reports__item .img {
+  border-radius: 10px;
+}
+
+.image-square {
+    width: 90px;
+    height: 60px;
+    float: right;
+    background-color: #efefef;
+    border-radius: 10px;
+    margin-left: 1em;
+}

@@ -19,33 +19,38 @@
 %]
 
                     <ul class="nav-menu nav-menu--main left">
-                        <li><a href="/">[% IF lang_code == 'en-gb' %]Home[% ELSE %]Ballina[% END %]</a></li>
-                        <li>
-                        <[% IF c.req.uri.path == '/reports' %]span[% ELSE %]a href="[% base %]/reports[% IF c.user_exists AND c.user.categories.size %]?filter_category=[% c.user.categories.join(",") | uri | html %][% END %]"[% END %]>
-                        [% loc("All reports") %]</[% c.req.uri.path == '/reports' ? 'span' : 'a' %]>[%
+                        <li class="[% IF c.req.uri.path == '/' %]active[% END %]">
+                          <div><a href="/"><i class="fa fa-home" aria-hidden="true"></i> [% IF lang_code == 'en-gb' %]Home[% ELSE %]Ballina[% END %]</a></div>
+                        </li>
+
+                        <li class="[% IF c.req.uri.path == '/reports' %]active[% END %]">
+                          <div><[% IF c.req.uri.path == '/reports' %]span[% ELSE %]a href="[% base %]/reports[% IF c.user_exists AND c.user.categories.size %]?filter_category=[% c.user.categories.join(",") | uri | html %][% END %]"[% END %]><i class="fa fa-map-o" aria-hidden="true"></i> [% loc("All reports") %]</[% c.req.uri.path == '/reports' ? 'span' : 'a' %]>[%
                             %]
+                          </div>
                         </li>
 
-                        <li id="link-two">
-                        <[% IF c.req.uri.path == '/alert' %]span[% ELSE %]a href="[% base %]/alert[% pc ? '/list?pc=' : '' %][% pc | uri %]"[% END %]>
-                        [% loc("Local alerts") %]</[% c.req.uri.path == '/alert' ? 'span' : 'a' %]>[%
-                        %]
+                        <li class="[% IF c.req.uri.path == '/alert' %]active[% END %]">
+                          <div><[% IF c.req.uri.path == '/alert' %]span[% ELSE %]a href="[% base %]/alert[% pc ? '/list?pc=' : '' %][% pc | uri %]"[% END %]><i class="fa fa-street-view" aria-hidden="true"></i> [% loc("Local alerts") %]</[% c.req.uri.path == '/alert' ? 'span' : 'a' %]>[%
+                            %]</div>
                         </li>
 
-                        <li id="link-three">
-                        <[% IF c.req.uri.path == '/faq' %]span[% ELSE %]a href="[% base %]/faq"[% END %]>
-                        [% loc("Help") %]</[% c.req.uri.path == '/faq' ? 'span' : 'a' %]>[%
-                        %]
+                        <li class="[% IF c.req.uri.path == '/faq' %]active[% END %]">
+                          <div><[% IF c.req.uri.path == '/faq' %]span[% ELSE %]a href="[% base %]/faq"[% END %]><i class="fa fa-question" aria-hidden="true"></i> [% loc("Help") %]</[% c.req.uri.path == '/faq' ? 'span' : 'a' %]>[%
+                        %]</div>
                         </li>
 
-                        <li id="link-four" class="nav-menu__item--privacy">
+                        <li class="[% IF c.req.uri.path == '/about/lokalizo' %]active[% END %]">
+                          <div><[% IF c.req.uri.path == '/about/lokalizo' %]span[% ELSE %]a href="[% base %]/about/lokalizo"[% END%]><i class="fa fa-info" aria-hidden="true"></i> [% IF lang_code == 'en-gb' %]About us[% ELSE %]Per ne[% END %]</[% c.req.uri.path == '/about/lokalizo' ? 'span' : 'a' %]>[%
+                        %]</div>
+                        </li>
 
-                        <[% IF c.req.uri.path == '/privacy' %]span[% ELSE %]a href="[% base %]/privacy"[% END%]>
-                        [% loc("Privacy") %]</[% c.req.uri.path == '/privacy' ? 'span' : 'a' %]>
+                        <li class="[% IF c.req.uri.path == '/contact' %]active[% END %]">
+                          <div><[% IF c.req.uri.path == '/contact' %]span[% ELSE %]a href="[% base %]/contact"[% END%]><i class="fa fa-envelope-o" aria-hidden="true"></i> [% IF lang_code == 'en-gb' %]Contact[% ELSE %]Kontakti[% END %]</[% c.req.uri.path == '/contact' ? 'span' : 'a' %]>
+                          </div>
                         </li>
 
                         <li>
-                            <a href="[% c.cobrand.base_url_with_lang(c.cobrand.base_url) IF admin %]/" id="report-cta" title="[%- loc('Report a problem') -%]">[% IF lang_code == 'en-gb' %][%- loc('Report') -%][% ELSE %]Raporto[% END %]</a>
+                            <a href="[% c.cobrand.base_url_with_lang(c.cobrand.base_url) IF admin %]/" id="report-cta" title="[%- loc('Report a problem') -%]"><i class="fa fa-map-marker" aria-hidden="true" style="margin-right:3px;"></i> [% IF lang_code == 'en-gb' %][%- loc('Report') -%][% ELSE %]Raporto[% END %]</a>
                         </li>
                     </ul>
 
@@ -53,13 +58,14 @@
                             <li id="link-one">
 
                         [% IF lang_code == 'en-gb' %]
-                                <li><a href="http://sq.[% c.cobrand.base_host %][% c.req.uri.path_query %]">sq</a></li>
+                                <li><a href="http://sq.[% c.cobrand.base_host %][% c.req.uri.path_query %]"><i class="fa fa-globe" aria-hidden="true"></i> sq</a></li>
                         [% ELSE %]
-                                <li><a href="http://[% c.cobrand.base_host %][% c.req.uri.path_query %]">en</a></li>
+                                <li><a href="http://[% c.cobrand.base_host %][% c.req.uri.path_query %]"><i class="fa fa-globe" aria-hidden="true"></i> en</a></li>
                         [% END %]
+                        
                         <li><[% IF c.req.uri.path == '/my'
                             %]span[% ELSE %]a href="[% base %]/my"[% END
-                            %]>[% c.user_exists ? loc("Your account") : loc("Sign in") %]</[% c.req.uri.path == '/my' ? 'span' : 'a' %]></li>[%
+                            %]><i class="fa fa-user-circle" aria-hidden="true" style="margin-right:3px;"></i> [% c.user_exists ? loc("Your account") : loc("Sign in") %]</[% c.req.uri.path == '/my' ? 'span' : 'a' %]></li>[%
                         %]
 
                     </ul> 
