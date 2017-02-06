@@ -1105,7 +1105,7 @@ sub pin_colour {
     my @allowedPinCategories = ("waste", "traffic", "infrastructure", "environmental", "disasterriskreduction");
     my $finalPinCategory = "other";
 
-    my $pinCategory = clean_category( $p->category );
+    my $pinCategory = $self->clean_category( $p->category );
 
     if ( grep { $_ eq $pinCategory } @allowedPinCategories ) {
 	   $finalPinCategory = $pinCategory;
@@ -1126,7 +1126,8 @@ Clean category from spaces and make it all lowercase
 =cut
 
 sub clean_category {
-    my $s = shift;
+    my ( $self, $s ) = @_;
+    # my $s = shift;
     $s =~ s/\s+//g;
     $s = lc $s;
     return $s;

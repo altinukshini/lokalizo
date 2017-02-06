@@ -28,46 +28,48 @@
 <div id="map_box" aria-hidden="true">
     <div class="panel panel-white left" style="display:none;">
 
-      <h3>Map Legend</h3>
-      
-      <div class="map-legend-item">
-        <div class="icon-wrapper traffic"><i class="fa fa-car" aria-hidden="true"></i></div>
-        <span class="map-category">Traffic</span>
-      </div>
-      <div class="map-legend-item">
-        <div class="icon-wrapper environmental"><i class="fa fa-leaf" aria-hidden="true"></i></div>
-        <span class="map-category">Environmental</span>
-      </div>
-      <div class="map-legend-item">
-        <div class="icon-wrapper infrastructure"><i class="fa fa-building-o" aria-hidden="true"></i></div>
-        <span class="map-category">Infrastructure</span>
-      </div>
-      <div class="map-legend-item">
-        <div class="icon-wrapper waste"><i class="fa fa-trash-o" aria-hidden="true"></i></div>
-        <span class="map-category">Waste</span>
-      </div>
-      <div class="map-legend-item">
-        <div class="icon-wrapper ddr"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>
-        <span class="map-category">Disaster risk reduction</span>
-      </div>
-      <div class="map-legend-item">
-        <div class="icon-wrapper other"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
-        <span class="map-category">Other</span>
-      </div>
+      <div class="panel-content-wrapper">
+        <h3>Map Legend</h3>
+        
+        <div class="map-legend-item">
+          <div class="icon-wrapper traffic"><i class="fa fa-car" aria-hidden="true"></i></div>
+          <span class="map-category">[% c.cobrand.change_category_text('Traffic') %]</span>
+        </div>
+        <div class="map-legend-item">
+          <div class="icon-wrapper environmental"><i class="fa fa-leaf" aria-hidden="true"></i></div>
+          <span class="map-category">[% c.cobrand.change_category_text('Environmental') %]</span>
+        </div>
+        <div class="map-legend-item">
+          <div class="icon-wrapper infrastructure"><i class="fa fa-building-o" aria-hidden="true"></i></div>
+          <span class="map-category">[% c.cobrand.change_category_text('Infrastructure') %]</span>
+        </div>
+        <div class="map-legend-item">
+          <div class="icon-wrapper waste"><i class="fa fa-trash-o" aria-hidden="true"></i></div>
+          <span class="map-category">[% c.cobrand.change_category_text('Waste') %]</span>
+        </div>
+        <div class="map-legend-item">
+          <div class="icon-wrapper ddr"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>
+          <span class="map-category">[% c.cobrand.change_category_text('Disaster risk reduction') %]</span>
+        </div>
+        <div class="map-legend-item">
+          <div class="icon-wrapper other"><i class="fa fa-circle-o" aria-hidden="true"></i></div>
+          <span class="map-category">[% c.cobrand.change_category_text('Other') %]</span>
+        </div>
 
-      <hr>
-      
-      <div class="map-legend-type">
-        <i class="fa fa-exclamation" aria-hidden="true"></i>
-        <span class="pin-type">Problem (open)</span>
-      </div>
-      <div class="map-legend-type">
-        <i class="fa fa-cog" aria-hidden="true"></i>
-        <span class="pin-type">In progress</span>
-      </div>
-      <div class="map-legend-type">
-        <i class="fa fa-check" aria-hidden="true"></i>
-        <span class="pin-type">Fixed</span>
+        <hr>
+        
+        <div class="map-legend-type">
+          <i class="fa fa-exclamation" aria-hidden="true"></i>
+          <span class="pin-type">[% loc('Unfixed reports') %]</span>
+        </div>
+        <div class="map-legend-type">
+          <i class="fa fa-cog" aria-hidden="true"></i>
+          <span class="pin-type">[% IF lang_code == 'en-gb' %]Reports in progress[% ELSE %]Raportimet në progres[% END %]</span>
+        </div>
+        <div class="map-legend-type">
+          <i class="fa fa-check" aria-hidden="true"></i>
+          <span class="pin-type">[% loc('Fixed reports') %]</span>
+        </div>
       </div>
 
     </div>

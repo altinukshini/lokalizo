@@ -1211,7 +1211,7 @@ msgstr "Rregulluar - Përdoruesi"
 
 #: templates/web/base/reports/_list-filters.html:5
 msgid "Fixed reports"
-msgstr "Raportime e rregulluara"
+msgstr "Raportimet e rregulluara"
 
 #: templates/web/base/admin/problem_row.html:37
 msgid "Fixed:"
@@ -1631,7 +1631,7 @@ msgstr "Përditësimi&nbsp;i&nbsp;fundit:"
 
 #: templates/web/base/reports/_list-filters.html:38
 msgid "Least recently updated"
-msgstr "Perditesimi më i hershëm:"
+msgstr "Perditësimet më të hershme"
 
 #: templates/web/base/admin/body-form.html:127
 msgid "Leave this blank if all reports to this body should be sent using the same send method (e.g., \"%s\")."
@@ -1740,7 +1740,7 @@ msgstr "Muaji"
 
 #: templates/web/base/reports/_list-filters.html:39
 msgid "Most commented"
-msgstr "Më të komentuarit"
+msgstr "Më të komentuarat"
 
 #: templates/web/base/admin/bodies.html:25
 #: templates/web/base/admin/body-form.html:24
@@ -1878,7 +1878,7 @@ msgstr "Shabllon i ri"
 
 #: templates/web/base/reports/_list-filters.html:35
 msgid "Newest"
-msgstr "Më e reja"
+msgstr "Më të rejat"
 
 #: templates/web/base/pagination.html:10
 msgid "Next"
@@ -3805,7 +3805,7 @@ msgstr "Pakonfirmuar"
 
 #: templates/web/base/reports/_list-filters.html:3
 msgid "Unfixed reports"
-msgstr "Raportime të parregulluara"
+msgstr "Raportimet e parregulluara"
 
 #: templates/web/base/report/banner.html:9
 msgid "Unknown"
@@ -4510,8 +4510,8 @@ msgstr[1] "<big>%s</big> raporte në javën e fundit"
 #, perl-format
 msgid "<big>%s</big> fixed in past month"
 msgid_plural "<big>%s</big> fixed in past month"
-msgstr[0] "<big>%s</big> e rregulluar në muajin e kaluar"
-msgstr[1] "<big>%s</big> të rregulluar në muajin e kaluar"
+msgstr[0] "<big>%s</big> i rregulluar në muajin e kaluar"
+msgstr[1] "<big>%s</big> të rregulluara në muajin e kaluar"
 
 #: perllib/Utils.pm:222
 #, perl-format

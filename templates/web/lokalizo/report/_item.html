@@ -4,13 +4,32 @@
 
 <li class="item-list__item item-list--reports__item [% item_extra_class %]"
     data-report-id="[% problem.id | html %]" data-lastupdate="[% problem.lastupdate %]">
-    <a href="[% c.cobrand.base_url_for_report( problem ) %][% problem.url %]">
+    <a href="[% c.cobrand.base_url_for_report( problem ) %][% problem.url %]" class="[% c.cobrand.clean_category(problem.category) %]">
+    <div class="problem-circle [% c.cobrand.clean_category(problem.category) %]">
+        <i class="fa [% SWITCH c.cobrand.clean_category(problem.category) %]
+            [%   CASE 'traffic' %]
+                   fa-car
+            [%   CASE 'environmental' %]
+                   fa-leaf
+            [%   CASE 'infrastructure' %]
+                   fa-building-o
+            [%   CASE 'waste' %]
+                   fa-trash-o
+            [%   CASE 'disasterriskreduction' %]
+                   fa-exclamation-triangle
+            [%   CASE DEFAULT %]
+                   fa-circle-o
+            [% END %]
+        " aria-hidden="true">
+            <img border="0" class="pin" src="[% start %][% c.cobrand.path_to_pin_icons _ 'pin-' _ c.cobrand.pin_colour(problem) _ '-mini.png' %]"/>
+        </i>
+    </div>
     [% IF problem.photo %]
         <img class="img" height="60" width="90" src="[% problem.photos.first.url_fp %]" alt="">
     [%- ELSE %]
         <div class="image-square"></div>
     [% END %]
-        <h3 class="item-list__heading">[% problem.title | html %]</h3>
+        <h3 class="item-list__heading [% c.cobrand.clean_category(problem.category) %]">[% problem.title | html %]</h3>
     [% IF c.user.has_permission_to('report_inspect', problem.bodies_str_ids) %]
         <div class="item-list__description">[% problem.detail | html %]</div>
     [% END %]

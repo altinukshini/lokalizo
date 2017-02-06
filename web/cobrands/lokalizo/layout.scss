@@ -579,6 +579,10 @@ body.twothirdswidthpage .content .sticky-sidebar aside {
 .panel-white h3 {
     margin-top: 0;
 }
+.panel-content-wrapper {
+    height: auto;
+    margin-bottom: 3em;
+}
 
 .map-legend-type .fa {
     padding: 0.1em;
@@ -611,4 +615,29 @@ body.twothirdswidthpage .content .sticky-sidebar aside {
 .map-legend-item .icon-wrapper.other {
     background-color: #CFCFCF;
     color: white;
+}
+
+.problem-circle.traffic, .item-list__heading.traffic {
+    border-color: #1260B6;
+    color: #1260B6;
+}
+.problem-circle.environmental, .item-list__heading.environmental {
+    border-color: #50B391;
+    color: #50B391;
+}
+.problem-circle.infrastructure, .item-list__heading.infrastructure {
+    border-color: #8053CF;
+    color: #8053CF;
+}
+.problem-circle.waste, .item-list__heading.waste {
+    border-color: #DB5B1C;
+    color: #DB5B1C;
+}
+.problem-circle.disasterriskreduction, .item-list__heading.disasterriskreduction {
+    border-color: #F42455;
+    color: #F42455;
+}
+.problem-circle.other, .item-list__heading.other {
+    border-color: #cdcdcd;
+    color: #666;
 }

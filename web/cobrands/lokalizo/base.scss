@@ -43,10 +43,10 @@ body {
 }
 
 .item-list--wards__item a:hover, .item-list--reports__item a:hover, .item-list--wards__item a:focus, .item-list--reports__item a:focus, .hovered.item-list--wards__item a, .hovered.item-list--reports__item a {
-    background-color: transparent;
+    background-color: #efefef;
     text-decoration: none;
-    color: #4DB848;
-    border-left: 4px solid #4DB848;
+    color: #4DB848 !important;
+    
 }
 
 .item-list__item {
@@ -90,7 +90,7 @@ body {
 }
 
 .item-list--reports__item a {
-  padding: 0 0 0 0.5em;
+  padding:0.5em 0.5em 0.5em 0.5em;
 }
 
 
@@ -448,7 +448,60 @@ nav ul li:hover a, nav ul li:hover .fa {
     width: 90px;
     height: 60px;
     float: right;
-    background-color: #efefef;
+    background-color: #fff;
     border-radius: 10px;
     margin-left: 1em;
+    border: 1px solid #cdcdcd;
+}
+.admin .full-width {
+    background-color: #efefef;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 15px;
+}
+
+.problem-circle {
+    width: 3em;
+    height: 3em;
+    border: 1px solid #cdcdcd;
+    text-align: center;
+    font-size: 1.3em;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px;
+}
+
+.problem-circle .fa {
+  color: #cdcdcd;
+  padding-top: 0.8em;
+  font-size: 1.2em;
+}
+.problem-circle .pin {
+    position: absolute;
+    margin-top: -0.9em;
+}
+
+.problem-circle.traffic, .item-list__heading.traffic {
+    border-color: #1260B6;
+    color: #1260B6;
+}
+.problem-circle.environmental, .item-list__heading.environmental {
+    border-color: #50B391;
+    color: #50B391;
+}
+.problem-circle.infrastructure, .item-list__heading.infrastructure {
+    border-color: #8053CF;
+    color: #8053CF;
+}
+.problem-circle.waste, .item-list__heading.waste {
+    border-color: #DB5B1C;
+    color: #DB5B1C;
+}
+.problem-circle.disasterriskreduction, .item-list__heading.disasterriskreduction {
+    border-color: #F42455;
+    color: #F42455;
+}
+.problem-circle.other, .item-list__heading.other {
+    border-color: #cdcdcd;
+    color: #666;
 }
