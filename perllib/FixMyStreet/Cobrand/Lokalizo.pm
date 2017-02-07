@@ -968,6 +968,7 @@ sub change_category_text {
     my ($self, $category) = @_;
 
     my $lang = $mySociety::Locale::lang;
+    my $enc = 'utf-8';
 
     my %allowedCategories_sq = (
         "Other"     =>  "Tjera",
@@ -975,14 +976,14 @@ sub change_category_text {
         "Environmental"     =>  "Ambient",
         "Infrastructure"    =>  "Infrastrukture",
         "Waste"     =>  "Mbeturina",
-        "Disaster risk reduction"       =>  "Fatkeqesi natyrore"
+        "Disaster risk reduction"       =>  "Zvoglimi i rrezikut të fatkeqësive"
     );
 
     if ($lang eq 'en') {
         return $category;
     } elsif ($lang eq 'sq') {
         if (exists $allowedCategories_sq{$category}) {
-            return $allowedCategories_sq{$category};
+            return decode($enc, $allowedCategories_sq{$category});
         }
         return $category;
     }

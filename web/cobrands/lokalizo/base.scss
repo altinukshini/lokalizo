@@ -240,6 +240,11 @@ a:hover, a:active, .content a:active, .content a:hover {
 
 footer {
     margin: -4em auto 6em auto;
+    width: 62em;
+}
+
+.home footer {
+    margin: -5.5em auto 6em auto;
     width: 60em;
 }
 
@@ -505,3 +510,276 @@ nav ul li:hover a, nav ul li:hover .fa {
     border-color: #cdcdcd;
     color: #666;
 }
+ol.big-numbers {
+    padding: 0;
+    margin: 0;
+    counter-reset: li;
+    width: 50%;
+    float: right;
+}
+#htrp-banner {
+    margin-top: 1.5em;
+    margin-left: 1em;
+}
+ol.big-numbers > li::before {
+  top: 0em;
+}
+ol.big-numbers > li {
+    position: relative;
+    list-style: none;
+    padding: 0 0 0 2.5em;
+    margin-bottom: 1.5em;
+    color: #4DB848;
+}
+
+#front-howto #front_stats div {
+  color: 4DB848;
+}
+#front-howto #front_stats div big {
+  color: #666;
+}
+
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+  h1, h2, h3, h4, h5 {
+    color: #666;
+  }
+  footer, .home footer {
+    width: 90%;
+    height: auto;
+    clear: both;
+    margin-top: 1em;
+    margin-bottom: 0em;
+  }
+  #geolocate_link {
+    display: none;
+  }
+  #htrp-banner {
+      display: none;
+  }
+  ol.big-numbers {
+      width: 100%;
+  }
+  #front-howto {
+      height: 25em;
+  }
+  #front-recent {
+    height: auto;
+  }
+  #site-header {
+      border-top: none;
+      border-bottom: 2px solid #4DB848;
+      background: #fff;
+      min-height: 3.5em;
+  }
+  #nav-link {
+      background-color: #999;
+      padding: 4px;
+      top: 0;
+  }
+  #front-main-container > img {
+      display: none;
+  }
+  #front-main #postcodeForm div input#sub {
+      height: 3em;
+      padding-bottom: 1px;
+  }
+  .sticky-sidebar {
+      background-color: #efefef;
+      padding: 1em 0.5em 1em 0.5em;
+  }
+  #footer-help {
+      clear: both;
+      width: 100%;
+      text-align: center;
+      border: none;
+  }
+  #footer-mobileapps {
+      clear: both;
+      width: 100%;
+      text-align: center !important;
+  }
+  #footer-mobileapps p {
+      text-align: center;
+      width: 100%;
+      border: none;
+  }
+  #footer-mobileapps img {
+      float: none;
+  }
+  .ninja-btn {
+      display: none;
+  }
+  .mobile #map_box {
+      height: 15em;
+  }
+  .report-list-filters > label, .report-list-filters .multi-select-container {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+  h1, h2, h3, h4, h5 {
+    color: #666;
+  }
+  footer, .home footer {
+    width: 90%;
+    height: auto;
+    clear: both;
+    margin-top: 1em;
+    margin-bottom: 0em;
+  }
+  #geolocate_link {
+    display: none;
+  }
+  #htrp-banner {
+      display: none;
+  }
+  ol.big-numbers {
+      width: 100%;
+  }
+  #front-howto {
+      height: 25em;
+  }
+  #front-recent {
+    height: auto;
+  }
+  #site-header {
+      border-top: none;
+      border-bottom: 2px solid #4DB848;
+      background: #fff;
+      min-height: 3.5em;
+  }
+  #nav-link {
+      background-color: #999;
+      padding: 4px;
+      top: 0;
+  }
+  #front-main-container > img {
+      display: none;
+  }
+  #front-main #postcodeForm div input#sub {
+      height: 3em;
+      padding-bottom: 1px;
+  }
+  .sticky-sidebar {
+      background-color: #efefef;
+      padding: 1em 0.5em 1em 0.5em;
+  }
+  #footer-help {
+      clear: both;
+      width: 100%;
+      text-align: center;
+      border: none;
+  }
+  #footer-mobileapps {
+      clear: both;
+      width: 100%;
+      text-align: center !important;
+  }
+  #footer-mobileapps p {
+      text-align: center;
+      width: 100%;
+      border: none;
+  }
+  #footer-mobileapps img {
+      float: none;
+  }
+  .ninja-btn {
+      display: none;
+  }
+  .mobile #map_box {
+      height: 15em;
+  }
+  .report-list-filters > label, .report-list-filters .multi-select-container {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+  h1, h2, h3, h4, h5 {
+    color: #666;
+  }
+  footer, .home footer {
+    width: 90%;
+    height: auto;
+    clear: both;
+    margin-top: 1em;
+    margin-bottom: 0em;
+  }
+  #geolocate_link {
+    display: none;
+  }
+  #htrp-banner {
+      display: none;
+  }
+  ol.big-numbers {
+      width: 100%;
+  }
+  #front-howto {
+      height: 25em;
+  }
+  #front-recent {
+    height: auto;
+  }
+  #site-header {
+      border-top: none;
+      border-bottom: 2px solid #4DB848;
+      background: #fff;
+      min-height: 3.5em;
+  }
+  #nav-link {
+      background-color: #999;
+      padding: 4px;
+      top: 0;
+  }
+  #front-main-container > img {
+      display: none;
+  }
+  #front-main #postcodeForm div input#sub {
+      height: 3em;
+      padding-bottom: 1px;
+  }
+  .sticky-sidebar {
+      background-color: #efefef;
+      padding: 1em 0.5em 1em 0.5em;
+  }
+  #footer-help {
+      clear: both;
+      width: 100%;
+      text-align: center;
+      border: none;
+  }
+  #footer-mobileapps {
+      clear: both;
+      width: 100%;
+      text-align: center !important;
+  }
+  #footer-mobileapps p {
+      text-align: center;
+      width: 100%;
+      border: none;
+  }
+  #footer-mobileapps img {
+      float: none;
+  }
+  .ninja-btn {
+      display: none;
+  }
+  .mobile #map_box {
+      height: 15em;
+  }
+  .report-list-filters > label, .report-list-filters .multi-select-container {
+    width: 100%;
+    display: block;
+  }
+}
+

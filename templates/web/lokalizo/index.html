@@ -2,7 +2,7 @@
 
 [% pre_container_extra = PROCESS 'around/postcode_form.html' %]
 
-[% INCLUDE 'header.html', title = '', bodyclass = 'frontpage fullwidthpage' %]
+[% INCLUDE 'header.html', title = '', bodyclass = 'frontpage fullwidthpage home' %]
 
 [% IF error %]
     <p class="form-error">[% error %]</p>
@@ -10,12 +10,16 @@
 
 [% TRY %][% PROCESS 'front/pre-steps.html' %][% CATCH file %][% END %]
 
-<div class="tablewrapper">
+<div class="front tablewrapper">
+    <div id="front-recent">
+    	<h2>[% loc('Recently reported problems') %]</h2>
+    	[% INCLUDE 'front/recent.html' %]
+    </div>
     <div id="front-howto">
+    	<h2>[% loc('How to report a problem') %]</h2>
         [% INCLUDE 'index-steps.html' %]
     </div>
-
-    [% INCLUDE 'front/recent.html' %]
+   
 </div>
 
 [% INCLUDE 'footer.html' pagefooter = 'yes' %]

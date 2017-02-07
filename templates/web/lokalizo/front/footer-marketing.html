@@ -9,11 +9,14 @@
                             </div>
 
                             <div id="footer-help">
-                                <h4>Sponsors</h4>
+                                <h4>[% IF lang_code == 'en-gb' %]Sponsors / Partners[% ELSE %]Sponzorët / Partnerët[% END %]</h4>
                                 <p>
-                                    One, Two, Three
+                                    PIKS, UNDP, CANADIAN EMBASSY, OMLADINA NAPRED
                                 </p>
                             </div>
 
                         </div>
-                        <div style="color:#fff; font-size:12px; margin:0 auto; width:100%;text-align:center;margin-top:4em;">[% loc('Powered by <a class="platform-logo" style="color:white;" href="http://fixmystreet.org/">FixMyStreet Platform</a>') %]</div>
+                        <div style="color:#fff; font-size:12px; margin:0 auto; width:100%;text-align:center;margin-top:4em;">
+                            [% IF lang_code == 'en-gb' %]Developed by <a class="platform-logo" style="color:white;" href="http://flossk.org/"><b>FLOSSK</b></a>[% ELSE %]Zhvilluar nga <a class="platform-logo" style="color:white;" href="http://flossk.org/"><b>FLOSSK</b></a>[% END %] - CC-BY-SA v3.0<br>
+                            [% loc('Powered by <a class="platform-logo" style="color:white;" href="http://fixmystreet.org/"><b>FixMyStreet Platform</b></a>') %]
+                        </div>

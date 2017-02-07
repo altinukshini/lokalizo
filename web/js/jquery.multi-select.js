@@ -22,7 +22,7 @@ function translateCategory(category){
     },
 		"Disaster risk reduction" : {
             "en" : "Disaster risk reduction",
-            "sq" : "Fatkeqsi natyrore",
+            "sq" : "Zvoglimi i rrezikut të fatkeqësive",
             "sr" : "Disaster risk reduction"
     },
 		"Other" : {

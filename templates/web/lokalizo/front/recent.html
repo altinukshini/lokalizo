@@ -1,16 +1,8 @@
 [% 
-    recent_photos = c.cobrand.recent_photos('front', 5);
+    recent_photos = c.cobrand.recent_photos('front', 8);
 %]
 
 <div id="front-recently">
-    <h2>
-        [%- IF c.cobrand.moniker == 'hart' %]
-            Recently reported
-        [% ELSE %]
-            [% loc('Recently reported problems') %]
-        [% END -%]
-    </h2>
-
     <section class="full-width">
         <ul class="item-list item-list--reports item-list--front-page">
         [% IF recent_photos.size %]
