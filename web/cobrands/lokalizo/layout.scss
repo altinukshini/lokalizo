@@ -4,11 +4,8 @@
 html {
   height: 100%;
 }
-.wrapper {
+.wrapper, body {
   height: 100%;
-}
-body {
-  height: auto;
 }
 body.frontpage #site-logo {
     width: 200px;
