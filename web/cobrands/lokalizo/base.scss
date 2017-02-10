@@ -538,7 +538,12 @@ ol.big-numbers > li {
 #front-howto #front_stats div big {
   color: #666;
 }
-
+.form-success {
+    background: #4DB848;
+    padding: 1em;
+    border-radius: 0em;
+    margin-bottom: 0em;
+}
 
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {

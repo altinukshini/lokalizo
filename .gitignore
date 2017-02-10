@@ -12,6 +12,8 @@
 FixMyStreet-EmptyHomes.po
 FixMyBarangay.po
 
+/fixmystreet-mobile
+
 # CSS
 .bundle
 .sass-cache

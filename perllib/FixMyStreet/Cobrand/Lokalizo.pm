@@ -641,7 +641,7 @@ Return a boolean indicating whether people should be sent questionnaire emails.
 
 =cut
 
-sub send_questionnaires { 0 }
+sub send_questionnaires { 1 }
 
 =head2 admin_pages
 
