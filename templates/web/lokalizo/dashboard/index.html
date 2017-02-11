@@ -6,7 +6,7 @@
     INCLUDE 'header.html'
         title = loc('Dashboard')
         robots = 'noindex, nofollow'
-        bodyclass = 'fullwidthpage'
+        bodyclass = 'frontpage fullwidthpage'
 %]
 
 <form>
@@ -55,7 +55,7 @@
     [%
     rows = {
         '0' => [ "total", "Total reports received" ]
-        '1' => [ "fixed - council", "Council has marked as fixed" ]
+        '1' => [ "fixed - council", "Municipality has marked as fixed" ]
         '2' => [ "fixed_user", "User has marked as fixed" ]
     };
     FOR row IN rows %]
@@ -78,10 +78,10 @@
 
     [%
     rows = {
-        '0' => [ "in progress", "Council has marked as in progress" ]
-        '1' => [ "action scheduled", "Council has marked as planned" ]
-        '2' => [ "investigating", "Council has marked as investigating" ]
-        '3' => [ "closed", "Council has marked as closed" ]
+        '0' => [ "in progress", "Municipality has marked as in progress" ]
+        '1' => [ "action scheduled", "Municipality has marked as planned" ]
+        '2' => [ "investigating", "Municipality has marked as investigating" ]
+        '3' => [ "closed", "Municipality has marked as closed" ]
     };
     wtd = 0, week = 0, weeks = 0, ytd = 0;
     FOR row IN rows %]
@@ -107,7 +107,7 @@
     </tr>
 
     <tr id="avg_fixed">
-        <th scope="row">Average time to council marking fixed (days)</th>
+        <th scope="row">Average time to municipality marking fixed (days)</th>
         <td>[% problems.wtd.time_to_fix %]</td>
         <td>[% problems.week.time_to_fix %]</td>
         <td>[% problems.weeks.time_to_fix %]</td>
@@ -115,7 +115,7 @@
     </tr>
 
     <tr id="avg_marked">
-        <th scope="row">Average time to first council state change (days)</th>
+        <th scope="row">Average time to first municipality state change (days)</th>
         <td>[% problems.wtd.time_to_mark %]</td>
         <td>[% problems.week.time_to_mark %]</td>
         <td>[% problems.weeks.time_to_mark %]</td>
