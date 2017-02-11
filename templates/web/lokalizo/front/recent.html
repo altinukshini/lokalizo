@@ -10,7 +10,7 @@
             [% INCLUDE 'front/_list-entry.html' %]
           [% END %]
         [% ELSE %]
-            No recent reports with images.
+            <center>[% IF lang_code == 'en-gb' %]No recent reports with images.[% ELSE %]Nuk ka probleme me fotografi të raportuara rishtazi[% END %]</center>
         [% END %]
         </ul>
     </section>
