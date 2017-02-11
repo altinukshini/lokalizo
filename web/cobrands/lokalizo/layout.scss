@@ -131,6 +131,7 @@ body.mappage #main-nav {
     color: #414042;
     width: 100%;
     padding: 10px 10px;
+    outline:none;
 }
 #front-main #postcodeForm div input#sub {
     background: #4DB848;
@@ -139,6 +140,7 @@ body.mappage #main-nav {
     height: 3em;
     width: auto;
     padding: 0em 0.5em 0em 0.5em;
+    outline:none;
 }
 
 #front-main #postcodeForm div input#sub:hover {
@@ -147,7 +149,8 @@ body.mappage #main-nav {
     border-radius: 15px;
     height: 3em;
     width: auto;
-    padding: 0em 0.5em 0em 0.5em;
+    padding: 0em 0.4em 0em 0.4em;
+    outline:none;
 }
 
 
@@ -499,6 +502,7 @@ a:hover, a:active {
     border: 1px solid;
     border-color: #fff;
     color: #ccc;
+    outline:none;
 }
 .header-logo #postcodeForm #sub {
     border: 1px solid #fff;
