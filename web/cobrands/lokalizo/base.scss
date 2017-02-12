@@ -471,6 +471,14 @@ nav ul li:hover a, nav ul li:hover .fa {
     border-radius: 15px;
 }
 
+.item-list__heading {
+  margin-left: 4.8em;
+}
+
+.item-list--reports__item small, .item-list--reports__item .small-print {
+  margin-left: 5.8em;
+}
+
 .problem-circle {
     width: 3em;
     height: 3em;
@@ -486,10 +494,12 @@ nav ul li:hover a, nav ul li:hover .fa {
   color: #cdcdcd;
   padding-top: 0.8em;
   font-size: 1.2em;
+  position: relative;
 }
 .problem-circle .pin {
     position: absolute;
-    margin-top: -0.9em;
+    top: -0.3em;
+    left: 0.9em;
 }
 
 .problem-circle.traffic, .item-list__heading.traffic {
@@ -545,16 +555,16 @@ ol.big-numbers > li {
   color: #666;
 }
 .form-success {
-    background: #4DB848;
-    padding: 1em;
-    border-radius: 0em;
-    margin-bottom: 0em;
+    background: #4DB848 !important;
+    padding: 1em  !important;
+    border-radius: 0em  !important;
+    margin-bottom: 0em  !important;
 }
 .form-error {
-    padding: 1em;
-    margin-bottom: 1em;
-    border-radius: 0em;
-    background-color: #F42455;
+    padding: 1em  !important;
+    margin-bottom: 1em  !important;
+    border-radius: 0em  !important;
+    background-color: #F42455  !important;
 }
 
 
