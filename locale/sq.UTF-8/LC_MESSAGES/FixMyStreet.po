@@ -2831,11 +2831,11 @@ msgstr "Raportuar përmjet %s nga %s te %s"
 
 #: perllib/FixMyStreet/DB/Result/Problem.pm:596
 msgid "Reported via %s in the %s category anonymously at %s"
-msgstr "Raportuar përmjet %s në kategorinë %s në mënyrë anonime te %s"
+msgstr "Raportuar përmjet %s në kategorinë %s në mënyrë anonime në %s"
 
 #: perllib/FixMyStreet/DB/Result/Problem.pm:610
 msgid "Reported via %s in the %s category by %s at %s"
-msgstr "Raportuar përmjet %s në kategorinë %s te %s"
+msgstr "Raportuar përmjet %s në kategorinë %s nga %s në %s"
 
 #: templates/web/base/reports/index.html:24
 msgid "Reported within the last four weeks"
