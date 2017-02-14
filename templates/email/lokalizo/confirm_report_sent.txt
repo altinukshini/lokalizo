@@ -1,4 +1,4 @@
-Subject: [% site_name %] Report Sent: [% title %]
+Subject: [% site_name %] - Report Sent: [% title %]
 
 Hello,
 
@@ -6,7 +6,7 @@ Thank you for using [% site_name %] to submit your report
 "[% title %]".
 
 This is to confirm that it has now been sent to [% bodies_name %],
-who should respond to you directly.
+who should respond to you directlyor through the platform with a comment.
 
 Your report is also on [% url %], where others may read, comment or
 offer advice.

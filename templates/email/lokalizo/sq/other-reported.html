@@ -1,0 +1,30 @@
+[%
+
+email_summary = "Falemnderit për regjsitrimin e raportimit Tuaj";
+email_columns = 2;
+
+PROCESS '_email_settings.html';
+INCLUDE '_email_top.html';
+
+%]
+
+<th style="[% td_style %][% primary_column_style %]" id="primary_column">
+  [% start_padded_box %]
+  <h1 style="[% h1_style %]">Raportimi Juaj është regjistruar</h1>
+  <p style="[% p_style %]">Raportimi Juaj te [% report.body %] është regjistruar në [% site_name %].
+[% IF c.cobrand.is_council && !c.cobrand.owns_problem( report ) %]
+Vini re se [% c.cobrand.council_name %] nuk është përgjegjës për këtë lloj
+të raportimit, prandaj ai do të përcillet te [% report.body %].
+[% END %]
+  </p>
+  <p style="margin: 20px auto; text-align: center">
+  <a style="[% button_style %]" href="[% cobrand.base_url_for_report(report) %][% report.url %]">Shih raportimin</a>
+  </p>
+  [% end_padded_box %]
+</th>
+[% WRAPPER '_email_sidebar.html' object = report %]
+    <h2 style="[% h2_style %]">[% report.title | html %]</h2>
+    <p style="[% secondary_p_style %]">[% report.detail | html %]</p>
+[% END %]
+
+[% INCLUDE '_email_bottom.html' %]

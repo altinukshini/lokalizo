@@ -1,0 +1,21 @@
+Subject: Konfirmoni përditësimin Tuaj në [% INCLUDE 'site-name.txt' | trim %]
+
+Përshëndetje [% update.name %],
+
+Ju lutemi klikoni në vegzën e mëposhtme për ta konfirmuar përditësimin Tuaj në [% INCLUDE 'site-name.txt' | trim %]:
+
+[% token_url %]
+
+Nëse programi Juaj i emailit nuk Ju lejon të klikoni këtë vegëz, kopjoni atë
+në broser.
+
+Përditësimi juaj është:
+
+[% update.text %]
+
+[% INCLUDE 'update-confirm-donotsend.txt' %]
+
+[% INCLUDE 'signature.txt' %]
+
+Ky email është dërguar automatikisht, nga një llogari e pamonitoruar - kështuqë
+mos ktheni përgjigje në të.

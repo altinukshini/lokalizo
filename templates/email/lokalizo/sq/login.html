@@ -1,0 +1,22 @@
+[%
+
+email_summary = "Klionin këtë vegëz për të konfirmuar email adresën dhe për t'u kyçur në " _ site_name;
+email_columns = 1;
+
+PROCESS '_email_settings.html';
+
+INCLUDE '_email_top.html';
+
+%]
+
+<th style="[% td_style %][% only_column_style %]">
+  <h1 style="[% h1_style %]">Ju falemnderit për shfrytëzimin e [% site_name %]</h1>
+  <p style="[% p_style %]">Ju lutemi klikoni në vegzën e mëposhtme për të konfirmuar adresën e emailit dhe kyçur në [% site_name %].</p>
+  <p style="margin: 20px auto; text-align: center">
+    <a style="[% button_style %]" href="[% c.uri_for_action( 'auth/token', token ) %]">Po, kjo është adresa ime</a>
+  </p>
+  <p style="[% p_style %]">Pasi që ta keni konfirmuar do të jeni në gjendje t'i shihni dhe administroni të gjitha raportimet
+dhe përditësimet që i keni bërë nga llogaria Juaj në [% site_name %].</p>
+</th>
+
+[% INCLUDE '_email_bottom.html' %]

@@ -642,10 +642,14 @@ ol.big-numbers > li {
   }
   .mobile #map_box {
       height: 15em;
+      position:relative;
   }
   .report-list-filters > label, .report-list-filters .multi-select-container {
     width: 100%;
     display: block;
+  }
+  #report-cta {
+    display: none;
   }
 }
 
@@ -723,10 +727,14 @@ ol.big-numbers > li {
   }
   .mobile #map_box {
       height: 15em;
+      position: relative;
   }
   .report-list-filters > label, .report-list-filters .multi-select-container {
     width: 100%;
     display: block;
+  }
+  #report-cta {
+    display: none;
   }
 }
 

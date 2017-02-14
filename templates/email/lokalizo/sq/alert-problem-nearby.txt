@@ -1,0 +1,22 @@
+Subject: Raportime të reja në [% site_name %]
+
+Janë shtuar raportime të reja në [% site_name %] në zonën që keni
+specifikuar:
+
+[% INCLUDE '_email_report_list.txt' %]
+
+[% signature %]
+
+Çregjistrohu?
+
+Keni kërkuar t'Ju dërgohet email kur dikush shton një raportim të ri në [% site_name %]
+në zonën e specifikuar. Ky është shërbim falas nga [% site_name %].
+
+Nëse nuk doni të merrni njoftime kur shtohen raportime të reja 
+në zonën e specifikuar klikoni këtë vegëz:
+
+[% unsubscribe_url %]
+
+Ky email është dërguar automatikisht, nga një llogari e pamonitoruar - kështuqë
+mos ktheni përgjigje në të.
+

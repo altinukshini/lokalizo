@@ -1,0 +1,16 @@
+Subject: Konfirmoni raportimin Tuaj në [% INCLUDE 'site-name.txt' | trim %]
+
+Përshëndetje [% report.name || report.email %],
+
+Për ta konfirmuar raportimin Tuaj në [% INCLUDE 'site-name.txt' | trim %]
+përmjet [% report.service %], si dhe për ta verifikuar gjegjësisht për të shtuar detaje tjera
+ndiqeni vegzën URL:
+
+[% token_url %]
+
+Falemnderit!
+
+[% INCLUDE 'signature.txt' %]
+
+Ky email është dërguar automatikisht, nga një llogari e pamonitoruar - kështuqë
+mos ktheni përgjigje në të.

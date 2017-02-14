@@ -1,0 +1,27 @@
+Subject: Raportimi Juaj është regjsitruar: [% report.title %]
+
+Përshëndetje [% report.name %],
+
+Raportimi Juaj te [% report.body %] është regjistruar në [% site_name %].
+
+[% IF c.cobrand.is_council && !c.cobrand.owns_problem( report ) %]
+Vini re se [% c.cobrand.council_name %] nuk është kompetent për këtë lloj
+të raportimit, prandaj ai do të përcillet te [% report.body %].
+[% END %]
+
+Raportimi mund të shihet te:
+
+[% cobrand.base_url_for_report(report) %][% report.url %]
+
+Raportimi Juaj ka titullin:
+
+[% report.title %]
+
+Dhe këto detaje:
+
+[% report.detail %]
+
+[% INCLUDE 'signature.txt' %]
+
+Ky email është dërguar automatikisht, nga një llogari e pamonitoruar - kështuqë
+mos ktheni përgjigje në të.

@@ -1,0 +1,22 @@
+Subject: Raportime të reja në [% site_name %] në [% area_name %] brenda [% ward_name %]
+
+Janë shtuar raportime të reja në [% site_name %] në [% area_name %]
+brenda [% ward_name %]:
+
+[% INCLUDE '_email_report_list.txt' %]
+
+[% signature %]
+
+Çregjistrohu?
+
+Keni kërkuar t'Ju dërgohet email kur dikush shton një raportim të ri në [% site_name %]
+në [% area_name %] brenda [% ward_name %]. Ky është shërbim falas nga [% site_name %].
+
+Nëse nuk doni të merrni njoftime nga kur shtohen raportime të reja 
+në [% area_name %] brenda [% ward_name %] klikoni këtë vegëz:
+
+[% unsubscribe_url %]
+
+Ky email është dërguar automatikisht, nga një llogari e pamonitoruar - kështuqë
+mos ktheni përgjigje në të.
+

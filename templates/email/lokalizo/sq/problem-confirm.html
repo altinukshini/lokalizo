@@ -1,0 +1,33 @@
+[%
+
+email_summary = "Duhet ta konfirmoni raportimin në " _ site_name _ " para se të dërgohet te ${ report.body }.";
+email_columns = 2;
+
+PROCESS '_email_settings.html';
+
+INCLUDE '_email_top.html';
+
+%]
+
+<th style="[% td_style %][% primary_column_style %]" id="primary_column">
+  [% start_padded_box %]
+  <h1 style="[% h1_style %]">Ju lutemi konfirmoni raportimin</h1>
+  <p style="[% p_style %]">Ju lutemi klikoni në vegzën e mëposhtme për të konfirmuar se doni ta dërgoni raportimin te [% report.body %].
+[% IF c.cobrand.is_council && !c.cobrand.owns_problem( report ) %]
+Vini re se [% c.cobrand.council_name %] nuk është kompetent për këtë
+lloj problemi, kësisoji ai do të përcillet te [% report.body %].
+[% END %]
+  </p>
+  <p style="[% p_style %]">Raportimi Juaj do të paraqitet edhe në faqen [% site_name %].</p>
+  <p style="margin: 20px auto; text-align: center">
+    <a style="[% button_style %]" href="[% token_url %]">Po, dërgojeni raportimin tim</a>
+  </p>
+  <p style="[% p_style %]">Nëse nuk dëshironi ta dërgoni këtë raportim, mos ndërmerrni asgjë.</p>
+  [% end_padded_box %]
+</th>
+[% WRAPPER '_email_sidebar.html' object = report %]
+    <h2 style="[% h2_style %]">[% report.title | html %]</h2>
+    <p style="[% secondary_p_style %]">[% report.detail | html %]</p>
+[% END %]
+
+[% INCLUDE '_email_bottom.html' %]

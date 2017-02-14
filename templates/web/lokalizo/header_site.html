@@ -16,12 +16,13 @@
   <ul>
 
     <li class="[% IF c.req.uri.path == '/' %]active[% END %]">
-      <div><i class="fa fa-home" aria-hidden="true"></i></div>
+      <div><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></div>
       <div><a href="/">[% IF lang_code == 'en-gb' %]Home[% ELSE %]Ballina[% END %]</a></div>
     </li>
 
     <li class="[% IF c.req.uri.path == '/reports' %]active[% END %]">
-      <div><i class="fa fa-map-o" aria-hidden="true"></i></div>
+      <div><[% IF c.req.uri.path == '/reports' %]span[% ELSE %]a href="[% base %]/reports[% IF c.user_exists AND c.user.categories.size %]?filter_category=[% c.user.categories.join(",") | uri | html %][% END %]"[% END %]><i class="fa fa-map-o" aria-hidden="true"></i></[% c.req.uri.path == '/reports' ? 'span' : 'a' %]>[%
+        %]</div>
       <div>
 	<[% IF c.req.uri.path == '/reports' %]span[% ELSE %]a href="[% base %]/reports[% IF c.user_exists AND c.user.categories.size %]?filter_category=[% c.user.categories.join(",") | uri | html %][% END %]"[% END %]>
 	[% loc("All reports") %]</[% c.req.uri.path == '/reports' ? 'span' : 'a' %]>[%
@@ -30,7 +31,8 @@
     </li>
 
     <li class="[% IF c.req.uri.path == '/alert' %]active[% END %]">
-      <div><i class="fa fa-street-view" aria-hidden="true"></i></div>
+      <div><[% IF c.req.uri.path == '/alert' %]span[% ELSE %]a href="[% base %]/alert[% pc ? '/list?pc=' : '' %][% pc | uri %]"[% END %]><i class="fa fa-street-view" aria-hidden="true"></i></[% c.req.uri.path == '/alert' ? 'span' : 'a' %]>[%
+  %]</div>
       <div>
 	<[% IF c.req.uri.path == '/alert' %]span[% ELSE %]a href="[% base %]/alert[% pc ? '/list?pc=' : '' %][% pc | uri %]"[% END %]>
 	[% loc("Local alerts") %]</[% c.req.uri.path == '/alert' ? 'span' : 'a' %]>[%
@@ -39,7 +41,9 @@
     </li>
 
     <li class="[% IF c.req.uri.path == '/faq' %]active[% END %]">
-      <div><i class="fa fa-question" aria-hidden="true"></i></div>
+      <div><[% IF c.req.uri.path == '/faq' %]span[% ELSE %]a href="[% base %]/faq"[% END %]>
+  <i class="fa fa-question" aria-hidden="true"></i></[% c.req.uri.path == '/faq' ? 'span' : 'a' %]>[%
+  %]</div>
       <div>
 	<[% IF c.req.uri.path == '/faq' %]span[% ELSE %]a href="[% base %]/faq"[% END %]>
 	[% loc("Help") %]</[% c.req.uri.path == '/faq' ? 'span' : 'a' %]>[%
@@ -48,7 +52,7 @@
     </li>
 
     <li class="[% IF c.req.uri.path == '/about/lokalizo' %]active[% END %]">
-      <div><i class="fa fa-info" aria-hidden="true"></i></div>
+      <div><[% IF c.req.uri.path == '/about/lokalizo' %]span[% ELSE %]a href="[% base %]/about/lokalizo"[% END%]><i class="fa fa-info" aria-hidden="true"></i></[% c.req.uri.path == '/about/lokalizo' ? 'span' : 'a' %]></div>
       <div>
 	<[% IF c.req.uri.path == '/about/lokalizo' %]span[% ELSE %]a href="[% base %]/about/lokalizo"[% END%]>
 	[% IF lang_code == 'en-gb' %]About us[% ELSE %]Per ne[% END %]</[% c.req.uri.path == '/about/lokalizo' ? 'span' : 'a' %]>
@@ -56,7 +60,7 @@
     </li>
 
     <li class="[% IF c.req.uri.path == '/contact' %]active[% END %]">
-      <div><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+      <div><[% IF c.req.uri.path == '/contact' %]span[% ELSE %]a href="[% base %]/contact"[% END%]><i class="fa fa-envelope-o" aria-hidden="true"></i></[% c.req.uri.path == '/contact' ? 'span' : 'a' %]></div>
       <div>
   <[% IF c.req.uri.path == '/contact' %]span[% ELSE %]a href="[% base %]/contact"[% END%]>
   [% IF lang_code == 'en-gb' %]Contact[% ELSE %]Kontakti[% END %]</[% c.req.uri.path == '/contact' ? 'span' : 'a' %]>

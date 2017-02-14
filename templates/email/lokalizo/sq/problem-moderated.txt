@@ -1,0 +1,37 @@
+Subject: Raportimi Juaj në [% site_name %] është moderuar
+
+Përshëndetje [% user.name %],
+
+Raportimi Juaj në [% site_name %] është moderuar.
+
+[% IF types == 'hide' -%]
+Raportimi është bërë i padukshëm në faqe.
+[% ELSE %]
+Shenimet vijuese janë ndryshuar:
+
+	[% types %]
+
+[% END -%]
+
+Raportimi Juaj ka titullin:
+
+[% problem.moderation_original_data.title %]
+
+Dhe përshkrimin:
+
+[% problem.moderation_original_data.detail %]
+
+[% UNLESS types == 'hide' %]
+You can see the report at [% report_uri %]
+[% END %]
+
+Nëse mendoni se raportimi Juaj nuk është dashur të moderohet, mund të kontaktoni
+ekipin në [% report_complain_uri %]
+
+Ju falemnderit për raportimin në faqen [% site_name %].
+
+
+[% INCLUDE 'signature.txt' %]
+
+Ky email është dërguar automatikisht, nga një llogari e pamonitoruar - kështuqë
+mos ktheni përgjigje në të.

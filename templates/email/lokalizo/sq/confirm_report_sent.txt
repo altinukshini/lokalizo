@@ -1,0 +1,25 @@
+Subject: [% site_name %] - Raporti u dërgua: [% title %]
+
+Përshëndetje,
+
+Ju falemnderit për shfrytëzimin e [% site_name %] për të dërguar raporin
+"[% title %]".
+
+Me këtë Jua konfirmojmë se raporti është dërguar te [% bodies_name %],
+të cilët do t'ju përgjigjen drejpërdrejtë ose brenda platformës me komente.
+
+Raporti Juaj gjindet edhe në [% url %], ku të tjerët mund ta lexojnë, komentojnë
+dhe ofrojnë këshillë.
+
+Ndjehuni gjithashtu të lirë të shtoni përditësime në faqe, ndonëse ato nuk do 
+t'i dërgohen institucionit përkatës.
+
+Nëse dëshironi ta përditësoni institucionin, ju lutem prisni përgjigjen e tyre në
+mënyrë që përditësimin t'ua dërgoni atyre drejtpërdrejtë.
+
+Ju dëshirojmë shumë fat në ndreqjen e problemit tuaj.
+
+[% signature %]
+
+Ky email është dërguar automatikisht, nga një llogari e pamonitoruar - kështuqë
+mos ktheni përgjigje në të.

@@ -1,0 +1,3 @@
+Vini re se ne nuk dërgojmë përditësime në [% update.problem.body %] - ato janë
+menduar si vend në [% site_name %] ku përdoruesit mund të
+diskutojnë, mbështesin njëri-tjetrin dhe ofrojnë këshilla.

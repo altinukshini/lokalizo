@@ -1,0 +1,29 @@
+[%
+
+email_summary = "Konfirmoni përditësimin në " _ site_name;
+email_columns = 2;
+
+PROCESS '_email_settings.html';
+
+INCLUDE '_email_top.html';
+
+%]
+
+<th style="[% td_style %][% primary_column_style %]" id="primary_column">
+  [% start_padded_box %]
+  <h1 style="[% h1_style %]">Ju lutemi konfirmoni përditësimin Tuaj</h1>
+  <p style="[% p_style %]">Ju lutemi klikoni në vegzën e mëposhtme për të konfirmuar përditësimin në [% site_name %].</p>
+  <p style="margin: 20px auto; text-align: center">
+    <a style="[% button_style %]" href="[% token_url %]">Po, konfirmoj përditësimin tim</a>
+  </p>
+  <p style="[% p_style %]">[% INCLUDE 'update-confirm-donotsend.txt' %]</p>
+  <p style="[% p_style %]">Nëse nuk doni të vazhdoni me konfirmimin e përditësimit, mos ndërmerrni asgjë.</p>
+  [% end_padded_box %]
+</th>
+[% WRAPPER '_email_sidebar.html'
+    object = update
+    report = problem %]
+    <p style="[% secondary_p_style %]">[% update.text | html %]</p>
+[% END %]
+
+[% INCLUDE '_email_bottom.html' %]

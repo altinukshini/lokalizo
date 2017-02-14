@@ -2815,11 +2815,11 @@ msgstr "Raportuar në kategorinë %s"
 
 #: perllib/FixMyStreet/DB/Result/Problem.pm:602
 msgid "Reported in the %s category anonymously at %s"
-msgstr "Raportuar në kategorinë %s në mënyrë anonime te %s"
+msgstr "Raportuar në kategorinë %s në mënyrë anonime në %s"
 
 #: perllib/FixMyStreet/DB/Result/Problem.pm:618
 msgid "Reported in the %s category by %s at %s"
-msgstr "Raportuar në kategorinë %s nga %s te %s"
+msgstr "Raportuar në kategorinë %s nga %s në %s"
 
 #: perllib/FixMyStreet/DB/Result/Problem.pm:599
 msgid "Reported via %s anonymously at %s"
@@ -3046,7 +3046,7 @@ msgstr "Dërgo raportin prapa"
 
 #: perllib/FixMyStreet/DB/Result/Problem.pm:724
 msgid "Sent to %s %s later"
-msgstr "Dërgo te %s %s më vonë"
+msgstr "Dërguar te %s %s më vonë"
 
 #: templates/web/base/admin/report_edit.html:79
 msgid "Sent:"

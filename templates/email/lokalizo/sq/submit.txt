@@ -1,0 +1,38 @@
+Subject: Raportim problemi: [% title %]
+
+I/E nderuar,
+
+[% missing %][% multiple %]Një përdorues i
+[% site_name %] ka postuar raportimin vijues
+rreth një problemi, i cili mund të ketë nevojë për vëmendjen Tuaj.
+
+[% fuzzy %], apo për përditësim të problemit,
+Ju lutemi vizitoni vegzën e mëposhtme:
+
+    [% url %]
+
+[% has_photo %]----------
+
+Emri: [% name %]
+
+Emaili: [% email %]
+
+[% phone_line %][% category_line %]Lënda: [% title %]
+
+Përshkrimi: [% detail %]
+
+Gjerësia gjeografike: [% latitude %]
+
+Gjatësia gjeografike: [% longitude %]
+
+Shih këtë vendndodhje në OpenStreetMap: [% osm_url %]
+
+[% closest_address %]----------
+
+Përgjigjet në këtë email do të shkojnë te përdoruesi, që e ka raportuar problemin.
+
+[% signature %]
+
+Nëse ka adresë më të përshtatshme ku duhet dërguar këtë mesazh rreth
+[% category_footer %], ju lutemi na njoftoni. Kjo do të ndihmojë ql shërbimi të
+përmirësohet për qytetarët. Gjithashtu e mirëpresim çdo informatë tjetër.

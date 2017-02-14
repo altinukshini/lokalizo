@@ -1,0 +1,29 @@
+Subject: Përditësim i ri në [% site_name %]: '[% title %]'
+
+Keni kërkuar që t'Ju dërgohet email sa herë që ka përditësime në
+[% site_name %] te raportimi: [% title %].
+
+Përditësimet vijuese janë bërë në këtë raportim:
+
+[% INCLUDE '_email_comment_list.txt' %]
+
+[% state_message %]
+
+Nëse nuk doni t'i shihni apo të përgjigjeni në këto përditësime vizitoni 
+vegzën në vazhdim:
+
+    [% problem_url %]
+
+Ky email është dërguar automatikisht, nga një llogari e pamonitoruar - kështuqë
+mos ktheni përgjigje në të.
+
+[% signature %]
+
+
+Çregjistrohu?
+
+Aktualisht ju çojmë email sa herë që dukush bën një përditësim në
+[% site_name %] te raportimi: [% title %].
+
+Nëse nuk doni të merrni njoftime sa herë që dikush shton një përditësim,
+ndiqeni vegzën: [% unsubscribe_url %]

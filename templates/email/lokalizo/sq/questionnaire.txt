@@ -1,0 +1,24 @@
+Subject: Pyetësor nga [% site_name %] për raportimin Tuaj: '[% report.title %]'
+
+Përshëndetje [% report.name %],
+
+[% created %] më parë, keni raportuar një problem në [% site_name %].
+
+Përshkrimi i këtij problemi është n' fund të këtij emaili.
+
+Për ta mbajtur [% site_name %] të përditësuar dhe relevant, do t'Jua dinim për nder
+nëse e përcillni vegzën e mëposhtme dhe plotësoni një pyetësor të shkurtër aty
+duke na përditësuar për problemin Tuaj:
+
+    [% url %]
+
+[% signature %]
+
+Raportimi Juaj ishte:
+
+[% report.title %]
+
+[% report.detail %]
+
+Ky email është dërguar automatikisht, nga një llogari e pamonitoruar - kështuqë
+mos ktheni përgjigje në të.

@@ -1,0 +1,9 @@
+Subject: Mesazh Lokalizo: [% subject %]
+
+[% message %]
+
+[% IF complaint %]
+[ [% complaint %] - [% problem_url %] - [% admin_url %] ]
+[% END %]
+
+[ Derguarg nga contact.cgi ne [% host %]. IP address [% ip %] ]

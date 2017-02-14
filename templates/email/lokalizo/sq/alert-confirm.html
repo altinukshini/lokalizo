@@ -1,0 +1,21 @@
+[%
+
+email_summary = "Duhet t'i konfirmoni konfigurimet e njoftimeve për " _ site_name _ " para se t'ju dërgojmë njoftime.";
+email_columns = 1;
+
+PROCESS '_email_settings.html';
+
+INCLUDE '_email_top.html';
+
+%]
+
+<th style="[% td_style %][% only_column_style %]">
+  <h1 style="[% h1_style %]">Ju lutem konfirmoni konfigurimet e njoftimeve</h1>
+  <p style="[% p_style %]">Ju lutemi klikoni në vegzën e mëposhtme për të konfirmuar se doni të merrni njoftime brenda zonës suaj.</p>
+  <p style="margin: 20px auto; text-align: center">
+    <a style="[% button_style %]" href="[% token_url %]">Po, më dërgoni njoftime</a>
+  </p>
+  <p style="[% p_style %]">Nëse nuk doni të vazhdoni abonimin për njoftime në këtë zonë, injoroni këtë email.</p>
+</th>
+
+[% INCLUDE '_email_bottom.html' %]
