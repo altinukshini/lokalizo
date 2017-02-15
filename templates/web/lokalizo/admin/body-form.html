@@ -104,7 +104,7 @@
       </p>
     </div>
     <p>
-        <label for="send_method">Send Method</label>
+        <label for="send_method">[% IF lang_code == 'en-gb' %]Send Method[% ELSE %]Metoda e dergimit[% END %]</label>
         <select class="form-control" name="send_method" id="send_method">
             <option value=""> -- Select a method -- </option>
             [% FOR method IN send_methods %]
