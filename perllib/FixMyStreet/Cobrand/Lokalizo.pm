@@ -249,10 +249,10 @@ sub base_url_with_lang {
    my $lang = $mySociety::Locale::lang;
 
    if ($lang eq 'sq') {
-      $base =~ s{http://}{$&sq.};
+      $base =~ s{https://}{$&sq.};
    } 
    #else {
-   #    $base =~ s{http://}{$&en.};
+   #    $base =~ s{https://}{$&en.};
    # }
 
    return $base;
