@@ -19,6 +19,16 @@
 
 <p>[% c.user.name %] [% c.user.email %]</p>
 
+[% IF c.user.is_superuser || c.user.from_body %]
+    <p class="my-account-buttons">
+        [% IF c.user.is_superuser %]
+            <a href="/admin">Admin</a>
+        [% END %]
+        [% IF c.user.from_body %]
+            <a href="/dashboard">[% loc('Dashboard') %]</a>
+        [% END %]
+    </p>
+[% END %]
 <p class="my-account-buttons">
   <a href="/auth/change_password">[% loc('Change password') %]</a>
   <a href="/auth/change_email">[% loc('Change email') %]</a>
