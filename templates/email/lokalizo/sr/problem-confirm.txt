@@ -1,0 +1,30 @@
+Subject: Potvrdite prijavu problema na [% site_name %]
+
+Zdravo [% report.name %],
+
+Ukoliko želite ja prijavu problema pošaljete [% report.body %], molimo da za potvrdu kliknete na link ispod. Imajte na umu da će vaš problem takođe biti objavljen na [% site_name %]
+sajtu :
+
+[% token_url %]
+
+Ukoliko iz nekog razloga ne možete da kliknete na link iznad, iskopirajte link u Vaš web pretraživač.
+[% IF c.cobrand.is_council && !c.cobrand.owns_problem( report ) %]
+Napomena: [% c.cobrand.council_name %] nije nadležno za ovaj tip
+problema, tako da će prijava biti poslata [% report.body %].
+[% END %]
+
+Naslov problema:
+
+[% report.title %]
+
+Detalji:
+
+[% report.detail %]
+
+Ukoliko više ne želite da prijavite ovaj problem, molimo ne poduzimajte dalje akcije.
+
+Hvala Vam što ste koristili [% site_name %].
+
+[% INCLUDE 'signature.txt' %]
+
+Ova poruka je poslata automatski sa email naloga koji se ne proverava. Molimo Vas ne odgovarajte na ovaj mail.

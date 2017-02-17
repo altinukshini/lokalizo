@@ -1,0 +1,15 @@
+Subject: Najnovija/dopunska informacija koju ste poslali je evidentirana
+
+Zdravo [% update.name %],
+
+Nova/dopunska informacija koju ste poslali sačuvana je na sajtu [% site_name %]:
+
+[% cobrand.base_url_for_report(problem) %][% problem.url %]#update_[% update.id %]
+
+Tekst nove/dopunske informacije:
+
+[% update.text %]
+
+[% INCLUDE 'signature.txt' %]
+
+Ova poruka je poslata automatski sa email naloga koji se ne proverava. Molimo Vas ne odgovarajte na ovaj mail.

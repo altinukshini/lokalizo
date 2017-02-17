@@ -1,0 +1,27 @@
+Subject: Potvrdite prijavu problema na [% site_name %]
+
+Zdravo [% report.name %],
+
+Molimo kliknite na link ispod ukoliko želite da se prijava o problemu pojavi na [% site_name %], bez obzira što ista neće biti poslata opštini.
+
+[% token_url %]
+	
+Ukoliko iz nekog razloga ne možete da kliknete na link iznad, iskopirajte link u Vaš web pretraživač.
+
+Problem koji ste prijavili:
+
+[% report.title %]
+
+Detalji:
+
+[% report.detail %]
+
+Ukoliko više ne želite da prijavite ovaj problem ne poduzimajte dalje akcije.
+
+Hvala Vam što podržavate [% site_name %].
+
+
+
+[% INCLUDE 'signature.txt' %]
+
+Ova poruka je poslata automatski sa email naloga koji se ne proverava. Molimo Vas ne odgovarajte na ovaj mail.

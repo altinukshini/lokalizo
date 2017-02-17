@@ -1,0 +1,9 @@
+Subject: Poruka Lokalizo: [% subject %]
+
+[% message %]
+
+[% IF complaint %]
+[ [% complaint %] - [% problem_url %] - [% admin_url %] ]
+[% END %]
+
+[ Poslao contact.cgi sa [% host %]. IP address [% ip %] ]

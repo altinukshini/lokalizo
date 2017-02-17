@@ -1,0 +1,18 @@
+Subject: Novi problemi prijavljeni na [% site_name %] u [% area_name %], [% ward_name %]
+
+Na [% site_name %] su prijavljeni sledeći novi problemi u [% area_name %], [% ward_name %]:
+
+[% INCLUDE '_email_report_list.txt' %]
+
+[% signature %]
+
+
+Želite da se odjavite?
+
+Tražili ste od nas da Vam pošaljemo mail svaki put kada neko prijavi novi problem na sajtu [% site_name %] u [% area_name %], [% ward_name %]. Ovo je besplatna usluga sajta [% site_name %].
+
+Ukoliko želite da se odjavite sa servisa prijema mail-ova upozorenja o prijavama novih problema u [% area_name %], [% ward_name %], sledite ovaj link:
+
+[% unsubscribe_url %]
+
+Ova poruka je poslata automatski sa email naloga koji se ne proverava. Molimo Vas ne odgovarajte na ovaj mail.

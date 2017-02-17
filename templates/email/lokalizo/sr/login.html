@@ -1,0 +1,21 @@
+[%
+
+email_summary = "Upotrebom ovog linka potvrdite Vašu email adresu i prijavu na " _ site_name;
+email_columns = 1;
+
+PROCESS '_email_settings.html';
+
+INCLUDE '_email_top.html';
+
+%]
+
+<th style="[% td_style %][% only_column_style %]">
+  <h1 style="[% h1_style %]">Hvala što koristite [% site_name %]</h1>
+  <p style="[% p_style %]">Za potvrdu Vaše email adrese i prijavu na [% site_name %] molimo kliknite na link ispod.</p>
+  <p style="margin: 20px auto; text-align: center">
+    <a style="[% button_style %]" href="[% c.uri_for_action( 'auth/token', token ) %]">Da, ovo je moja adresa</a>
+  </p>
+  <p style="[% p_style %]">Kada potvrdite svoju email adresu, bićete u mogućnosti da upravljate svim prijavama problema iz menija "Vaš nalog" na sajtu [% site_name %].</p>
+</th>
+
+[% INCLUDE '_email_bottom.html' %]

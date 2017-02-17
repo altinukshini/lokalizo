@@ -1,0 +1,28 @@
+[%
+
+email_summary = "Pre nego što bude objavljen javno, potrebno je da potvrdite problem koji ste prijavili na " _ site_name _ " .";
+email_columns = 2;
+
+PROCESS '_email_settings.html';
+
+INCLUDE '_email_top.html';
+
+%]
+
+<th style="[% td_style %][% primary_column_style %]" id="primary_column">
+  [% start_padded_box %]
+  <h1 style="[% h1_style %]">Molimo potvrdite prijavu problema </h1>
+  <p style="[% p_style %]">Kliknite na link ispod ukoliko želite da se prijava o problemu pojavi na [% site_name %], bez obzira što ista neće biti poslata opštini.</p>
+  <p style="[% p_style %]">Problem koji ste prijavili biće objavljen i na sajtu [% site_name %] .</p>
+  <p style="margin: 20px auto; text-align: center">
+    <a style="[% button_style %]" href="[% token_url %]">Da, objavi moju prijavu</a>
+  </p>
+  <p style="[% p_style %]">Ukoliko više ne želite da prijavite ovaj problem ne poduzimajte dalje akcije.</p>
+  [% end_padded_box %]
+</th>
+[% WRAPPER '_email_sidebar.html' object = report %]
+    <h2 style="[% h2_style %]">[% report.title | html %]</h2>
+    <p style="[% secondary_p_style %]">[% report.detail | html %]</p>
+[% END %]
+
+[% INCLUDE '_email_bottom.html' %]

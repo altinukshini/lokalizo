@@ -1,0 +1,19 @@
+Subject: Novi problem prijavljen na [% site_name %]
+
+Na [% site_name %] su dodati sledeći novi problemi:
+
+[% INCLUDE '_email_report_list.txt' %]
+
+[% signature %]
+
+
+Želite da se odjavite?
+
+Tražili ste od nas da Vam pošaljemo mail svaki put kada neko prijavi novi problem na sajtu [% site_name %]. Ovo je besplatna usluga sajta [% site_name %].
+
+Ukoliko želite da se odjavite sa servisa prijema mail-ova upozorenja o prijavama novih problema na  [% site_name %] kliknite na link ispod:
+
+[% unsubscribe_url %]
+
+Ova poruka je poslata automatski sa email naloga koji se ne proverava. Molimo Vas ne odgovarajte na ovaj mail.
+

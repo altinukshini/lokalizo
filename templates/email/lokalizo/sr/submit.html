@@ -1,0 +1,57 @@
+[%
+
+email_summary = "Korisnik/ca " _ site_name _ " je prijavio/la novi provlem u Vašem području.";
+email_footer = "Ukoliko mislite da bi neki drugi nadležni organ ili kontakt bolje odgovarao situaciji  " _ category_footer _ ",molimo da nas o tome obavestite. To će pomoći poboljšanju usluge za lokalno stanovništvo. Takođe pozdravljamo ma koje druge sugestije koje imate.";
+email_columns = 2;
+
+PROCESS '_email_settings.html';
+
+INCLUDE '_email_top.html';
+
+%]
+
+<th style="[% td_style %][% primary_column_style %]" id="primary_column">
+  [% start_padded_box %]
+  <h1 style="[% h1_style %]">Prijavljen novi problem u vašoj oblasti</h1>
+  <p style="[% p_style %]">[% missing %][% multiple %]Korisnik/ca [% site_name %] prijavio/la je sledeći
+lokalni problem za koji veruje da zaslužuje Vašu pažnju.</p>
+
+  <p style="margin: 20px auto; text-align: center">
+    <a style="[% button_style %]" href="[% url %]">Prikaži celu prijavu</a>
+  </p>
+  <h2 style="[% h2_style %] margin: 30px 0 10px 0">Prijavu podneo/la:</h2>
+  <table [% table_reset %]>
+    <tr>
+      <th style="[% contact_th_style %]">Ime</th>
+      <td style="[% contact_td_style %]">[% name | html %]</td>
+    </tr>
+    <tr>
+      <th style="[% contact_th_style %]">Email</th>
+      <td style="[% contact_td_style %]"><a href="mailto:[% email | html %]">[% email | html %]</a></td>
+    </tr>
+    [%~ IF phone %]
+      <tr>
+        <th style="[% contact_th_style %]">Telefon</th>
+        <td style="[% contact_td_style %]"><a href="tel:[% phone | html %]">[% phone | html %]</a></td>
+      </tr>
+    [%~ END %]
+  </table>
+  <p style="[% p_style %] margin-top: 0.5em;">Odgovori na ovaj mail biće poslati direktno [% name | html %], korisniku/ci koji/a je problem prijavio/la.</p>
+  [% end_padded_box %]
+</th>
+[% WRAPPER '_email_sidebar.html' object = report %]
+    <h2 style="[% h2_style %]">[% title | html %]</h2>
+    [%~ IF category_line %]
+    <p style="[% secondary_p_style %]">[% category | html %]</p>
+    [%~ END %]
+    <p style="[% secondary_p_style %]">[% detail | html %]</p>
+    <p style="[% secondary_p_style %]">
+      <strong>Lokacija:</strong>
+      <a href="[% osm_url %]" title="View OpenStreetMap of this location">
+        [%~ latitude %], [% longitude ~%]
+      </a>
+      [% IF closest_address %]<br>[% closest_address | trim | replace("\n\n", "<br>") %][% END %]
+    </p>
+[% END %]
+
+[% INCLUDE '_email_bottom.html' %]

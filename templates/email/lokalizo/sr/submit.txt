@@ -1,0 +1,35 @@
+Subject: Prijava problema: [% title %]
+
+Poštovani [% bodies_name %],
+
+[% missing %][% multiple %]Korisnik/ca
+[% site_name %] prijavio/la je sledeći
+lokalni problem za koji veruje da zaslužuje Vašu pažnju.
+
+[% fuzzy %], ili za nove/dopunske informacije o problemu, molimo posetite sledeći link:
+
+    [% url %]
+
+[% has_photo %]----------
+
+Ime: [% name %]
+
+Email adresa: [% email %]
+
+[% phone_line %][% category_line %]Tema: [% title %]
+
+Detalji: [% detail %]
+
+Geografska širina: [% latitude %]
+
+Geografska dužina: [% longitude %]
+
+Pogledajte ovu lokaciju na OpenStreetMap: [% osm_url %]
+
+[% closest_address %]----------
+
+Odgovori na ovaj mail biće poslati korisniku/ci koji/a je problem prijavio/la.
+
+[% signature %]
+
+Ukoliko mislite da bi neki drugi nadležni organ ili kontakt bolje odgovarao situaciji [% category_footer %], molimo da nas o tome obavestite. To će pomoći poboljšanju usluge za lokalno stanovništvo. Takođe pozdravljamo ma koje druge sugestije koje imate.

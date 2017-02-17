@@ -1,0 +1,20 @@
+Subject: [% site_name %] prijavljen problem: [% title %]
+
+Zdravo,
+
+Hvala Vam što ste koristili [% site_name %] za prijavu "[% title %]".
+
+Ovim mail-om potvrđujemo da je prijava sada poslata [% bodies_name %] koji će Vam odgvoriti direktno.
+
+Problem koji ste prijavili je takođe objavljen na [% url %], kako bi i drugi mogli da pročitaju informaciju, komentarišu ili posavetuju.
+
+Na toj stranici slobodno možete upisati i nove/dopunske informacije, ali imajte na umu da one neće biti poslate Vašopj opštini.
+
+Ukoliko želite da Vašoj opštini pošaljete nove/dopunske informacije, molimo da sačekate njihov odgovor kako biste im direktno odgovorili.
+
+Srećno sa rešavanjem problema.
+
+[% signature %]
+
+Ova poruka je poslata automatski sa email naloga koji se ne proverava. Molimo Vas ne odgovarajte na ovaj mail.
+

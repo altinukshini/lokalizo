@@ -1,0 +1,11 @@
+Subject: Detalji Vašeg naloga na [% site_name %]
+
+Molimo potvrdite svoju adresu klikom na link ispod.
+
+[% c.uri_for_action( 'auth/token', token ) %]
+
+Kada potvrdite svoju email adresu, bićete u mogućnosti da upravljate svim prijavama problema iz menija "Vaš nalog" na sajtu [% site_name %].
+
+[% INCLUDE 'signature.txt' %]
+
+Ova poruka je poslata automatski sa email naloga koji se ne proverava. Molimo Vas ne odgovarajte na ovaj mail.

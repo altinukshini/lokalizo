@@ -1,0 +1,25 @@
+Subject: Problem koji ste prijavili je evidentiran: [% report.title %]
+
+Zdravo [% report.name %],
+
+Problem koji ste prijavili [% report.body %] sačuvan je na sajtu [% site_name %].
+
+[% IF c.cobrand.is_council && !c.cobrand.owns_problem( report ) %]
+Napomena: [% c.cobrand.council_name %] nije nadležna za ovu vrstu problema, tako da će prijava biti poslata [% report.body %].
+[% END %]
+
+Prijavu možete pogledati ovde:
+
+[% cobrand.base_url_for_report(report) %][% report.url %]
+
+Naslov problema koji ste prijavili:
+
+[% report.title %]
+
+Detalji:
+
+[% report.detail %]
+
+[% INCLUDE 'signature.txt' %]
+
+Ova poruka je poslata automatski sa email naloga koji se ne proverava. Molimo Vas ne odgovarajte na ovaj mail.

@@ -1,0 +1,24 @@
+Subject: [% site_name %] nove informacije o problemu: '[% title %]'
+
+Tražili ste od nas da Vam pošaljemo mail svaki put kada se pojavi nova informacija na [% site_name %] povodom problema: [% title %].
+
+Najnovije/dopunske informacije povodom ovog problema su:
+
+[% INCLUDE '_email_comment_list.txt' %]
+
+[% state_message %]
+
+Ukoliko želite da pogledate ili odgovorite na ove informacije, molimo posetite sledeći link:
+
+    [% problem_url %]
+
+Ova poruka je poslata automatski sa email naloga koji se ne proverava. Molimo Vas ne odgovarajte na ovaj mail.
+
+[% signature %]
+
+
+Želite da se odjavite?
+
+Tražili ste od nas da Vam pošaljemo mail svaki put kada neko na sajtu [% site_name %] pruži nove informacije o problemu [% title %]:
+
+Ukoliko želite da se odjavite sa servisa prijema mail-ova svaki put kada je dostupna nova informacija, sledite ovaj link: [% unsubscribe_url %]

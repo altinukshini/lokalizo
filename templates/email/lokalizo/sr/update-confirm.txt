@@ -1,0 +1,19 @@
+Subject: Potvrdite novu/dopunsku informaciju na [% INCLUDE 'site-name.txt' | trim %]
+
+Zdravo [% update.name %],
+
+Za potvrdu nove/dopunske informacije na [% INCLUDE 'site-name.txt' | trim %], molimo kliknite na link ispod:
+
+[% token_url %]
+
+Ukoliko iz nekog razloga ne možete da kliknete na link iznad, iskopirajte link u Vaš web pretraživač.
+
+Nove/dopunske informacije:
+
+[% update.text %]
+
+[% INCLUDE 'update-confirm-donotsend.txt' %]
+
+[% INCLUDE 'signature.txt' %]
+
+Ova poruka je poslata automatski sa email naloga koji se ne proverava. Molimo Vas ne odgovarajte na ovaj mail.

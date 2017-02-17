@@ -1,0 +1,35 @@
+Subject: Problem koji ste prijavili na [% site_name %] je moderiran
+
+Zdravo [% user.name %],
+
+Problem koji ste prijavili na [% site_name %] je moderiran.
+
+[% IF types == 'hide' -%]
+Problem koji ste prijavili je sakriven.
+[% ELSE %]
+Promenjeni su sledeći podaci:
+
+	[% types %]
+
+[% END -%]
+
+Problem koji ste prijavili:
+
+[% problem.moderation_original_data.title %]
+
+Detalji:
+
+[% problem.moderation_original_data.detail %]
+
+[% UNLESS types == 'hide' %]
+You can see the report at [% report_uri %]
+[% END %]
+
+Ukoliko mislite da Vašu prijavu nije trebalo moderirati, možete kontaktirati [% report_complain_uri %]
+
+Hvala Vam što za prijavljivanje problema koristite [% site_name %].
+
+
+[% INCLUDE 'signature.txt' %]
+
+Ova poruka je poslata automatski sa email naloga koji se ne proverava. Molimo Vas ne odgovarajte na ovaj mail.

@@ -1,0 +1,14 @@
+Subject: Potvrdite prijavu problema na [% INCLUDE 'site-name.txt' | trim %]
+
+Zdravo [% report.name || report.email %],
+
+Za potvrdu prijavljenog problema na [% INCLUDE 'site-name.txt' | trim %]
+putem [% report.service %], kao i za proveru ili dodavanje ma kojih novih detalja, molimo posetite sledeći link:
+
+[% token_url %]
+
+Hvala!
+
+[% INCLUDE 'signature.txt' %]
+
+Ova poruka je poslata automatski sa email naloga koji se ne proverava. Molimo Vas ne odgovarajte na ovaj mail.

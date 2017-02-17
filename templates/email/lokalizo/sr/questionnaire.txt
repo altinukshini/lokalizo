@@ -1,0 +1,21 @@
+Subject: Upitnik o problemu prijavljenom na [% site_name %] : '[% report.title %]'
+
+Zdravo [% report.name %],
+
+Pre [% created %], prijavili ste problem putem sajta [% site_name %].
+
+Detalji te prijave nalaze se na kraju ove poruke.
+
+Cenili bismo ukoliko biste kliknuli na link ispod i popunili kratak upitnik o trenutnom stanju problema koji ste prijavili . To će nam pomoći da na [% site_name %] uvek budu objavljene najnovije i relevantne informacije. 
+
+    [% url %]
+
+[% signature %]
+
+Prijavili ste:
+
+[% report.title %]
+
+[% report.detail %]
+
+Ova poruka je poslata automatski sa email naloga koji se ne proverava. Molimo Vas ne odgovarajte na ovaj mail.

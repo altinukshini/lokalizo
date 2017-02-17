@@ -1,0 +1,21 @@
+[%
+
+email_summary = "Potrebno je da potvrdite podešavanja za mailove upozorenja na " _ site_name _ ", pre nego Vam iste možemo i poslati.";
+email_columns = 1;
+
+PROCESS '_email_settings.html';
+
+INCLUDE '_email_top.html';
+
+%]
+
+<th style="[% td_style %][% only_column_style %]">
+  <h1 style="[% h1_style %]">Molimo potvrdite podešavanja za mail-ove upozorenja</h1>
+  <p style="[% p_style %]">Za potvrdu prijema mail-ova upozorenja unutar izabranog područja, molimo kliknite na link ispod.</p>
+  <p style="margin: 20px auto; text-align: center">
+    <a style="[% button_style %]" href="[% token_url %]">Da, želim da primam mail-ove upozorenja.</a>
+  </p>
+  <p style="[% p_style %]">Ukoliko više ne želite da budete pretplaćeni na mail-ove upozorenja u vezi sa ovim područjem, samo ignorišite ovaj mail.</p>
+</th>
+
+[% INCLUDE '_email_bottom.html' %]
