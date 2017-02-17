@@ -251,6 +251,10 @@ sub base_url_with_lang {
    if ($lang eq 'sq') {
       $base =~ s{https://}{$&sq.};
    } 
+   if ($lang eq 'sr') {
+      $base =~ s{https://}{$&sr.};
+   }
+
    #else {
    #    $base =~ s{https://}{$&en.};
    # }
