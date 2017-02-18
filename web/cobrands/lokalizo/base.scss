@@ -431,13 +431,16 @@ nav ul li.active .fa {
 nav ul li:hover a, nav ul li:hover .fa {
     color: #4DB848;
 }
-
-#footer-mobileapps img {
-    float: left;
-    width: 44%;
+#footer-mobileapps p {
+  text-align: center;
+}
+#footer-mobileapps a img {
+    width: 50%;
     padding: 1em 1em 1em 1em;
 }
-
+*:focus {
+    outline: none;
+}
 #footer-mobileapps h4, #footer-help h4 {
     margin: 0;
     font-weight: bold;
@@ -450,7 +453,16 @@ nav ul li:hover a, nav ul li:hover .fa {
 #footer-mobileapps, #footer-help {
   color: #888;
 }
-
+#footer-help a img {
+    height: 80px;
+    margin: 5px;
+}
+#footer-help p a:nth-child(3) img {
+    height: 45px;
+}
+#footer-help p {
+    text-align: center;
+}
 .item-list--reports__item .img {
   border-radius: 10px;
 }
@@ -544,15 +556,11 @@ ol.big-numbers > li {
     position: relative;
     list-style: none;
     padding: 0 0 0 2.5em;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.2em;
     color: #4DB848;
 }
-
 #front-howto #front_stats div {
-  color: 4DB848;
-}
-#front-howto #front_stats div big {
-  color: #666;
+  color: #4DB848;
 }
 .form-success {
     background: #4DB848 !important;
@@ -570,6 +578,9 @@ ol.big-numbers > li {
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   /* Styles */
+  #front-howto #front_stats div big {
+    color: #fff;
+  }
   h1, h2, h3, h4, h5 {
     color: #666;
   }
@@ -656,6 +667,9 @@ ol.big-numbers > li {
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
   /* Styles */
+  #front-howto #front_stats div big {
+    color: #fff;
+  }
   h1, h2, h3, h4, h5 {
     color: #666;
   }

@@ -1,9 +1,15 @@
                         <div class="tablewrapper bordered">
                             <div id="footer-mobileapps">
                                 
-                                <h4>[% IF lang_code == 'en-gb' %]Download our mobile apps[% ELSE %]Shkarkoni aplikacionet mobile[% END %]</h4>
+                                <h4>[% IF lang_code == 'en-gb' %]
+                                Download our mobile apps
+                                [% ELSE %]
+                                Shkarkoni aplikacionet mobile
+                                [% END %]
+                                </h4>
                                 <p>
-                                    <a href="#"><img src="/cobrands/lokalizo/images/android-banner.png"></a><a href="#"><img src="/cobrands/lokalizo/images/ios-banner.png"></a>
+                                    <a href="#"><img src="/cobrands/lokalizo/images/android-banner.png"></a>
+                                    <a href="#"><img src="/cobrands/lokalizo/images/ios-banner.png"></a>
                                 </p>
                                 
                             </div>
@@ -11,12 +17,22 @@
                             <div id="footer-help">
                                 <h4>[% IF lang_code == 'en-gb' %]Sponsors / Partners[% ELSE %]Sponzorët / Partnerët[% END %]</h4>
                                 <p>
-                                    PIKS, UNDP, CANADIAN EMBASSY, OMLADINA NAPRED
+                                    <a href="http://pi-ks.org"><img title="PIKS" alt="PIKS" src="/cobrands/lokalizo/images/piks.png"></a>
+                                    <a href="http://ks.undp.org/"><img title="UNDP Kosovo" alt="UNDP Kosovo" src="/cobrands/lokalizo/images/undp.png"></a>
+                                    <a href="#"><img title="Canada Fund for Local Initiatives" alt="Canada Fund for Local Initiatives" src="/cobrands/lokalizo/images/canada.png"></a>
+                                    <a href="http://flossk.org"><img title="FLOSSK" alt="FLOSSK" src="/cobrands/lokalizo/images/flossk.png"></a>
+                                    <a href="#"><img title="Omladina Napred" alt="Omladina Napred" src="/cobrands/lokalizo/images/omladina.png"></a>
                                 </p>
                             </div>
 
                         </div>
                         <div style="color:#fff; font-size:12px; margin:0 auto; width:100%;text-align:center;margin-top:4em;">
                             [% IF lang_code == 'en-gb' %]Developed by <a class="platform-logo" style="color:white;" href="http://flossk.org/"><b>FLOSSK</b></a>[% ELSE %]Zhvilluar nga <a class="platform-logo" style="color:white;" href="http://flossk.org/"><b>FLOSSK</b></a>[% END %] - CC-BY-SA v3.0<br>
-                            [% loc('Powered by <a class="platform-logo" style="color:white;" href="http://fixmystreet.org/"><b>FixMyStreet Platform</b></a>') %]
+
+                            [% IF lang_code == 'en-gb' %]
+                                Powered by <a class="platform-logo" style="color:white;" href="http://fixmystreet.org/"><b>FixMyStreet Platform</b></a>
+                            [% ELSE %]
+                                Mundësuar nga <a class="platform-logo" style="color:white;" href="http://fixmystreet.org/"><b>Platforma FixMyStreet</b></a>
+                            [% END %]
+                            
                         </div>

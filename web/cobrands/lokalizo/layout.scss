@@ -583,7 +583,9 @@ a:hover, a:active {
     padding: 2em 1.2em 2em 1.2em;
     height: 28em;
 }
-
+#front-howto #front_stats div big {
+    color: #888;
+}
 #footer-help {
     border: none;
     width: 45%;
@@ -591,7 +593,7 @@ a:hover, a:active {
     background: #fff;
     padding: 2em 1.2em 2em 1.2em;
     border-radius: 15px;
-    height: 10em;
+    height: 15em;
 }
 
 #footer-mobileapps {
@@ -601,7 +603,7 @@ a:hover, a:active {
     float: left;
     border-radius: 15px;
     padding: 2em 1.2em 2em 1.2em;
-    height: 10em;
+    height: 15em;
     margin: 0;
 }
 
@@ -780,5 +782,6 @@ body.twothirdswidthpage .content .sticky-sidebar aside {
 .localrss .content, .localrss .form-box {
   background-color: transparent;
 }
-
-
+*:focus {
+    outline: none;
+}
