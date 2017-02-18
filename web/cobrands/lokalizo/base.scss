@@ -578,6 +578,10 @@ ol.big-numbers > li {
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   /* Styles */
+  #front-howto #front_stats div { color: #333; }
+  #front-main #postcodeForm label { color: #fff; } 
+  #front-recent {margin-top:5em;}
+  #front-main #postcodeForm {background: #86cbe9;}
   #front-howto #front_stats div big {
     color: #fff;
   }
@@ -601,7 +605,8 @@ ol.big-numbers > li {
       width: 100%;
   }
   #front-howto {
-      height: 25em;
+      height: 18em;
+      margin: 3em 0 3em 0;
   }
   #front-recent {
     height: auto;
@@ -667,6 +672,10 @@ ol.big-numbers > li {
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
   /* Styles */
+  #front-howto #front_stats div { color: #333; }
+  #front-main #postcodeForm label { color: #fff; }
+  #front-recent {margin-top:5em;}
+  #front-main #postcodeForm {background: #86cbe9;}
   #front-howto #front_stats div big {
     color: #fff;
   }
@@ -690,7 +699,8 @@ ol.big-numbers > li {
       width: 100%;
   }
   #front-howto {
-      height: 25em;
+      height: 18em;
+      margin: 3em 0 3em 0;
   }
   #front-recent {
     height: auto;
