@@ -1170,7 +1170,7 @@ zoom, to stop e.g. OpenLayers defaulting to null/0.
 =cut
 
 sub default_map_zoom { undef };
-sub default_link_zoom { 3 }
+sub default_link_zoom { 1 }
 
 sub users_can_hide { return 0; }
 
@@ -1181,7 +1181,7 @@ Returns true if the show name checkbox should be ticked by default.
 =cut
 
 sub default_show_name {
-    1;
+    0;
 }
 
 =head2 report_check_for_errors
