@@ -25,8 +25,8 @@ function translateCategory(category){
             "sq" : "Zvoglimi i rrezikut të fatkeqësive",
             "sr" : "Disaster risk reduction"
     },
-		"Other" : {
-            "en" : "Other",
+		"Something else" : {
+            "en" : "Something else",
             "sq" : "Tjera",
             "sr" : "Other"
     }

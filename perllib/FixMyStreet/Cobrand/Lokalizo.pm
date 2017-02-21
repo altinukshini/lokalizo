@@ -975,7 +975,7 @@ sub change_category_text {
     my $enc = 'utf-8';
 
     my %allowedCategories_sq = (
-        "Other"     =>  "Tjera",
+        "Something else"     =>  "Tjera",
         "Traffic"     =>  "Trafik",
         "Environmental"     =>  "Ambient",
         "Infrastructure"    =>  "Infrastrukture",
