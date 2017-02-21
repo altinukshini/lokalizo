@@ -9,7 +9,7 @@
         [%~ FOREACH cat_op IN category_options ~%]
         [% cat_op_lc = cat_op | lower =%]
         <option value='[% cat_op | html %]'[% ' selected' IF report.category == cat_op || category_lc == cat_op_lc || (category_options.size == 2 AND loop.last) ~%]
-        >[% IF loop.first %][% cat_op %][% ELSIF lang_code == 'sq' %][% c.cobrand.change_category_text(cat_op) | html %][% ELSE %][% cat_op | html %][% END %]</option>
+	>[% IF loop.first %][% c.cobrand.change_category_text(cat_op) %][% ELSE %][% c.cobrand.change_category_text(cat_op) | html %][% END %]</option>
         [%~ END =%]
     </select>
 [%~ END ~%]

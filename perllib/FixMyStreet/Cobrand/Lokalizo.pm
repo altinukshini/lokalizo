@@ -980,13 +980,12 @@ sub change_category_text {
         "Environmental"     =>  "Ambient",
         "Infrastructure"    =>  "Infrastrukture",
         "Waste"     =>  "Mbeturina",
-        "Disaster risk reduction"       =>  "Zvoglimi i rrezikut të fatkeqësive"
+        "Disaster risk reduction"       =>  "Zvoglimi i rrezikut te fatkeqesive"
     );
 
-    if ($lang eq 'en') {
-        return $category;
-    } elsif ($lang eq 'sq') {
+    if ($lang eq 'sq') {
         if (exists $allowedCategories_sq{$category}) {
+	    #return $allowedCategories_sq{$category};
             return decode($enc, $allowedCategories_sq{$category});
         }
         return $category;
@@ -1085,9 +1084,7 @@ sub change_body_text {
         "Municipality of North Mitrovica" => "Opština Severna Mitrovica"
     );
 
-    if ($lang eq 'en') {
-        return $body;
-    } elsif ($lang eq 'sq') {
+    if ($lang eq 'sq') {
         if (exists $bodies_sq{$body}) {
             return decode($enc, $bodies_sq{$body});
         }
