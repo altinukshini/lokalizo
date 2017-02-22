@@ -1063,7 +1063,7 @@ sub change_body_text {
         "Municipality of Pristina" => "Opština Priština",
         "Municipality of Decan" => "Opština Dečane",
         "Municipality of Prizren" => "Opština Prizren",
-        "Municipality of Gjakova" => "Opština Djakovic",
+        "Municipality of Gjakova" => "Opština Djakovica",
         "Municipality of Skenderaj" => "Opština Srbica",
         "Municipality of Glogovac" => "Opština Glogovac",
         "Municipality of Stimlje" => "Opština Štimlje",
