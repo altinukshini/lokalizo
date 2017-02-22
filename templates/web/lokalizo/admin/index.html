@@ -4,10 +4,12 @@
 [% PROCESS 'admin/report_blocks.html' %]
 
 <div class="fms-admin-info fms-admin-floated">
-[% IF lang_code == 'en-gb' %]
-This is the administration interface for [% site_name %]. If you need any help or guidance, please contact the development team of the platform on info@lokalizo.org.
-[% ELSE %]
+[% IF lang_code == 'sq' %]
 Kjo është ndërfaqja administruese e [% site_name %]. Nëse keni pyetje apo keni nevojë për ndihmë në shfrytëzimin e saj, ju lutem kontaktoni ekipin e zhvilluesëve të pltafromës në info@lokalizo.org.
+[% ELSIF lang_code == 'sr' %]
+Ovo je administracioni interfejs za [% site_name %]. Ukoliko su Vam potrebne ma kakva pomoć i smernice molimo kontaktirajte razvojni tim platforme na info@lokalizo.org.
+[% ELSE %]
+This is the administration interface for [% site_name %]. If you need any help or guidance, please contact the development team of the platform on info@lokalizo.org.
 [% END %]
 
 </div>

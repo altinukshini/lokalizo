@@ -104,9 +104,9 @@
       </p>
     </div>
     <p>
-        <label for="send_method">[% IF lang_code == 'en-gb' %]Send Method[% ELSE %]Metoda e dergimit[% END %]</label>
+        <label for="send_method">[% IF lang_code == 'sq' %]Metoda e dergimit[% ELSIF lang_code == 'sr' %]Pošalji metod[% ELSE %]Send Method[% END %]</label>
         <select class="form-control" name="send_method" id="send_method">
-            <option value=""> -- Select a method -- </option>
+            <option value=""> [% IF lang_code == 'sq' %]-- Zgjidh metoden --[% ELSIF lang_code == 'sr' %]-- Izaberite metod --[% ELSE %]-- Select a method --[% END %] </option>
             [% FOR method IN send_methods %]
             <option value="[% method %]"[% ' selected' IF body.send_method == method %]>[% method %]</option>
             [% END %]
@@ -130,7 +130,7 @@
     <p>
         <input type="checkbox" id="can_be_devolved" name="can_be_devolved"[% ' checked' IF body.can_be_devolved %]>
         <label for="can_be_devolved" class="inline">
-        [% IF lang_code == 'en-gb' %]Send method or endpoints can be devolved to contacts (i.e, can be different from the body's)[% ELSE %]Metoda e dergimit mund ti pershtatet kontaktit (p.sh mund te jete tjeter nga ajo e komunes)[% END %]
+        [% IF lang_code == 'sq' %]Metoda e dergimit mund ti pershtatet kontaktit (p.sh mund te jete tjeter nga ajo e komunes)[% ELSIF lang_code == 'sr' %]Način slanja ili krajnje tačke (endpoints) mogu se preneti i na kontakte (npr, mogu biti drugačije od onih za instituciju)[% ELSE %]Send method or endpoints can be devolved to contacts (i.e, can be different from the body's)[% END %]
         </label>
     </p>
 

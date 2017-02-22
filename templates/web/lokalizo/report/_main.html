@@ -63,7 +63,7 @@
       [% IF problem.title != original.title %]
         <label>
             <input type="checkbox" name="problem_revert_title" class="revert-title">
-            [% IF lang_code == 'en-gb' %]Revert to original title[% ELSE %]Kthe titullin fillestarë[% END %]
+            [% IF lang_code == 'sq' %]Kthe titullin fillestarë[% ELSIF lang_code == 'sr' %]Vrati na originalni naziv[% ELSE %]Revert to original title[% END %]
         </label>
       [% END %]
         <h1><input class="form-control" type="text" name="problem_title" value="[% problem.title | html %]" data-original-value="[% original.title | html %]"></h1>
@@ -73,7 +73,7 @@
     <div class="moderate-edit">
         <label>
             <input type="checkbox" name="problem_show_name" [% 'checked' UNLESS problem.anonymous %]>
-            [% IF lang_code == 'en-gb' %]Show reporter&rsquo;s name[% ELSE %]Shfaq emrin e raportuesit[% END %]
+            [% IF lang_code == 'sq' %]Shfaq emrin e raportuesit[% ELSIF lang_code == 'sr' %]Prikaži ime osobe koja je problem prijavila[% ELSE %]Show reporter&rsquo;s name[% END %]
         </label>
     </div>
 
@@ -83,7 +83,8 @@
 
     [% INCLUDE 'report/_main_sent_info.html' %]
     [% mlog = problem.latest_moderation_log_entry(); IF mlog %]
-        <p>[% IF lang_code == 'en-gb' %]Moderated by [% mlog.user.from_body.name %] at [% prettify_dt(mlog.whenedited) %][% ELSE %]Moderuar nga [% mlog.user.from_body.name %] më [% prettify_dt(mlog.whenedited) %][% END %]</p>
+        <p>
+        [% IF lang_code == 'sq' %]Moderuar nga [% mlog.user.from_body.name %] më [% prettify_dt(mlog.whenedited) %][% ELSIF lang_code == 'sr' %]Moderirao/la [% mlog.user.from_body.name %], [% prettify_dt(mlog.whenedited) %][% ELSE %]Moderated by [% mlog.user.from_body.name %] at [% prettify_dt(mlog.whenedited) %][% END %]</p>
     [% END %]
 
     [% INCLUDE 'report/_support.html' %]
@@ -93,7 +94,7 @@
         <p class="moderate-edit">
             <label>
                 <input type="checkbox" name="problem_show_photo" [% problem.photo ? 'checked' : '' %]>
-                [% IF lang_code == 'en-gb' %]Show photo[% ELSE %]Shfaq fotografinë[% END %]
+                [% IF lang_code == 'sq' %]Shfaq fotografinë[% ELSIF lang_code == 'sr' %]Prikaži sliku[% ELSE %]Show photo[% END %]
             </label>
         </p>
     [% END %]
@@ -109,7 +110,7 @@
       [% IF problem.detail != original.detail %]
         <label>
             <input type="checkbox" name="problem_revert_detail" class="revert-textarea">
-            [% IF lang_code == 'en-gb' %]Revert to original text[% ELSE %]Kthe tekstin fillestarë[% END %]
+            [% IF lang_code == 'sq' %]Kthe tekstin fillestarë[% ELSIF lang_code == 'sr' %]Vrati na originalni tekst[% ELSE %]Revert to original text[% END %]
         </label>
       [% END %]
         <textarea class="form-control" name="problem_detail" data-original-value="[% original.detail | html %]">[% problem.detail | html %]</textarea>
@@ -119,12 +120,12 @@
         <p>
             <label>
                 <input type="checkbox" class="hide-document" name="problem_hide" [% problem.hidden ? 'checked' : '' %]>
-                [% IF lang_code == 'en-gb' %]Hide entire report[% ELSE %]Fsheh të gjithë raportin[% END %]
+                [% IF lang_code == 'sq' %]Fsheh të gjithë raportin[% ELSIF lang_code == 'sr' %]Sakrij čitavu prijavu[% ELSE %]Hide entire report[% END %]
             </label>
         </p>
         <p>
-            <label for="moderation_reason">[% IF lang_code == 'en-gb' %]Moderation reason[% ELSE %]Arsyeja e moderimit[% END %]:</label>
-            <input type="text" class="form-control" name="moderation_reason" placeholder="[% IF lang_code == 'en-gb' %]Describe why you are moderating this[% ELSE %]Përshkruaj pse po e moderoni këtë[% END %]">
+            <label for="moderation_reason">[% IF lang_code == 'sq' %]Arsyeja e moderimit[% ELSIF lang_code == 'sr' %]Moderacija razlog[% ELSE %]Moderation reason[% END %]:</label>
+            <input type="text" class="form-control" name="moderation_reason" placeholder="[% IF lang_code == 'sq' %]Përshkruaj pse po e moderoni këtë[% ELSIF lang_code == 'sr' %]Opišite razloge za moderaciju ovog problema[% ELSE %]Describe why you are moderating this[% END %]">
         </p>
         <p>
             <input type="submit" class="green-btn" value="[% loc('Save changes') %]">

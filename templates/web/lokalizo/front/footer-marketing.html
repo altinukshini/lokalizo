@@ -1,11 +1,7 @@
                         <div class="tablewrapper bordered">
                             <div id="footer-mobileapps">
                                 
-                                <h4>[% IF lang_code == 'en-gb' %]
-                                Download our mobile apps
-                                [% ELSE %]
-                                Shkarkoni aplikacionet mobile
-                                [% END %]
+                                <h4>[% IF lang_code == 'sq' %]Shkarkoni aplikacionet mobile[% ELSIF lang_code == 'sr' %]Preuzmite naše mobilne aplikacije[% ELSE %]Download our mobile apps[% END %]
                                 </h4>
                                 <p>
                                     <a href="#"><img src="/cobrands/lokalizo/images/android-banner.png"></a>
@@ -15,7 +11,7 @@
                             </div>
 
                             <div id="footer-help">
-                                <h4>[% IF lang_code == 'en-gb' %]Sponsors / Partners[% ELSE %]Sponzorët / Partnerët[% END %]</h4>
+                                <h4>[% IF lang_code == 'sq' %]Sponzorët / Partnerët[% ELSIF lang_code == 'sr' %]Sponzori / Partneri[% ELSE %]Sponsors / Partners[% END %]</h4>
                                 <p>
                                     <a href="http://pi-ks.org"><img title="PIKS" alt="PIKS" src="/cobrands/lokalizo/images/piks.png"></a>
                                     <a href="http://ks.undp.org/"><img title="UNDP Kosovo" alt="UNDP Kosovo" src="/cobrands/lokalizo/images/undp.png"></a>
@@ -27,12 +23,20 @@
 
                         </div>
                         <div style="color:#fff; font-size:12px; margin:0 auto; width:100%;text-align:center;margin-top:4em;">
-                            [% IF lang_code == 'en-gb' %]Developed by <a class="platform-logo" style="color:white;" href="http://flossk.org/"><b>FLOSSK</b></a>[% ELSE %]Zhvilluar nga <a class="platform-logo" style="color:white;" href="http://flossk.org/"><b>FLOSSK</b></a>[% END %] - AGPL v3.0<br>
-
-                            [% IF lang_code == 'en-gb' %]
-                                Powered by <a class="platform-logo" style="color:white;" href="http://fixmystreet.org/"><b>FixMyStreet Platform</b></a>
+                            [% IF lang_code == 'sq' %]
+                            Zhvilluar nga <a class="platform-logo" style="color:white;" href="http://flossk.org/"><b>FLOSSK</b></a>
+                            [% ELSIF lang_code == 'sr' %]
+                            Razvijeno od strane <a class="platform-logo" style="color:white;" href="http://flossk.org/"><b>FLOSSK</b></a>
                             [% ELSE %]
-                                Mundësuar nga <a class="platform-logo" style="color:white;" href="http://fixmystreet.org/"><b>Platforma FixMyStreet</b></a>
+                            Developed by <a class="platform-logo" style="color:white;" href="http://flossk.org/"><b>FLOSSK</b></a>
+                            [% END %] - AGPL v3.0<br>
+
+                            [% IF lang_code == 'sq' %]
+                            Mundësuar nga <a class="platform-logo" style="color:white;" href="http://fixmystreet.org/"><b>Platforma FixMyStreet</b></a>
+                            [% ELSIF lang_code == 'sr' %]
+                            Pokreće <a class="platform-logo" style="color:white;" href="http://fixmystreet.org/"><b>FixMyStreet Platforma</b></a>
+                            [% ELSE %]
+                            Powered by <a class="platform-logo" style="color:white;" href="http://fixmystreet.org/"><b>FixMyStreet Platform</b></a>
                             [% END %]
                             
                         </div>

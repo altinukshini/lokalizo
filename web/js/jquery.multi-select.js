@@ -3,32 +3,32 @@ function translateCategory(category){
 		"Waste" : {
   			"en" : "Waste",
   			"sq" : "Mbeturina",
-  			"sr" : "Waste"
+  			"sr" : "Otpad i smeće"
 		},
 		"Infrastructure" : {
             "en" : "Infrastructure",
             "sq" : "Infrastrukture",
-            "sr" : "Infrastructure"
+            "sr" : "Infrastruktura"
     },
 		"Traffic" : {
             "en" : "Traffic",
             "sq" : "Trafik",
-            "sr" : "Traffic"
+            "sr" : "Saobraćaj"
     },
 		"Environmental" : {
             "en" : "Environmental",
             "sq" : "Ambient",
-            "sr" : "Environmental"
+            "sr" : "Ekologija"
     },
 		"Disaster risk reduction" : {
             "en" : "Disaster risk reduction",
             "sq" : "Zvoglimi i rrezikut të fatkeqësive",
-            "sr" : "Disaster risk reduction"
+            "sr" : "Smanjenje rizika od katastrofa"
     },
 		"Something else" : {
             "en" : "Something else",
             "sq" : "Tjera",
-            "sr" : "Other"
+            "sr" : "Drugo"
     }
 	};
   var websiteDomain = window.location.host;

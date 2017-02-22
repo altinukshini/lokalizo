@@ -20,7 +20,7 @@
 
                     <ul class="nav-menu nav-menu--main left">
                         <li class="[% IF c.req.uri.path == '/' %]active[% END %]">
-                          <div><a href="/"><i class="fa fa-home" aria-hidden="true"></i> [% IF lang_code == 'en-gb' %]Home[% ELSE %]Ballina[% END %]</a></div>
+                          <div><a href="/"><i class="fa fa-home" aria-hidden="true"></i> [% IF lang_code == 'sq' %]Ballina[% ELSIF lang_code == 'sr' %]Početna[% ELSE %]Home[% END %]</a></div>
                         </li>
 
                         <li class="[% IF c.req.uri.path == '/reports' %]active[% END %]">
@@ -40,27 +40,28 @@
                         </li>
 
                         <li class="[% IF c.req.uri.path == '/about/lokalizo' %]active[% END %]">
-                          <div><[% IF c.req.uri.path == '/about/lokalizo' %]span[% ELSE %]a href="[% base %]/about/lokalizo"[% END%]><i class="fa fa-info" aria-hidden="true"></i> [% IF lang_code == 'en-gb' %]About us[% ELSE %]Per ne[% END %]</[% c.req.uri.path == '/about/lokalizo' ? 'span' : 'a' %]>[%
+                          <div><[% IF c.req.uri.path == '/about/lokalizo' %]span[% ELSE %]a href="[% base %]/about/lokalizo"[% END%]><i class="fa fa-info" aria-hidden="true"></i> [% IF lang_code == 'sq' %]Per ne[% ELSIF lang_code == 'sr' %]O nama[% ELSE %]About us[% END %]</[% c.req.uri.path == '/about/lokalizo' ? 'span' : 'a' %]>[%
                         %]</div>
                         </li>
 
                         <li class="[% IF c.req.uri.path == '/contact' %]active[% END %]">
-                          <div><[% IF c.req.uri.path == '/contact' %]span[% ELSE %]a href="[% base %]/contact"[% END%]><i class="fa fa-envelope-o" aria-hidden="true"></i> [% IF lang_code == 'en-gb' %]Contact[% ELSE %]Kontakti[% END %]</[% c.req.uri.path == '/contact' ? 'span' : 'a' %]>
+                          <div><[% IF c.req.uri.path == '/contact' %]span[% ELSE %]a href="[% base %]/contact"[% END%]><i class="fa fa-envelope-o" aria-hidden="true"></i> [% IF lang_code == 'sq' %]Kontakti[% ELSIF lang_code == 'sr' %]Kontakt[% ELSE %]Contact[% END %]</[% c.req.uri.path == '/contact' ? 'span' : 'a' %]>
                           </div>
                         </li>
 
                         <li>
-                            <a href="[% c.cobrand.base_url_with_lang(c.cobrand.base_url) IF admin %]/" id="report-cta" title="[%- loc('Report a problem') -%]"><i class="fa fa-map-marker" aria-hidden="true" style="margin-right:3px;"></i> [% IF lang_code == 'en-gb' %][%- loc('Report') -%][% ELSE %]Raporto[% END %]</a>
+                            <a href="[% c.cobrand.base_url_with_lang(c.cobrand.base_url) IF admin %]/" id="report-cta" title="[%- loc('Report a problem') -%]"><i class="fa fa-map-marker" aria-hidden="true" style="margin-right:3px;"></i> [% IF lang_code == 'sq' %]Raporto[% ELSE %][%- loc('Report') -%][% END %]</a>
                         </li>
                     </ul>
 
                     <ul class="nav-menu nav-menu--main">
-                            <li id="link-one">
 
                         [% IF lang_code == 'en-gb' %]
-                                <li><a href="https://sq.[% c.cobrand.base_host %][% c.req.uri.path_query %]"><i class="fa fa-globe" aria-hidden="true"></i> sq</a></li>
+                            <li id="language-codes"><a href="https://sq.[% c.cobrand.base_host %][% c.req.uri.path_query %]"><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;&nbsp;sq</a> <a href="#">/</a> <a href="https://sr.[% c.cobrand.base_host %][% c.req.uri.path_query %]">sr</a></li>
+                        [% ELSIF lang_code == 'sr' %]
+                            <li id="language-codes"><a href="https://[% c.cobrand.base_host %][% c.req.uri.path_query %]"><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;&nbsp;en</a> <a href="#">/</a> <a href="https://sq.[% c.cobrand.base_host %][% c.req.uri.path_query %]">sq</a></li>
                         [% ELSE %]
-                                <li><a href="https://[% c.cobrand.base_host %][% c.req.uri.path_query %]"><i class="fa fa-globe" aria-hidden="true"></i> en</a></li>
+                            <li id="language-codes"><a href="https://[% c.cobrand.base_host %][% c.req.uri.path_query %]"><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;&nbsp;en</a> <a href="#">/</a> <a href="https://sr.[% c.cobrand.base_host %][% c.req.uri.path_query %]">sr</a></li>
                         [% END %]
                         
                         <li><[% IF c.req.uri.path == '/my'

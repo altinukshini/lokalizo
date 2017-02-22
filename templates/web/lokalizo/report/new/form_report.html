@@ -7,7 +7,7 @@
 [% PROCESS "report/new/category_wrapper.html" %]
 [% TRY %][% PROCESS 'report/new/after_category.html' %][% CATCH file %][% END %]
 
-    <h2 class="form-section-heading">[% IF lang_code == 'en-gb' %]Public details[% ELSE %]Detajet publike[% END %]</h2>
+    <h2 class="form-section-heading">[% IF lang_code == 'sq' %]Detajet publike[% ELSIF lang_code == 'sr' %]Javni detalji[% ELSE %]Public details[% END %]</h2>
     <div class="form-section-description" id="js-councils_text">
       [% IF js %]
         [% PROCESS 'report/new/councils_text_all.html' list_of_names = [ loc('the local council') ] %]

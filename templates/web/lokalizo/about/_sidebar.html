@@ -1,10 +1,22 @@
 <div class="sticky-sidebar">
     <aside>
         <ul class="plain-list">
-        	[% IF lang_code == 'en-gb' %]<li>[% INCLUDE link h='/about/lokalizo' t='About Lokalizo' %]</li>[% ELSE %]<li>[% INCLUDE link h='/about/lokalizo' t='Për Lokalizo' %]</li>[% END %]
+        	[% IF lang_code == 'sq' %]
+        	<li>[% INCLUDE link h='/about/lokalizo' t='Për Lokalizo' %]</li>
+        	[% ELSIF lang_code == 'sr' %]
+        	<li>[% INCLUDE link h='/about/lokalizo' t='O Lokalizo' %]</li>
+        	[% ELSE %]
+        	<li>[% INCLUDE link h='/about/lokalizo' t='About Lokalizo' %]</li>
+        	[% END %]
             <li>[% INCLUDE link h='/faq' t=loc('Frequently Asked Questions') %]</li>
             <li>[% INCLUDE link h='/about/privacy' t=loc('Privacy and cookies') %]</li>
-            [% IF lang_code == 'en-gb' %]<li>[% INCLUDE link h='/about/rules' t='House rules' %]</li>[% ELSE %]<li>[% INCLUDE link h='/about/rules' t='Rregullat e shtëpisë' %]</li>[% END %]
+            [% IF lang_code == 'sq' %]
+            <li>[% INCLUDE link h='/about/rules' t='Rregullat e shtëpisë' %]</li>
+            [% ELSIF lang_code == 'sr' %]
+            <li>[% INCLUDE link h='/about/rules' t='Pravila ponašanja' %]</li>
+            [% ELSE %]
+            <li>[% INCLUDE link h='/about/rules' t='House rules' %]</li>
+            [% END %]
             <li>[% INCLUDE link h='/contact' t=tprintf(loc("Contact %s", "%s is the site name"), site_name) %]</li>
         </ul>
     </aside>

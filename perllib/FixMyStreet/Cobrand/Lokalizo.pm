@@ -983,10 +983,26 @@ sub change_category_text {
         "Disaster risk reduction"       =>  "Zvoglimi i rrezikut te fatkeqesive"
     );
 
+    my %allowedCategories_sr = (
+        "Something else"     =>  "Drugo",
+        "Traffic"     =>  "Saobraćaj",
+        "Environmental"     =>  "Ekologija",
+        "Infrastructure"    =>  "Infrastruktura",
+        "Waste"     =>  "Otpad i smeće",
+        "Disaster risk reduction"       =>  "Smanjenje rizika od katastrofa"
+    );
+
     if ($lang eq 'sq') {
         if (exists $allowedCategories_sq{$category}) {
 	    #return $allowedCategories_sq{$category};
             return decode($enc, $allowedCategories_sq{$category});
+        }
+        return $category;
+    }
+    if ($lang eq 'sr') {
+        if (exists $allowedCategories_sr{$category}) {
+        #return $allowedCategories_sr{$category};
+            return decode($enc, $allowedCategories_sr{$category});
         }
         return $category;
     }

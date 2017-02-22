@@ -9,7 +9,7 @@
         <form action="[% c.uri_for('/around') %]" method="get" name="postcodeForm" id="postcodeForm">
             <label for="pc">[% question %]:</label>
             <div>
-                <input type="text" name="pc" value="[% pc | html %]" id="pc" size="10" maxlength="200" placeholder="[% IF lang_code == 'en-gb' %]e.g 'Street, Neighborhood' or 'City'[% ELSE %]p.sh 'Rrugë, Lagje' ose 'Qytet'[% END %]">
+                <input type="text" name="pc" value="[% pc | html %]" id="pc" size="10" maxlength="200" placeholder="[% IF lang_code == 'sq' %]p.sh 'Rrugë, Lagje' ose 'Qytet'[% ELSIF lang_code == 'sr' %]npr. 'Ulica, Naselje' or 'Grad'[% ELSE %]e.g 'Street, Neighborhood' or 'City'[% END %]">
                 <input type="submit" value="[% loc('Go') %]" id="sub">
             </div>
 

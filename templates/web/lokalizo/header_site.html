@@ -17,7 +17,7 @@
 
     <li class="[% IF c.req.uri.path == '/' %]active[% END %]">
       <div><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></div>
-      <div><a href="/">[% IF lang_code == 'en-gb' %]Home[% ELSE %]Ballina[% END %]</a></div>
+      <div><a href="/">[% IF lang_code == 'sq' %]Ballina[% ELSIF lang_code == 'sr' %]Početna[% ELSE %]Home[% END %]</a></div>
     </li>
 
     <li class="[% IF c.req.uri.path == '/reports' %]active[% END %]">
@@ -55,7 +55,7 @@
       <div><[% IF c.req.uri.path == '/about/lokalizo' %]span[% ELSE %]a href="[% base %]/about/lokalizo"[% END%]><i class="fa fa-info" aria-hidden="true"></i></[% c.req.uri.path == '/about/lokalizo' ? 'span' : 'a' %]></div>
       <div>
 	<[% IF c.req.uri.path == '/about/lokalizo' %]span[% ELSE %]a href="[% base %]/about/lokalizo"[% END%]>
-	[% IF lang_code == 'en-gb' %]About us[% ELSE %]Per ne[% END %]</[% c.req.uri.path == '/about/lokalizo' ? 'span' : 'a' %]>
+	[% IF lang_code == 'sq' %]Per ne[% ELSIF lang_code == 'sr' %]O nama[% ELSE %]About us[% END %]</[% c.req.uri.path == '/about/lokalizo' ? 'span' : 'a' %]>
       </div>
     </li>
 
@@ -63,7 +63,7 @@
       <div><[% IF c.req.uri.path == '/contact' %]span[% ELSE %]a href="[% base %]/contact"[% END%]><i class="fa fa-envelope-o" aria-hidden="true"></i></[% c.req.uri.path == '/contact' ? 'span' : 'a' %]></div>
       <div>
   <[% IF c.req.uri.path == '/contact' %]span[% ELSE %]a href="[% base %]/contact"[% END%]>
-  [% IF lang_code == 'en-gb' %]Contact[% ELSE %]Kontakti[% END %]</[% c.req.uri.path == '/contact' ? 'span' : 'a' %]>
+  [% IF lang_code == 'sq' %]Kontakti[% ELSIF lang_code == 'sr' %]Kontakt[% ELSE %]Contact[% END %]</[% c.req.uri.path == '/contact' ? 'span' : 'a' %]>
       </div>
     </li>
 

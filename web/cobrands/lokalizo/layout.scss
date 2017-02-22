@@ -73,6 +73,13 @@ body.twothirdswidthpage .content .sticky-sidebar aside {
 #main-nav {
   float: right;
 }
+#language-codes a {
+    float: left;
+    padding: 1.4em 0.2em 1.4em 0.2em;
+}
+#language-codes {
+  margin-right: 5px;
+}
 
 body.mappage #main-nav {
   width: 100%;

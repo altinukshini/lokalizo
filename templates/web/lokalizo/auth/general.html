@@ -21,7 +21,7 @@
       <div class="form-box">
         <button name="facebook_sign_in" id="facebook_sign_in" value="facebook_sign_in" class="btn btn--block btn--social btn--facebook">
             <img alt="" src="/i/facebook-icon-32.png" width="17" height="32">
-            [% IF lang_code == 'en-gb' %]Log in with Facebook[% ELSE %]Kyçu me Facebook[% END %]
+            [% IF lang_code == 'sq' %]Kyçu me Facebook[% ELSIF lang_code == 'sr' %]Prijavi se Facebook nalogom[% ELSE %]Log in with Facebook[% END %]
         </button>
       </div>
     [% END %]
@@ -29,7 +29,7 @@
       <div class="form-box">
         <button name="twitter_sign_in" id="twitter_sign_in" value="twitter_sign_in" class="btn btn--block btn--social btn--twitter">
             <img alt="" src="/i/twitter-icon-32.png" width="17" height="32">
-            [% IF lang_code == 'en-gb' %]Log in with Twitter[% ELSE %]Kyçu me Twitter[% END %]
+            [% IF lang_code == 'sq' %]Kyçu me Twitter[% ELSIF lang_code == 'sr' %]Prijavi se Twitter nalogom[% ELSE %]Log in with Twitter[% END %]
         </button>
       </div>
     [% END %]

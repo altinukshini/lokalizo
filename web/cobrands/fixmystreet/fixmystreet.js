@@ -824,6 +824,9 @@ $.extend(fixmystreet.set_up, {
     if (subdomain == 'sq') {
         loginButton = '<button class="btn btn--social btn--social-email">Kyçu me email</button>';
     }
+    if (subdomain == 'sr') {
+        loginButton = '<button class="btn btn--social btn--social-email">Prijavi se email nalogom</button>';
+    }
     // Log in with email button
     var email_form = $('#js-social-email-hide'),
         button = $(loginButton),
