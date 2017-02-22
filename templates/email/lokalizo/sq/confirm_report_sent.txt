@@ -2,7 +2,7 @@ Subject: [% site_name %] - Raporti u dërgua: [% title %]
 
 Përshëndetje,
 
-Ju falemnderit për shfrytëzimin e [% site_name %] për të dërguar raporin
+Ju falemnderit për shfrytëzimin e [% site_name %] për të dërguar raportin
 "[% title %]".
 
 Me këtë Jua konfirmojmë se raporti është dërguar te [% bodies_name %],
