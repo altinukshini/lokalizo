@@ -1213,7 +1213,7 @@ msgstr "Enter a nearby postcode, or street name and area"
 #: templates/web/base/around/postcode_form.html:5
 #: templates/web/base/around/postcode_form.html:6
 msgid "Enter a nearby street name and area"
-msgstr "Enter a nearby street name and area"
+msgstr "Enter a nearby location"
 
 #: templates/web/base/auth/general.html:116
 #: templates/web/base/report/new/form_user_loggedout_by_email.html:35

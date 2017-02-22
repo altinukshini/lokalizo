@@ -9,7 +9,11 @@
 h1, h2, h3, h4, h5, h6 {
   font-family: Roboto,Museo300-display,MuseoSans,Helmet,Freesans,sans-serif;
 }
-
+#front-main span {
+    background-color: white;
+    padding: 6px;
+    color: #666;
+}
 body {
   font-family: Roboto,MuseoSans,Helmet,Freesans,sans-serif;
 }
@@ -595,7 +599,7 @@ ol.big-numbers > li {
     margin-top: 1em;
     margin-bottom: 0em;
   }
-  #geolocate_link {
+  #site-header #geolocate_link {
     display: none;
   }
   #htrp-banner {
@@ -689,7 +693,7 @@ ol.big-numbers > li {
     margin-top: 1em;
     margin-bottom: 0em;
   }
-  #geolocate_link {
+  #site-header #geolocate_link {
     display: none;
   }
   #htrp-banner {

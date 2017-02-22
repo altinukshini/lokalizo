@@ -1169,8 +1169,8 @@ zoom, to stop e.g. OpenLayers defaulting to null/0.
 
 =cut
 
-sub default_map_zoom { undef };
-sub default_link_zoom { 1 }
+sub default_map_zoom { 4 };
+sub default_link_zoom { 2 }
 
 sub users_can_hide { return 0; }
 
