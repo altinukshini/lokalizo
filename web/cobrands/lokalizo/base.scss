@@ -582,10 +582,22 @@ ol.big-numbers > li {
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   /* Styles */
+  .nav-menu a, .nav-menu span {
+    border-bottom: none;
+    border-top: 0.15em solid #4DB848;
+    background: #fefefe;
+  }
+  .nav-menu a:hover, .nav-menu span.hover {
+    background-color: #4DB848;
+  }
   #front-howto #front_stats div { color: #333; }
   #front-main #postcodeForm label { color: #fff; } 
   #front-recent {margin-top:5em;}
-  #front-main #postcodeForm {background: #86cbe9;}
+  #front-main #postcodeForm {margin-top: 1em;}
+  #langslash {display:none;}
+  .fa.fa-globe.showlangglobe {
+    display: inline-block !important;
+  }
   #front-howto #front_stats div big {
     color: #fff;
   }
@@ -629,10 +641,15 @@ ol.big-numbers > li {
   #front-main-container > img {
       display: none;
   }
+  #front-main #postcodeForm div {border: none;}
   #front-main #postcodeForm div input#sub {
-      height: 3em;
-      padding-bottom: 1px;
-      outline:none;
+      height: 3.5em;
+      outline: none;
+      padding: 0.5em;
+      width: 100%;
+      background-color: #fff;
+      color: #666 !important;
+      border-top: 5px solid #4DB848;
   }
   .sticky-sidebar {
       background-color: #efefef;
@@ -676,10 +693,22 @@ ol.big-numbers > li {
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
   /* Styles */
+  .nav-menu a, .nav-menu span {
+    border-bottom: none;
+    border-top: 0.15em solid #4DB848;
+    background: #fefefe;
+  }
+  .nav-menu a:hover, .nav-menu span.hover {
+    background-color: #4DB848;
+  }
   #front-howto #front_stats div { color: #333; }
   #front-main #postcodeForm label { color: #fff; }
   #front-recent {margin-top:5em;}
-  #front-main #postcodeForm {background: #86cbe9;}
+  #front-main #postcodeForm {margin-top: 1em;}
+  #langslash {display:none;}
+  .fa.fa-globe.showlangglobe {
+    display: inline-block !important;
+  }
   #front-howto #front_stats div big {
     color: #fff;
   }
@@ -723,9 +752,15 @@ ol.big-numbers > li {
   #front-main-container > img {
       display: none;
   }
+  #front-main #postcodeForm div {border: none;}
   #front-main #postcodeForm div input#sub {
-      height: 3em;
-      padding-bottom: 1px;
+      height: 3.5em;
+      outline: none;
+      padding: 0.5em;
+      width: 100%;
+      background-color: #fff;
+      color: #666 !important;
+      border-top: 5px solid #4DB848;
   }
   .sticky-sidebar {
       background-color: #efefef;

@@ -57,11 +57,11 @@
                     <ul class="nav-menu nav-menu--main">
 
                         [% IF lang_code == 'en-gb' %]
-                            <li id="language-codes"><a href="https://sq.[% c.cobrand.base_host %][% c.req.uri.path_query %]"><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;&nbsp;sq</a> <a href="#">/</a> <a href="https://sr.[% c.cobrand.base_host %][% c.req.uri.path_query %]">sr</a></li>
+                            <li id="language-codes"><a href="https://sq.[% c.cobrand.base_host %][% c.req.uri.path_query %]"><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;&nbsp;sq</a> <a href="#" id="langslash">/</a> <a href="https://sr.[% c.cobrand.base_host %][% c.req.uri.path_query %]"><i class="fa fa-globe showlangglobe" aria-hidden="true" style="display:none;"></i>&nbsp;&nbsp;sr</a></li>
                         [% ELSIF lang_code == 'sr' %]
-                            <li id="language-codes"><a href="https://[% c.cobrand.base_host %][% c.req.uri.path_query %]"><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;&nbsp;en</a> <a href="#">/</a> <a href="https://sq.[% c.cobrand.base_host %][% c.req.uri.path_query %]">sq</a></li>
+                            <li id="language-codes"><a href="https://[% c.cobrand.base_host %][% c.req.uri.path_query %]"><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;&nbsp;en</a> <a href="#" id="langslash">/</a> <a href="https://sq.[% c.cobrand.base_host %][% c.req.uri.path_query %]"><i class="fa fa-globe showlangglobe" aria-hidden="true" style="display:none;"></i>&nbsp;&nbsp;sq</a></li>
                         [% ELSE %]
-                            <li id="language-codes"><a href="https://[% c.cobrand.base_host %][% c.req.uri.path_query %]"><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;&nbsp;en</a> <a href="#">/</a> <a href="https://sr.[% c.cobrand.base_host %][% c.req.uri.path_query %]">sr</a></li>
+                            <li id="language-codes"><a href="https://[% c.cobrand.base_host %][% c.req.uri.path_query %]"><i class="fa fa-globe" aria-hidden="true"></i>&nbsp;&nbsp;en</a> <a href="#" id="langslash">/</a> <a href="https://sr.[% c.cobrand.base_host %][% c.req.uri.path_query %]"><i class="fa fa-globe showlangglobe" aria-hidden="true" style="display:none;"></i>&nbsp;&nbsp;sr</a></li>
                         [% END %]
                         
                         <li><[% IF c.req.uri.path == '/my'
