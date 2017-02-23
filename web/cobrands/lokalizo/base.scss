@@ -590,6 +590,10 @@ ol.big-numbers > li {
   .nav-menu a:hover, .nav-menu span.hover {
     background-color: #4DB848;
   }
+  #front-howto #front_stats {
+    border-top: 0.2em solid #4DB848;
+    background: #fff;
+  }
   #front-howto #front_stats div { color: #333; }
   #front-main #postcodeForm label { color: #fff; } 
   #front-recent {margin-top:5em;}
@@ -599,7 +603,9 @@ ol.big-numbers > li {
     display: inline-block !important;
   }
   #front-howto #front_stats div big {
-    color: #fff;
+    color: #666;
+    font-size: 1.6em;
+    padding-top: 0.3em;
   }
   h1, h2, h3, h4, h5 {
     color: #666;
@@ -701,6 +707,10 @@ ol.big-numbers > li {
   .nav-menu a:hover, .nav-menu span.hover {
     background-color: #4DB848;
   }
+  #front-howto #front_stats {
+    border-top: 0.2em solid #4DB848;
+    background: #fff;
+  }
   #front-howto #front_stats div { color: #333; }
   #front-main #postcodeForm label { color: #fff; }
   #front-recent {margin-top:5em;}
@@ -710,7 +720,9 @@ ol.big-numbers > li {
     display: inline-block !important;
   }
   #front-howto #front_stats div big {
-    color: #fff;
+    color: #666;
+    font-size: 1.6em;
+    padding-top: 0.3em;
   }
   h1, h2, h3, h4, h5 {
     color: #666;
