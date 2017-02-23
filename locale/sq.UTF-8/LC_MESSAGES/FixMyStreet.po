@@ -3394,7 +3394,7 @@ msgstr "Kjo foto nuk duket të jetë ngarkuar mirë (%s), ju lutemi provoni prap
 
 #: perllib/FixMyStreet/App/Controller/Council.pm:102
 msgid "That location does not appear to be covered by a council; perhaps it is offshore or outside the country. Please try again."
-msgstr "Ky lokacion nuk duket të jetë mbuluar nga komuna; ndoshta është jashtë shtetit. Ju lutemi provoni prap."
+msgstr "Ky lokacion nuk mbulohet nga ndonjë komunë akoma; ndoshta është jashtë shtetit. Ju lutemi provoni prap."
 
 #: perllib/FixMyStreet/App/Controller/Location.pm:129
 msgid "That location does not appear to be in the UK; please try again."

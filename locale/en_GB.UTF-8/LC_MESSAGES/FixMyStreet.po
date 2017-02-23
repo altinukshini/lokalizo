@@ -3768,7 +3768,7 @@ msgid ""
 "offshore or outside the country. Please try again."
 msgstr ""
 "That location does not appear to be covered by a municipality; perhaps it is "
-"offshore or outside the country. Please try again."
+"outside the country. Please try again."
 
 #: perllib/FixMyStreet/App/Controller/Location.pm:129
 msgid "That location does not appear to be in the UK; please try again."
