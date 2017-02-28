@@ -1,3 +1,1 @@
-Imajte na umu da nove/dopune informacije ne šaljemo [% update.problem.body %] - namena im 
-je da na [% site_name %] posluže korisnicima/ama da diskutuju, 
-pruže savet ili podršku u vezi sa prijavljenim problemom.
+Imajte na umu da nove/dopune informacije ne šaljemo [% update.problem.body %] - namena im je da na [% site_name %] posluže korisnicima/ama da diskutuju, pruže savet ili podršku u vezi sa prijavljenim problemom.

@@ -9,7 +9,7 @@ Na [% site_name %] su prijavljeni sledeći novi problemi u izabranoj oblasti:
 
 Želite da se odjavite?
 
-Tražili ste od nas da Vam pošaljemo mail svaki put kada neko prijavi novi problem na sajtu [% site_name %] u okvirima izabrane oblasti. Ovo je besplatna usluga sajta [% site_name %].
+Tražili ste od nas da Vam pošaljemo mail svaki put kada neko prijavi novi problem na sajtu [% site_name %] u okviru izabrane oblasti. Ovo je besplatna usluga sajta [% site_name %].
 
 Ukoliko želite da se odjavite sa servisa prijema mail-ova upozorenja o prijavama novih problema u ovom području, molimo sledite link ispod:
 

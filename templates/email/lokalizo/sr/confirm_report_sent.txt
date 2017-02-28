@@ -4,11 +4,11 @@ Zdravo,
 
 Hvala Vam što ste koristili [% site_name %] za prijavu "[% title %]".
 
-Ovim mail-om potvrđujemo da je prijava sada poslata [% bodies_name %] koji će Vam odgvoriti direktno.
+Ovim mail-om potvrđujemo da je prijava sada poslata [% bodies_name %] koji će Vam odgovoriti direktno.
 
-Problem koji ste prijavili je takođe objavljen na [% url %], kako bi i drugi mogli da pročitaju informaciju, komentarišu ili posavetuju.
+Problem koji ste prijavili je takođe objavljen na [% url %], kako bi i drugi mogli da pročitaju informaciju, komentarišu ili daju koristan savet.
 
-Na toj stranici slobodno možete upisati i nove/dopunske informacije, ali imajte na umu da one neće biti poslate Vašopj opštini.
+Na toj stranici slobodno možete upisati i nove/dopunske informacije, ali imajte na umu da one neće biti poslate Vašoj opštini.
 
 Ukoliko želite da Vašoj opštini pošaljete nove/dopunske informacije, molimo da sačekate njihov odgovor kako biste im direktno odgovorili.
 

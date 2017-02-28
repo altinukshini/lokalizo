@@ -1,4 +1,4 @@
-Subject: Poruka Lokalizo: [% subject %]
+Subject: Poruka FMS: [% subject %]
 
 [% message %]
 

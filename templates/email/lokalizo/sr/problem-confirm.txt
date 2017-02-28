@@ -2,7 +2,7 @@ Subject: Potvrdite prijavu problema na [% site_name %]
 
 Zdravo [% report.name %],
 
-Ukoliko želite ja prijavu problema pošaljete [% report.body %], molimo da za potvrdu kliknete na link ispod. Imajte na umu da će vaš problem takođe biti objavljen na [% site_name %]
+Ukoliko želite da prijavu problema pošaljete [% report.body %], molimo da za potvrdu kliknete na link ispod. Imajte na umu da će vaš problem takođe biti objavljen na [% site_name %]
 sajtu :
 
 [% token_url %]
@@ -21,7 +21,7 @@ Detalji:
 
 [% report.detail %]
 
-Ukoliko više ne želite da prijavite ovaj problem, molimo ne poduzimajte dalje akcije.
+Ukoliko više ne želite da prijavite ovaj problem, molimo ne preduzimajte dalje akcije.
 
 Hvala Vam što ste koristili [% site_name %].
 

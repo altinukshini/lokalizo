@@ -12,14 +12,14 @@ INCLUDE '_email_top.html';
 
 <th style="[% td_style %][% primary_column_style %]" id="primary_column">
   [% start_padded_box %]
-  <h1 style="[% h1_style %]">Da li Vaš problem rešen?</h1>
+  <h1 style="[% h1_style %]">Da li je Vaš problem rešen?</h1>
   <p style="[% p_style %]">Pre [% created %], prijavili ste problem putem sajta [% site_name %].</p>
   <p style="[% p_style %]">Pomozite nam da na [% site_name %] objavljujemo najnovije i relevantne informacije o prijavljenim problemima tako što će te nas obavestiti da li je prijavljeni problem rešen:</p>
   <p style="margin: 20px auto; text-align: center">
     <a style="[% fixed_button_style %]" href="[% url %]">Rešen</a>
     <a style="[% notfixed_button_style %]" href="[% url %]">Nije rešen</a>
   </p>
-  <p style="[% p_style %]">Hvala! Povratne informacije koje dobijamo su nam veoma vredne</p>
+  <p style="[% p_style %]">Hvala! Povratne informacije koje dobijamo su nam veoma važne</p>
   [% end_padded_box %]
 </th>
 [% WRAPPER '_email_sidebar.html' object = report %]

@@ -21,5 +21,37 @@
               <input type="hidden" name="filter_category" value="[% c.user.categories.join(",") | html %]">
             [% END %]
         </form>
+
+        [% IF c.req.uri.path == '/' %]
+        <div id="show-municipalities">
+            <span id="show-municipalities"><i class="fa fa-map-marker"></i> [% IF lang_code == 'sq' %]...ose shkoni direkt tek një komunë e mbështetur[% ELSIF lang_code == 'sr' %][% ELSE %]...or go directly to a supported municipality[% END %]</span>
+        </div>
+        <div id="municipalities-popup" style="display:none;">
+
+            <!-- <div class="container"> -->
+                <div id="municipalities-close">[% loc('Cancel')%]</div>
+                [% IF c.req.uri.path == '/' %]
+                  <link rel="stylesheet" href="/cobrands/lokalizo/OpenLayers/theme/default/style.css" type="text/css">
+                [% END %]
+
+                <label>[% IF lang_code == 'sq' %][% ELSIF lang_code == 'sr' %][% ELSE %][% END %]Supported municipalities:</label>
+                <div id="municipalities-popup-inner">
+                    <a class="municipality" data-lat="42.6629" data-lon="21.1655" href="javascript:void(0)">[% c.cobrand.change_body_text('Municipality of Pristina') %]</a>
+                    <a class="municipality" data-lat="42.3798" data-lon="20.4316" href="javascript:void(0)">[% c.cobrand.change_body_text('Municipality of Gjakova') %]</a>
+                    <a class="municipality" data-lat="42.6014" data-lon="21.1919" href="javascript:void(0)">[% c.cobrand.change_body_text('Municipality of Gracanice') %]</a>
+                    <a class="municipality" data-lat="42.4008" data-lon="21.4332" href="javascript:void(0)">[% c.cobrand.change_body_text('Municipality of Partesh') %]</a>
+                </div>
+
+                <hr>
+
+                <span id="show-fpmap"><i class="fa fa-map"></i> [% IF lang_code == 'sq' %]...ose hapni hartën[% ELSIF lang_code == 'sr' %]...ili pokaži na karti[% ELSE %]...or open the map[% END %]</span>
+
+                <div id="map" tabindex="0" style="display:none;"><span id="click-map">[% loc( 'Click map to report a problem' ) %]</span></div>
+                <button id="gotoaround" style="display:none;">[% loc('Go') %]</button>
+        </div>
+        [% END %]
+       
+         
+
     </div>
 </div>

@@ -578,10 +578,115 @@ ol.big-numbers > li {
     border-radius: 0em  !important;
     background-color: #F42455  !important;
 }
+.box-warning {
+    text-decoration: none;
+    background-color: transparent;
+    border-bottom: 3px solid #F42455;
+    border-top: 3px solid #F42455;
+}
+.box-warning a {
+    color: #48B848;
+    text-decoration: none;
+}
 
+#municipalities-close:hover, #show-municipalities:hover, #show-fpmap:hover {
+    cursor: pointer;
+}
+#show-municipalities {
+    background-color: transparent !important;
+    color: #333 !important;
+    margin-top: 10px;
+}
+#municipalities-popup {
+    position: relative;
+    width: 58em;
+    margin: 1em auto;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: -3em;
+    padding: 1em;
+}
+
+#municipalities-close {
+    font-size: 1em;
+    padding: 0.5em 1em 0.5em 1em;
+    background-color: #fff;
+    color: #888;
+    font-weight: bold;
+    margin: -4em 0em 1em 1em;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+#municipalities-popup-inner {
+    font-size: 1.2em;
+    color: #888;
+    overflow-y: auto;
+    height: auto;
+    max-height: 10em;
+}
+
+#municipalities-popup-inner a {
+    text-decoration: none !important;
+    width: 100%;
+    display: block;
+    vertical-align: middle;
+    padding: 0.3em 0 0.3em 0;
+}
+
+#municipalities-popup-inner a:hover {
+    background-color: #efefef;
+}
+
+#gotoaround {
+    width: 100%;
+    background-color: #fff;
+    color: #4DB848 !important;
+    margin-top: -1em;
+    border: 1px solid #4DB848;
+    border-radius: 5px;
+}
+.frontpage #map {
+    height: 400px;
+    width: 100%;
+    margin: 2em 0 1.5em 0 !important;
+    border: 1px solid #ebebeb;
+}
+
+#municipalities-popup label {
+    margin: 0em 0em 1em 0em;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1em;
+}
+#municipalities-popup #OpenLayers_Map_2_OpenLayers_ViewPort {
+    margin-top:-24px;
+}
+#click-map {
+    z-index: 1030;
+    position: relative;
+}
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
   /* Styles */
+  #municipalities-popup {
+    width: 100%;
+    margin-top: 5em;
+    padding: 0em;
+  }
+
+  #municipalities-popup-inner a {
+    color: #888;
+  }
+  #municipalities-close {
+    background-color: #4DB848;
+    color: white;
+    border-radius: 0px;
+  }
+  .frontpage #map {
+    height: 250px;
+  }
   .nav-menu a, .nav-menu span {
     border-bottom: none;
     border-top: 0.15em solid #4DB848;
@@ -699,6 +804,23 @@ ol.big-numbers > li {
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
   /* Styles */
+  #municipalities-popup {
+    width: 100%;
+    margin-top: 5em;
+    padding: 0em;
+  }
+
+  #municipalities-popup-inner a {
+    color: #888;
+  }
+  #municipalities-close {
+    background-color: #4DB848;
+    color: white;
+    border-radius: 0px;
+  }
+  .frontpage #map {
+    height: 250px;
+  }
   .nav-menu a, .nav-menu span {
     border-bottom: none;
     border-top: 0.15em solid #4DB848;

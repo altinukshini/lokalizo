@@ -15,4 +15,4 @@ Ukoliko želite da se odjavite sa servisa prijema mail-ova o prijavama novih pro
 
 [% unsubscribe_url %]
 
-Ukoliko više ne želite da budete pretplaćeni na mail-ove upozorenja u vezi sa ovim područjem, samo ignorišite ovaj mail
+Ukoliko više ne želite da budete obavešteni mail-om upozorenja u vezi sa ovim područjem, samo ignorišite ovaj mail

@@ -6,7 +6,7 @@ Za potvrdu mail-a upozorenja na [% INCLUDE 'site-name.txt' | trim %] kliknite na
 
 Ukoliko iz nekog razloga ne možete da kliknete na link iznad, iskopirajte link u Vaš web pretraživač.
 
-Ovim potrvđujete da želite da primate mail-ove kada neko na [% INCLUDE 'site-name.txt' | trim %] prijavi problem u izabranom području.
+Ovim potvrđujete da želite da primate mail-ove kada neko na [% INCLUDE 'site-name.txt' | trim %] prijavi problem u izabranom području.
 
 Mail-ovi upozorenja su besplatna usluga [% INCLUDE 'site-name.txt' | trim %].
 

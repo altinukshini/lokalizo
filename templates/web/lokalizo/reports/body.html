@@ -3,7 +3,7 @@
        thing = loc('ward')
     %]
 [% ELSE %]
-    [% name = body.name
+    [% name = c.cobrand.change_body_text(body.name)
        thing = loc('council')
     %]
 [% END %]

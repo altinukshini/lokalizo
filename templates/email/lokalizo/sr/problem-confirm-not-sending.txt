@@ -16,7 +16,7 @@ Detalji:
 
 [% report.detail %]
 
-Ukoliko više ne želite da prijavite ovaj problem ne poduzimajte dalje akcije.
+Ukoliko više ne želite da prijavite ovaj problem ne preduzimajte dalje akcije.
 
 Hvala Vam što podržavate [% site_name %].
 

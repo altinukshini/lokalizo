@@ -10,6 +10,90 @@ $('document').ready(function(){
 	  }
 	}); 
 
+	var lat = 42.6026;
+	var lon = 20.9030;
+	var zoom;
+	var map;
+	var fromProjection;
+	var toProjection;
+	var position;
+	var mapnik;
+	var markers;
+	var markerLat;
+
+	$('#show-municipalities').click(function(){
+        $('#municipalities-popup').fadeIn();
+        $('#show-municipalities').fadeOut();
+    });
+
+    $('#show-fpmap').click(function(){
+
+		$('#map').fadeIn();
+		$('#gotoaround').fadeIn();
+		$('#show-fpmap').fadeOut();
+
+	 	lat = 42.6258687;
+	 	lon = 20.8911131;
+	 	zoom = 9;
+
+	 	fromProjection = new OpenLayers.Projection("EPSG:900913"); // Transform from Spherical Mercator Projection
+	 	toProjection = new OpenLayers.Projection("EPSG:4326"); // To from WGS 1984
+	 	position = new OpenLayers.LonLat(lon, lat).transform(toProjection, fromProjection);
+
+	 	map = new OpenLayers.Map('map', {
+	 	    projection: 'EPSG:3857'
+	 	});
+
+		mapnik = new OpenLayers.Layer.OSM();
+	 	map.addLayer(mapnik);
+
+	 	markers = new OpenLayers.Layer.Markers("Markers");
+	 	map.addLayer(markers);
+
+	 	map.setCenter(position, zoom);
+
+	 	markerLat = lat, markerLon = lon; // = transformedMarker.lon.toFixed(6);
+
+	 	var size = new OpenLayers.Size(48,64);
+	 	var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+	 	var icon = new OpenLayers.Icon('/i/pin-green.png', size, offset);
+
+	 	map.events.register("click", map, function (e) {
+	 	    "use strict";
+	 	    var point, transformedMarker;
+	 	    point = map.getLonLatFromPixel(e.xy);
+	 	    markers.clearMarkers(); // Clear markers first
+	 	    markers.addMarker(new OpenLayers.Marker(new OpenLayers.LonLat(point.lon, point.lat),icon)); // New Location
+	 	    transformedMarker = point.transform(fromProjection, toProjection); // Transform marker
+
+	 	    markerLat = transformedMarker.lat.toFixed(6);
+	 	    markerLon = transformedMarker.lon.toFixed(6);
+	 	});
+    });
+
+    $('#gotoaround').click(function(){
+    	websiteDomain = window.location.host;
+		location.href = 'http://' + websiteDomain + '/report/new?latitude='+markerLat+';longitude='+markerLon;
+    });
+
+    $('#municipalities-close').click(function(){
+        $('#municipalities-popup').fadeOut();
+        $('#show-fpmap').fadeIn();
+        $('#show-municipalities').fadeIn();
+    });
+    
+    $('.municipality').click(function(){
+    	websiteDomain = window.location.host;
+
+		var lat = this.getAttribute('data-lat');
+		var lon = this.getAttribute('data-lon');
+
+		window.location.href = 'http://' + websiteDomain + '/around?latitude='+lat+';longitude='+lon+'&zoom=1';
+    });
+
+
+    // $('#choose-municipality').selectbox();
+
 	// var municipalitiesArray = {
 	// 	"Municipality of Prishtina" : {
 	// 		"en" : "Municipality of Pristina",
@@ -220,4 +304,73 @@ $('document').ready(function(){
 	// 	}
 	// }
 
+		// var map,vectorLayer,selectMarkerControl,selectedFeature;
+
+  //       var zoom        =   8;
+
+  //       var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+  //       var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+
+  //       var cntrposition       = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
+  //       map = new OpenLayers.Map("map",{
+  //           controls: 
+  //           	[
+  //                   new OpenLayers.Control.PanZoomBar(),                        
+  //                   new OpenLayers.Control.LayerSwitcher({}),
+  //                   new OpenLayers.Control.Permalink(),
+  //                   new OpenLayers.Control.MousePosition({}),
+  //                   new OpenLayers.Control.ScaleLine(),
+  //                   new OpenLayers.Control.OverviewMap(),
+  //               ]
+  //       });
+  //       var mapnik      = new OpenLayers.Layer.OSM("MAP");
+
+  //       // map.addLayers([,markers]);
+  //       map.addLayer(mapnik);
+  //       map.setCenter(cntrposition, zoom);
+
+
+  // var mousePositionControl = new ol.control.MousePosition({
+  //         coordinateFormat: ol.coordinate.createStringXY(4),
+  //         projection: 'EPSG:4326',
+  //         // comment the following two lines to have the mouse position
+  //         // be placed within the map.
+  //         className: 'custom-mouse-position',
+  //         target: document.getElementById('mouse-position'),
+  //         undefinedHTML: '&nbsp;'
+  //       });
+
+ 	// var map = new ol.Map({
+ 	//         controls: ol.control.defaults({
+ 	//           attributionOptions: /** @type {olx.control.AttributionOptions} */ ({
+ 	//             collapsible: false
+ 	//           })
+ 	//         }).extend([mousePositionControl]),
+ 	//         layers: [
+ 	//           new ol.layer.Tile({
+ 	//             source: new ol.source.OSM()
+ 	//           })
+ 	//         ],
+ 	//         target: 'map',
+ 	//         view: new ol.View({
+ 	//           center: [lat, lon],
+ 	//           zoom: 10
+ 	//         })
+ 	//       });
+
+ 	// var projectionSelect = document.getElementById('projection');
+ 	//       projectionSelect.addEventListener('change', function(event) {
+ 	//         mousePositionControl.setProjection(ol.proj.get(event.target.value));
+ 	//       });
+
+ 	//       var precisionInput = document.getElementById('precision');
+ 	//       precisionInput.addEventListener('change', function(event) {
+ 	//         var format = ol.coordinate.createStringXY(event.target.valueAsNumber);
+ 	//         mousePositionControl.setCoordinateFormat(format);
+ 	//       });
+
+
+    
+
 });
+

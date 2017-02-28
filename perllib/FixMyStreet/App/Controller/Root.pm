@@ -2,6 +2,13 @@ package FixMyStreet::App::Controller::Root;
 use Moose;
 use namespace::autoclean;
 
+use File::Slurp;
+use JSON::MaybeXS;
+use List::MoreUtils qw(any);
+use POSIX qw(strcoll);
+use RABX;
+use mySociety::MaPit;
+
 BEGIN { extends 'Catalyst::Controller' }
 
 __PACKAGE__->config( namespace => '' );
@@ -57,6 +64,38 @@ sub index : Path : Args(0) {
         $c->res->redirect($around_uri);
         return;
     }
+
+    # my @bodies = $c->model('DB::Body')->search({
+    #     deleted => 0,
+    # }, {
+    #     '+select' => [ { count => 'area_id' } ],
+    #     '+as' => [ 'area_count' ],
+    #     join => 'body_areas',
+    #     distinct => 1,
+    # })->all;
+    # @bodies = sort { strcoll($a->name, $b->name) } @bodies;
+    # $c->stash->{bodies} = \@bodies;
+    # $c->stash->{any_empty_bodies} = any { $_->get_column('area_count') == 0 } @bodies;
+
+    # eval {
+    #     my $data = File::Slurp::read_file(
+    #         FixMyStreet->path_to( '../data/all-reports.json' )->stringify
+    #     );
+    #     my $j = decode_json($data);
+    #     $c->stash->{fixed} = $j->{fixed};
+    #     $c->stash->{open} = $j->{open};
+    # };
+    # if ($@) {
+    #     my $message = _("There was a problem showing the All Reports page. Please try again later.");
+    #     if ($c->config->{STAGING_SITE}) {
+    #         $message .= '</p><p>Perhaps the bin/update-all-reports script needs running. Use: bin/update-all-reports</p><p>'
+    #             . sprintf(_('The error was: %s'), $@);
+    #     }
+    #     $c->detach('/page_error_500_internal_error', [ $message ]);
+    # }
+
+    # Down here so that error pages aren't cached.
+    # $c->response->header('Cache-Control' => 'max-age=3600');
 
 }
 

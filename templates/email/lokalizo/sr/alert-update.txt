@@ -19,6 +19,6 @@ Ova poruka je poslata automatski sa email naloga koji se ne proverava. Molimo Va
 
 Želite da se odjavite?
 
-Tražili ste od nas da Vam pošaljemo mail svaki put kada neko na sajtu [% site_name %] pruži nove informacije o problemu [% title %]:
+Tražili ste od nas da Vam pošaljemo mail svaki put kada neko na sajtu [% site_name %] dostavi nove informacije o problemu [% title %]:
 
 Ukoliko želite da se odjavite sa servisa prijema mail-ova svaki put kada je dostupna nova informacija, sledite ovaj link: [% unsubscribe_url %]
