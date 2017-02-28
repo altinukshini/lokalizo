@@ -10,39 +10,73 @@ $('document').ready(function(){
 	  }
 	}); 
 
-	var lat = 42.6026;
-	var lon = 20.9030;
-	var zoom;
+	var lat;
+	var lon;
 	var map;
-	var fromProjection;
-	var toProjection;
-	var position;
 	var mapnik;
 	var markers;
 	var markerLat;
+	var markerLon;
+	var fromProjection;
+	var toProjection;
 
 	$('#show-municipalities').click(function(){
         $('#municipalities-popup').fadeIn();
         $('#show-municipalities').fadeOut();
     });
 
-    $('#show-fpmap').click(function(){
+ 	OpenLayers.Control.Click = new OpenLayers.Class(OpenLayers.Control, {                
+        defaultHandlerOptions: {
+            'single': true,
+            'double': false,
+            'pixelTolerance': 0,
+            'stopSingle': false,
+            'stopDouble': false
+        },
 
-		$('#map').fadeIn();
-		$('#gotoaround').fadeIn();
-		$('#show-fpmap').fadeOut();
+        initialize: function(options) {
+            this.handlerOptions = OpenLayers.Util.extend(
+                {}, this.defaultHandlerOptions
+            );
+            OpenLayers.Control.prototype.initialize.apply(
+                this, arguments
+            ); 
+            this.handler = new OpenLayers.Handler.Click(
+                this, {
+                    'click': this.trigger
+                }, this.handlerOptions
+            );
+        }, 
 
+        trigger: function(e) {
+        	var point, transformedMarker;
+        	var size = new OpenLayers.Size(48,64);
+        	var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+        	var icon = new OpenLayers.Icon('/i/pin-green.png', size, offset);
+
+			if (map != null) {
+	        	point = map.getLonLatFromPixel(e.xy);
+        		markers.clearMarkers(); // Clear markers first
+        		markers.addMarker(new OpenLayers.Marker(new OpenLayers.LonLat(point.lon, point.lat),icon)); // New Location
+        		transformedMarker = point.transform(fromProjection, toProjection); // Transform marker
+
+        		markerLat = transformedMarker.lat.toFixed(6);
+        		markerLon = transformedMarker.lon.toFixed(6);
+        	}
+        }
+
+    });
+
+    function create_map(){
 	 	lat = 42.6258687;
 	 	lon = 20.8911131;
-	 	zoom = 9;
+	 	var zoom = 9;
 
 	 	fromProjection = new OpenLayers.Projection("EPSG:900913"); // Transform from Spherical Mercator Projection
 	 	toProjection = new OpenLayers.Projection("EPSG:4326"); // To from WGS 1984
-	 	position = new OpenLayers.LonLat(lon, lat).transform(toProjection, fromProjection);
+	 	var position = new OpenLayers.LonLat(lon, lat).transform(toProjection, fromProjection);
 
-	 	map = new OpenLayers.Map('map', {
-	 	    projection: 'EPSG:3857'
-	 	});
+	 	map = new OpenLayers.Map('map');
 
 		mapnik = new OpenLayers.Layer.OSM();
 	 	map.addLayer(mapnik);
@@ -52,34 +86,56 @@ $('document').ready(function(){
 
 	 	map.setCenter(position, zoom);
 
-	 	markerLat = lat, markerLon = lon; // = transformedMarker.lon.toFixed(6);
+	 	var click = new OpenLayers.Control.Click();
+        map.addControl(click);
+        click.activate();
 
-	 	var size = new OpenLayers.Size(48,64);
-	 	var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
-	 	var icon = new OpenLayers.Icon('/i/pin-green.png', size, offset);
+	 	// map.events.register("click", map, function (e) {
+	 	//     "use strict";
+	 	//     var point, transformedMarker;
+	 	//     point = map.getLonLatFromPixel(e.xy);
+	 	//     markers.clearMarkers(); // Clear markers first
+	 	//     markers.addMarker(new OpenLayers.Marker(new OpenLayers.LonLat(point.lon, point.lat),icon)); // New Location
+	 	//     transformedMarker = point.transform(fromProjection, toProjection); // Transform marker
 
-	 	map.events.register("click", map, function (e) {
-	 	    "use strict";
-	 	    var point, transformedMarker;
-	 	    point = map.getLonLatFromPixel(e.xy);
-	 	    markers.clearMarkers(); // Clear markers first
-	 	    markers.addMarker(new OpenLayers.Marker(new OpenLayers.LonLat(point.lon, point.lat),icon)); // New Location
-	 	    transformedMarker = point.transform(fromProjection, toProjection); // Transform marker
+	 	//     markerLat = transformedMarker.lat.toFixed(6);
+	 	//     markerLon = transformedMarker.lon.toFixed(6);
+	 	// });
+    }	
 
-	 	    markerLat = transformedMarker.lat.toFixed(6);
-	 	    markerLon = transformedMarker.lon.toFixed(6);
-	 	});
+    function destroy_map(){
+    	// markers.clearMarkers();
+    	markers.destroy();
+    	markers=null;
+    	map.destroy();
+    	map=null;
+    }
+
+    $('#show-fpmap').click(function(){
+
+		$('#map').fadeIn();
+		$('#gotoaround').fadeIn();
+		$('#show-fpmap').fadeOut();
+
+	 	if (map == null) {
+	 		create_map();
+	 	}
     });
 
     $('#gotoaround').click(function(){
     	websiteDomain = window.location.host;
-		location.href = 'http://' + websiteDomain + '/report/new?latitude='+markerLat+';longitude='+markerLon;
+    	if (markers != null && (markerLat != null && markerLon !=null)) {
+			location.href = 'http://' + websiteDomain + '/report/new?latitude='+markerLat+';longitude='+markerLon;
+		}
     });
 
     $('#municipalities-close').click(function(){
         $('#municipalities-popup').fadeOut();
         $('#show-fpmap').fadeIn();
         $('#show-municipalities').fadeIn();
+        $('#map').fadeOut();
+        $('#gotoaround').fadeOut();
+        destroy_map();
     });
     
     $('.municipality').click(function(){
