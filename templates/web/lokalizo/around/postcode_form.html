@@ -24,7 +24,7 @@
 
         [% IF c.req.uri.path == '/' %]
         <div id="show-municipalities">
-            <span id="show-municipalities"><i class="fa fa-map-marker"></i> [% IF lang_code == 'sq' %]...ose shkoni direkt tek një komunë e mbështetur[% ELSIF lang_code == 'sr' %][% ELSE %]...or go directly to a supported municipality[% END %]</span>
+            <span id="show-municipalities"><i class="fa fa-map-marker"></i> [% IF lang_code == 'sq' %]...ose shkoni direkt tek një komunë e mbështetur[% ELSIF lang_code == 'sr' %]...ili idite direktno na podržan opštini[% ELSE %]...or go directly to a supported municipality[% END %]</span>
         </div>
         <div id="municipalities-popup" style="display:none;">
 
@@ -34,7 +34,7 @@
                   <link rel="stylesheet" href="/cobrands/lokalizo/OpenLayers/theme/default/style.css" type="text/css">
                 [% END %]
 
-                <label>[% IF lang_code == 'sq' %][% ELSIF lang_code == 'sr' %][% ELSE %][% END %]Supported municipalities:</label>
+                <label>[% IF lang_code == 'sq' %]Komunat e mbështetura[% ELSIF lang_code == 'sr' %]Podržani opštine:[% ELSE %][% END %]Supported municipalities:</label>
                 <div id="municipalities-popup-inner">
                     <a class="municipality" data-lat="42.6629" data-lon="21.1655" href="javascript:void(0)">[% c.cobrand.change_body_text('Municipality of Pristina') %]</a>
                     <a class="municipality" data-lat="42.3798" data-lon="20.4316" href="javascript:void(0)">[% c.cobrand.change_body_text('Municipality of Gjakova') %]</a>
