@@ -1,6 +1,73 @@
 <header id="site-header" role="banner">
-    <div class="container">
+    <div class="container header-logo">
         [% INCLUDE 'header_logo.html' %]
         <a href="#main-nav" id="nav-link">Main Navigation</a>
     </div>
 </header>
+
+[%
+    SET base = "";
+    SET base = c.cobrand.base_url IF admin;
+%]
+
+
+
+<nav style="display:none;">
+  <ul>
+
+    <li class="[% IF c.req.uri.path == '/' %]active[% END %]">
+      <div><a href="/"><i class="fa fa-home" aria-hidden="true"></i></a></div>
+      <div><a href="/">[% IF lang_code == 'sq' %]Ballina[% ELSIF lang_code == 'sr' %]Početna[% ELSE %]Home[% END %]</a></div>
+    </li>
+
+    <li class="[% IF c.req.uri.path == '/reports' %]active[% END %]">
+      <div><[% IF c.req.uri.path == '/reports' %]span[% ELSE %]a href="[% base %]/reports[% IF c.user_exists AND c.user.categories.size %]?filter_category=[% c.user.categories.join(",") | uri | html %][% END %]"[% END %]><i class="fa fa-map-o" aria-hidden="true"></i></[% c.req.uri.path == '/reports' ? 'span' : 'a' %]>[%
+        %]</div>
+      <div>
+	<[% IF c.req.uri.path == '/reports' %]span[% ELSE %]a href="[% base %]/reports[% IF c.user_exists AND c.user.categories.size %]?filter_category=[% c.user.categories.join(",") | uri | html %][% END %]"[% END %]>
+	[% loc("All reports") %]</[% c.req.uri.path == '/reports' ? 'span' : 'a' %]>[%
+        %]
+      </div>
+    </li>
+
+    <li class="[% IF c.req.uri.path == '/alert' %]active[% END %]">
+      <div><[% IF c.req.uri.path == '/alert' %]span[% ELSE %]a href="[% base %]/alert[% pc ? '/list?pc=' : '' %][% pc | uri %]"[% END %]><i class="fa fa-street-view" aria-hidden="true"></i></[% c.req.uri.path == '/alert' ? 'span' : 'a' %]>[%
+  %]</div>
+      <div>
+	<[% IF c.req.uri.path == '/alert' %]span[% ELSE %]a href="[% base %]/alert[% pc ? '/list?pc=' : '' %][% pc | uri %]"[% END %]>
+	[% loc("Local alerts") %]</[% c.req.uri.path == '/alert' ? 'span' : 'a' %]>[%
+	%]
+      </div>
+    </li>
+
+    <li class="[% IF c.req.uri.path == '/faq' %]active[% END %]">
+      <div><[% IF c.req.uri.path == '/faq' %]span[% ELSE %]a href="[% base %]/faq"[% END %]>
+  <i class="fa fa-question" aria-hidden="true"></i></[% c.req.uri.path == '/faq' ? 'span' : 'a' %]>[%
+  %]</div>
+      <div>
+	<[% IF c.req.uri.path == '/faq' %]span[% ELSE %]a href="[% base %]/faq"[% END %]>
+	[% loc("Help") %]</[% c.req.uri.path == '/faq' ? 'span' : 'a' %]>[%
+	%]
+      </div>
+    </li>
+
+    <li class="[% IF c.req.uri.path == '/about/lokalizo' %]active[% END %]">
+      <div><[% IF c.req.uri.path == '/about/lokalizo' %]span[% ELSE %]a href="[% base %]/about/lokalizo"[% END%]><i class="fa fa-info" aria-hidden="true"></i></[% c.req.uri.path == '/about/lokalizo' ? 'span' : 'a' %]></div>
+      <div>
+	<[% IF c.req.uri.path == '/about/lokalizo' %]span[% ELSE %]a href="[% base %]/about/lokalizo"[% END%]>
+	[% IF lang_code == 'sq' %]Per ne[% ELSIF lang_code == 'sr' %]O nama[% ELSE %]About us[% END %]</[% c.req.uri.path == '/about/lokalizo' ? 'span' : 'a' %]>
+      </div>
+    </li>
+
+    <li class="[% IF c.req.uri.path == '/contact' %]active[% END %]">
+      <div><[% IF c.req.uri.path == '/contact' %]span[% ELSE %]a href="[% base %]/contact"[% END%]><i class="fa fa-envelope-o" aria-hidden="true"></i></[% c.req.uri.path == '/contact' ? 'span' : 'a' %]></div>
+      <div>
+  <[% IF c.req.uri.path == '/contact' %]span[% ELSE %]a href="[% base %]/contact"[% END%]>
+  [% IF lang_code == 'sq' %]Kontakti[% ELSIF lang_code == 'sr' %]Kontakt[% ELSE %]Contact[% END %]</[% c.req.uri.path == '/contact' ? 'span' : 'a' %]>
+      </div>
+    </li>
+
+  </ul>
+</nav>
+
+
