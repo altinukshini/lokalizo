@@ -11,7 +11,13 @@ sub send_from {
 
 sub reply_to {
     my ( $self, $row ) = @_;
-    return [ $row->user->email, $row->name ];
+    # return [ $row->user->email, $row->user->name ];
+
+    if ($row->name eq '') {
+        return $row->user->email;
+    }
+
+    return $row->name .'<'.$row->user->email.'>';
 }
 
 sub send {
