@@ -36,8 +36,9 @@ sub send {
     my $params = {
         To => $self->to,
         From => $self->send_from( $row ),
-        Reply-To => $self->reply_to( $row ),
     };
+
+    $params->{'Reply-To'} = $self->reply_to( $row );
 
     $cobrand->munge_sendreport_params($row, $h, $params) if $cobrand->can('munge_sendreport_params');
 
@@ -49,7 +50,7 @@ sub send {
     );
 
     if (FixMyStreet::Email::test_dmarc($params->{From}[0])) {
-        # $params->{'Reply-To'} = [ $params->{Reply-To} ];
+        $params->{'Reply-To'} = [ $params->{From} ];
         $params->{From} = [ $sender, $params->{From}[1] ];
     }
 
