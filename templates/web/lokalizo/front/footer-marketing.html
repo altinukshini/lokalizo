@@ -4,8 +4,21 @@
                                 <h4>[% IF lang_code == 'sq' %]Shkarkoni aplikacionet mobile[% ELSIF lang_code == 'sr' %]Preuzmite naše mobilne aplikacije[% ELSE %]Download our mobile apps[% END %]
                                 </h4>
                                 <p>
-                                    <a href="#"><img src="/cobrands/lokalizo/images/android-banner.png"></a>
-                                    <a href="#"><img src="/cobrands/lokalizo/images/ios-banner.png"></a>
+                                    [% IF lang_code == 'sq' %]
+                                        <a href="https://play.google.com/store/apps/details?id=org.lokalizo.sq" target="_blank"><img src="/cobrands/lokalizo/images/android-banner.png"></a>
+                                    [% ELSIF lang_code == 'sr' %]
+                                        <a href="https://play.google.com/store/apps/details?id=org.lokalizo.sr" target="_blank"><img src="/cobrands/lokalizo/images/android-banner.png"></a>
+                                    [% ELSE %]
+                                        <a href="https://play.google.com/store/apps/details?id=org.lokalizo.en" target="_blank"><img src="/cobrands/lokalizo/images/android-banner.png"></a>
+                                    [% END %]
+
+                                    [% IF lang_code == 'sq' %]
+                                        <a href="#" target="_blank"><img src="/cobrands/lokalizo/images/ios-banner.png"></a>
+                                    [% ELSIF lang_code == 'sr' %]
+                                        <a href="#" target="_blank"><img src="/cobrands/lokalizo/images/ios-banner.png"></a>
+                                    [% ELSE %]
+                                        <a href="#" target="_blank"><img src="/cobrands/lokalizo/images/ios-banner.png"></a>
+                                    [% END %]
                                 </p>
                                 
                             </div>

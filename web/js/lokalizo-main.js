@@ -25,7 +25,7 @@ $('document').ready(function(){
         $('#show-municipalities').fadeOut();
     });
 
- 	OpenLayers.Control.Click = new OpenLayers.Class(OpenLayers.Control, {                
+	OpenLayers.Control.Click = new OpenLayers.Class(OpenLayers.Control, {
         defaultHandlerOptions: {
             'single': true,
             'double': false,
@@ -125,7 +125,7 @@ $('document').ready(function(){
     $('#gotoaround').click(function(){
     	websiteDomain = window.location.host;
     	if (markers != null && (markerLat != null && markerLon !=null)) {
-			location.href = 'http://' + websiteDomain + '/report/new?latitude='+markerLat+';longitude='+markerLon;
+			location.href = 'http://' + websiteDomain + '/around?latitude='+markerLat+';longitude='+markerLon;
 		}
     });
 
