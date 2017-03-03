@@ -28,7 +28,7 @@ Pogledajte ovu lokaciju na OpenStreetMap: [% osm_url %]
 
 [% closest_address %]----------
 
-Odgovori na ovaj mail biće poslati korisniku/ci koji/a je problem prijavio/la.
+Ako želite odgovoriti na korisniku koji vam poslao ovaj email, molimo koristite [% email %]
 
 [% signature %]
 

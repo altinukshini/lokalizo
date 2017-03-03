@@ -29,7 +29,7 @@ Shih këtë vendndodhje në OpenStreetMap: [% osm_url %]
 
 [% closest_address %]----------
 
-Përgjigjet në këtë email do të shkojnë te përdoruesi, që e ka raportuar problemin.
+Për t'i dërguar përgjigje personit që ka dërguar këtë raport, ju lutem përdorni: [% email %].
 
 [% signature %]
 
