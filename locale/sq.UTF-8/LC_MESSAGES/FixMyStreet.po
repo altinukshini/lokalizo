@@ -2815,7 +2815,7 @@ msgstr "Raportuar në kategorinë %s"
 
 #: perllib/FixMyStreet/DB/Result/Problem.pm:602
 msgid "Reported in the %s category anonymously at %s"
-msgstr "Raportuar në kategorinë %s në mënyrë anonime te %s"
+msgstr "Raportuar në kategorinë %s në mënyrë anonime në %s"
 
 #: perllib/FixMyStreet/DB/Result/Problem.pm:618
 msgid "Reported in the %s category by %s at %s"
