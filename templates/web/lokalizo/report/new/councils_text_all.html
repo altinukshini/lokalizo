@@ -1,10 +1,18 @@
 [% DEFAULT list_of_names = bodies_to_list_names %]
 
 <p>
+
+[% municipalities = '' %]
+
+[% FOREACH municipality IN bodies_to_list_names %]
+   [% municipalities = municipalities _ c.cobrand.change_body_text(municipality) _ ', ' %]
+[% END %]
+
+
 [%
     tprintf(
         loc('These will be sent to <strong>%s</strong> and also published online for others to see, in accordance with our <a href="%s">privacy policy</a>.'),
-        list_of_names.join( '</strong>' _ loc(' or ') _ '<strong>' ), '/privacy'
+        municipalities, '/privacy'
     );
 %]
 

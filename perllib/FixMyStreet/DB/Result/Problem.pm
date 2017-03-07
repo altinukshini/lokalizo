@@ -713,7 +713,7 @@ sub duration_string {
         }
     }
     return unless $problem->whensent;
-    return sprintf(_('Sent to %s %s later'), $body,
+    return sprintf(_('Sent to %s %s later'), $c->cobrand->change_body_text($body),
         Utils::prettify_duration($problem->whensent->epoch - $problem->confirmed->epoch, 'minute')
     );
 }
