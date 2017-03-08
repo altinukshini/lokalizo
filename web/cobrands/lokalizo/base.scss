@@ -587,6 +587,11 @@ ol.big-numbers > li {
 .box-warning a {
     color: #48B848;
     text-decoration: none;
+    background-color: transparent;
+    padding: 5px;
+    display: inline;
+    border-bottom: 1px solid #888;
+    border-radius: 0;
 }
 
 #municipalities-close:hover, #show-municipalities:hover, #show-fpmap:hover {
