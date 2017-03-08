@@ -1,4 +1,6 @@
-            <div class="form-error" style="border-radius:15px !important;">[% IF lang_code == 'sq' %]Ju lutem keni parasysh që ju po e shikoni verzionin jo final të uebsajtit tonë.<br>Ne do ta lancojmë verzionin final pas dy javësh dhe të gjitha të dhënat do të fshihen.[% ELSIF lang_code == 'sr' %]Molimo imajte na umu da trenutno koristite razvojnu verziju našeg sajta.<br>Sajt lansiramo uživo za dve nedelje i svi podaci koje ovde vidite biće obrisani.[% ELSE %]Please note that you are viewing a staging version of our website.<br>We will be launching in two weeks and all the data you see here will be wiped.[% END %]</div><br>
+            [% IF c.config.STAGING_SITE %]
+            	<div class="form-error" style="border-radius:15px !important;">[% IF lang_code == 'sq' %]Ju lutem keni parasysh që ju po e shikoni verzionin jo final të uebsajtit tonë.<br>Ne do ta lancojmë verzionin final pas dy javësh dhe të gjitha të dhënat do të fshihen.[% ELSIF lang_code == 'sr' %]Molimo imajte na umu da trenutno koristite razvojnu verziju našeg sajta.<br>Sajt lansiramo uživo za dve nedelje i svi podaci koje ovde vidite biće obrisani.[% ELSE %]Please note that you are viewing a staging version of our website.<br>We will be launching in two weeks and all the data you see here will be wiped.[% END %]</div><br>
+            [% END %]
             <img src="/cobrands/lokalizo/images/lokalizo-mascot.png" style="margin-bottom:2em;" />
             <br />
             <h1>[% loc('Report, view, or discuss local problems') %]</h1>
